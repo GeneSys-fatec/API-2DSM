@@ -5,7 +5,11 @@ Este projeto foi iniciado com o [Create React App](https://github.com/facebook/c
 ## Scripts Disponíveis
 
 No diretório do projeto, você pode rodar:
+Para instalação de dependencias.
 
+### `npm i` 
+
+Para inicialização.
 ### `npm start`
 
 Executa o aplicativo no modo de desenvolvimento.\
