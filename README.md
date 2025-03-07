@@ -1,74 +1,175 @@
-# Introdução ao Create React App
+## 💻 Aprendizado por Projeto Integrado (API) 
 
-Este projeto foi iniciado com o [Create React App](https://github.com/facebook/create-react-app).
+Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
+Uso de estratégias para entender o problema, conceber uma solução viável ao desenvolver e implementar o MVP seguido de sua operação (CDIO). 
+Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da Fatec SJC com definição das datas do kickoff e das sprints.
 
-## Scripts Disponíveis
+<br>
 
-No diretório do projeto, você pode rodar:
-Para instalação de dependencias.
+<span id="sumario">
 
-### `npm i` 
+<div align=center>
+<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
+<a href ="#backlog&userstories"> Backlog & User Stories </a> | <a href ="#registros"> Registros das Sprints </a> | <a href ="#equipe"> Equipe </a>
+</div>
 
-Para inicialização.
-### `npm start`
+<br>
 
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
+<span id="projeto">
 
-A página será recarregada sempre que você fizer alterações.\
-Você também pode ver quaisquer erros de lint no console.
+## 📋 Sobre o projeto
+> **📌 Status do Projeto: Em Desenvolvimento**
+ 
+Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da plataforma, facilitando o acompanhamento do crescimento do projeto e oferecendo dados estratégicos e detalhados para patrocinadores e stakeholders.
+ 
+<br>
+ 
+<span id="tecnologias">
+ 
+## 🔧 Tecnologias
 
-### `npm test`
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&logo=sass) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) 
+ 
+<br>
+ 
+ <span id="sprints">
 
-Inicia o runner de testes no modo interativo de observação.\
-Veja a seção sobre [executando testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
+## 📊 Sprints
+ 
+Sprint | Previsão | Status|
+|------|--------|------|
+|Kick Off | 24/02/2025 - 28/02/2025 |✔️Finalizado|
+|01 | 10/03/2025 - 30/03/2025 |a fazer|
+|02|  07/04/2025 - 27/04/2025 |a fazer|
+|03| 05/05/2025 - 25/05/2025 |a fazer|
+|Feira de Soluções| 29/05/2025 |a fazer|
+ 
+<br>
 
-### `npm run build`
+<details>
+  <summary>Tasks - Sprint 1</summary>
+- [ ] 
+</details>
 
-Cria o aplicativo para produção na pasta `build`.\
-O React será agrupado corretamente no modo de produção e o build será otimizado para o melhor desempenho.
+<br>
 
-O build é minificado e os nomes dos arquivos incluem os hashes.\
-Seu aplicativo está pronto para ser implantado!
+<details>
+  <summary>Tasks - Sprint 2</summary>
+- [ ]
+</details>
 
-Veja a seção sobre [implantação](https://facebook.github.io/create-react-app/docs/deployment) para mais informações.
+<br>
 
-### `npm run eject`
+<details>
+  <summary>Tasks - Sprint 3</summary>
+- [ ]
+</details> 
 
-**Nota: esta é uma operação irreversível. Depois de executar `eject`, não há como voltar!**
+<br>
 
-Se você não estiver satisfeito com as ferramentas de build e as opções de configuração, você pode executar `eject` a qualquer momento. Este comando removerá a dependência de build única do seu projeto.
+→ <a href="#sumario"> Voltar ao topo </a>
 
-Em vez disso, ele copiará todos os arquivos de configuração e dependências transitivas (webpack, Babel, ESLint, etc) diretamente para o seu projeto para que você tenha controle total sobre eles. Todos os comandos, exceto `eject`, continuarão funcionando, mas apontarão para os scripts copiados para que você possa ajustá-los. A partir deste ponto, você estará por conta própria.
+<br>
 
-Você não precisa usar o `eject`. O conjunto de recursos curados é adequado para implantações pequenas e médias, e você não deve se sentir obrigado a usar esse recurso. No entanto, entendemos que essa ferramenta não seria útil se você não pudesse personalizá-la quando estivesse pronto para isso.
+<span id="protótipo">
 
-## Aprenda Mais
+## 💡 Protótipo
+**:link: Clique no link abaixo para visualizar o protótipo do projeto:**  
+> [Protótipo do Projeto]
 
-Você pode aprender mais na [documentação do Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-Para aprender React, consulte a [documentação do React](https://reactjs.org/).
+<span id="backlog&userstories">
 
-### Divisão de Código
+## 🎯 Backlog do Produto & User Stories
+**:link: Clique no link abaixo para visualizar o backlog do produto:**  
+> [Backlog do Produto](https://docs.google.com/spreadsheets/d/16_ebRJeTTw_G6ENu5bRBPgEcn4-hYOILC6T_cBW6R4g/edit?gid=604193790#gid=604193790)
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<details>
+     <summary>Backlog - Sprint 1</summary>
+      <div align="center">
+      <br>
 
-### Analisando o Tamanho do Pacote
+| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
+| --- | --- | --- | --- | --- |
+| BL01 | ALTA | Visão Geral do Dashboard |Como gestor, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| 1 |
+| BL02 | ALTA | Visualização do Número de Lojas Criadas |Como gestor, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
+| BL03 | ALTA | Monitoramento de Usuários Impactados |Como gestor, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
+| BL04 | ALTA | Exibição do Volume de Transações |Como gestor, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  </details>
 
-### Criando um Aplicativo Progressivo (PWA)
+<details>
+     <summary>Backlog - Sprint 2</summary>
+      <div align="center">
+      <br>
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
+| --- | --- | --- | --- | --- |
+| BL05 | ALTA | Exibição da Distribuição Geográfica |Como gestor, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 5 |
+| BL06 | ALTA | Engajamento e Uso da Plataforma |Como gestor, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.| 6 |
 
-### Configuração Avançada
+  </details>
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<details>
+     <summary>Backlog - Sprint 3</summary>
+      <div align="center">
+      <br>
 
-### Implantação
+| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
+| --- | --- | --- | --- | --- |
+| BL07 | MÉDIA | Link Exclusivo para Acesso ao Dashboard |Como usuário, quero acessar o dashboard via um link exclusivo, para facilitar o compartilhamento com stakeholders.| 7 |
+| BL08 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 8 |
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  </details>
 
-### `npm run build` falha ao minificar
+<br>
 
-Esta seção foi movida para cá: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+|          Título           |                     User Story                      |
+| :-------------------: | :----------------------------------------------------------: |
+| Visão Geral do Dashboard |Como gestor, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.|
+| Visualização do Número de Lojas Criadas |Como gestor, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
+| Monitoramento de Usuários Impactados |Como gestor, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
+| Exibição do Volume de Transações |Como gestor, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
+| Exibição da Distribuição Geográfica |Como gestor, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.|
+| Engajamento e Uso da Plataforma |Como gestor, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.|
+| Link Exclusivo para Acesso ao Dashboard |Como usuário, quero acessar o dashboard via um link exclusivo, para facilitar o compartilhamento com stakeholders.| 
+| Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
+
+<br>
+
+→ <a href="#sumario"> Voltar ao topo </a>
+
+<br>
+
+<span id="registros">
+
+## 📸 Registros das Sprints
+
+<h3>📌Sprint 1</h3>
+
+<br>
+
+<h3>📌Sprint 2</h3>
+
+<br>
+
+<h3>📌Sprint 3</h3>
+
+<br>
+
+<span id="equipe">
+
+## 👤 Equipe
+|    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
+| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Product Owner |   Ana Beatriz Coelho         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abeatrizcoelho/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/abeatrizdscoelho)              |
+| Scrum Master  | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
+|  Team Member  | Ana Júlia Gaspar |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-gaspar-957775325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/anajgaspar)        |
+| Team Member |   Emmanuel Yokoyama         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuelyokoyama/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/EmmanuelJYokoyama)              |
+| Team Member |   Lavínia Piratello         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lavinia-piratello-6a82101b1/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/laviniappiratello)             |
+
+<br>
+
+→ <a href="#sumario"> Voltar ao topo </a>
