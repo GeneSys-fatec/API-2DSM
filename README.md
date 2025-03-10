@@ -39,7 +39,7 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
 Sprint | Previsão | Status|
 |------|--------|------|
 |Kick Off | 24/02/2025 - 28/02/2025 |✔️Finalizado|
-|01 | 10/03/2025 - 30/03/2025 |a fazer|
+|01 | 10/03/2025 - 30/03/2025 |Em Andamento|
 |02|  07/04/2025 - 27/04/2025 |a fazer|
 |03| 05/05/2025 - 25/05/2025 |a fazer|
 |Feira de Soluções| 29/05/2025 |a fazer|
@@ -75,7 +75,7 @@ Sprint | Previsão | Status|
 
 ## 💡 Protótipo
 **:link: Clique no link abaixo para visualizar o protótipo do projeto:**  
-> [Protótipo do Projeto]
+> [Protótipo do Projeto](https://www.figma.com/design/SH4lK6gOZIokeUNJQtBIiI/GeneSys-API?node-id=0-1&p=f&t=shfLLSMznF3evchS-0)
 
 <br>
 
@@ -83,7 +83,7 @@ Sprint | Previsão | Status|
 
 ## 🎯 Backlog do Produto & User Stories
 **:link: Clique no link abaixo para visualizar o backlog do produto:**  
-> [Backlog do Produto](https://docs.google.com/spreadsheets/d/16_ebRJeTTw_G6ENu5bRBPgEcn4-hYOILC6T_cBW6R4g/edit?gid=604193790#gid=604193790)
+> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1Qx6caXBjgTfsOwpYBH-3MVOZ7oo-DheCsgqlsbYvK0U/edit?usp=sharing)
 
 <details>
      <summary>Backlog - Sprint 1</summary>
@@ -92,10 +92,10 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL01 | ALTA | Visão Geral do Dashboard |Como gestor, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| 1 |
-| BL02 | ALTA | Visualização do Número de Lojas Criadas |Como gestor, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
-| BL03 | ALTA | Monitoramento de Usuários Impactados |Como gestor, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
-| BL04 | ALTA | Exibição do Volume de Transações |Como gestor, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
+| BL01 | ALTA | Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| 1 |
+| BL02 | ALTA | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
+| BL03 | ALTA | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
+| BL04 | ALTA | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
 
   </details>
 
@@ -106,8 +106,9 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL05 | ALTA | Exibição da Distribuição Geográfica |Como gestor, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 5 |
-| BL06 | ALTA | Engajamento e Uso da Plataforma |Como gestor, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.| 6 |
+| BL05 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 5 |
+| BL06 | ALTA | Engajamento e Uso da Plataforma |Como patrocinador, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.| 6 |
+| BL07 | MÉDIA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 7 |
 
   </details>
 
@@ -118,8 +119,7 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL07 | MÉDIA | Link Exclusivo para Acesso ao Dashboard |Como usuário, quero acessar o dashboard via um link exclusivo, para facilitar o compartilhamento com stakeholders.| 7 |
-| BL08 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 8 |
+| BL08 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| 8 |
 
   </details>
 
@@ -128,13 +128,13 @@ Sprint | Previsão | Status|
 
 |          Título           |                     User Story                      |
 | :-------------------: | :----------------------------------------------------------: |
-| Visão Geral do Dashboard |Como gestor, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.|
-| Visualização do Número de Lojas Criadas |Como gestor, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
-| Monitoramento de Usuários Impactados |Como gestor, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
-| Exibição do Volume de Transações |Como gestor, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
-| Exibição da Distribuição Geográfica |Como gestor, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.|
-| Engajamento e Uso da Plataforma |Como gestor, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.|
-| Link Exclusivo para Acesso ao Dashboard |Como usuário, quero acessar o dashboard via um link exclusivo, para facilitar o compartilhamento com stakeholders.| 
+| Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.|
+| Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
+| Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
+| Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
+| Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.|
+| Engajamento e Uso da Plataforma |Como patrocinador, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.|
+| Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
 | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
 
 <br>
