@@ -9,7 +9,7 @@ Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da 
 <span id="sumario">
 
 <div align=center>
-<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
+<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="dor-dod"> DoR e DoD </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
 <a href ="#backlog&userstories"> Backlog & User Stories </a> | <a href ="#registros"> Registros das Sprints </a> | <a href ="#equipe"> Equipe </a>
 </div>
 
@@ -31,6 +31,17 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&logo=sass) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) 
  
 <br>
+
+ <span id="dor-dod">
+
+## 📍 DoR Definition of Ready
+[DoR API.docx](https://github.com/user-attachments/files/19209101/DoR.API.docx)
+
+<br>
+
+## 📍 DoD Definition of Done
+
+<br>
  
  <span id="sprints">
 
@@ -48,7 +59,12 @@ Sprint | Previsão | Status|
 
 <details>
   <summary>Tasks - Sprint 1</summary>
-- [ ] 
+ 
+- [ ] Criar Componentes no React;
+- [ ] Criar Página Principal do Dashboard;
+- [ ] Criar Gráfico Simulando Dados Reais;
+- [ ] Criar Lógica de Criação Dinâmica das Rotas;
+- [ ] Implementar Estilização e Responsividade.
 </details>
 
 <br>
@@ -165,10 +181,11 @@ Sprint | Previsão | Status|
 |    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
 | :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner |   Ana Beatriz Coelho         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abeatrizcoelho/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/abeatrizdscoelho)              |
-| Scrum Master  | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
+| Scrum Master  | Gabriel Calebe |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-medeiros-516ab3325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gbmedeiros00)          |
 |  Team Member  | Ana Júlia Gaspar |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-gaspar-957775325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/anajgaspar)        |
 | Team Member |   Emmanuel Yokoyama         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuelyokoyama/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/EmmanuelJYokoyama)              |
 | Team Member |   Lavínia Piratello         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lavinia-piratello-6a82101b1/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/laviniappiratello)             |
+| Team Member | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
 
 <br>
 
