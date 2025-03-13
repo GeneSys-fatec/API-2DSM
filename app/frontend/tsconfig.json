@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "rootDir": "./src",
     "outDir": "./build",
     "strict": true
