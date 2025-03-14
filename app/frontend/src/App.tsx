@@ -1,11 +1,13 @@
 import './App.scss';
-import Main from './components/layout/Main';
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer"
 
 function App() {
   return (
-   <Main>
-    Sex12
-   </Main>
+    <div>
+      <Header/>
+      <Footer/>
+    </div>
   );
 }
 
