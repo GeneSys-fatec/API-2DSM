@@ -1,4 +1,5 @@
 import React from "react";
+import "./Graficos.scss"
 
 interface GraficoProps {
     iconeCard: string,

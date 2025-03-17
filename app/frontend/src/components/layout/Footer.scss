@@ -1,0 +1,32 @@
+@import './variaveis';
+
+.footer{
+    background-color: $background-color; 
+    font-family: $font-stack;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    .contatos{
+        display: flex;
+        align-items: center;
+    }
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: auto;
+        text-align: right;
+        padding: 0px;
+
+        h1{
+            color: $second-color;
+            padding-bottom: -30px;
+            font-size: 48px;
+        }
+
+        p{
+            font-size: 32px;
+        }
+    }
+    
+}
