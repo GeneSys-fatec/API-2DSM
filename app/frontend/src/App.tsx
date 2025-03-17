@@ -1,12 +1,19 @@
 import './App.scss';
 import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer"
+import Footer from "./components/layout/Footer";
+import Cards from "./components/layout/Cards";
+import Grafico from "./components/layout/Grafico"
 
 function App() {
   return (
     <div>
-      <Header/>
-      <Footer/>
+      <Header logoEmpresa="data:image/png;base64,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" nomeEmpresa="Agência Ship" />
+      <Cards iconeCard="https://img.icons8.com/?size=100&id=G7xxWUssqjYw&format=png&color=143357" valorCard={0} tituloCard="Transações Realizadas"/>
+      <Cards iconeCard="https://img.icons8.com/?size=100&id=98957&format=png&color=143357" valorCard={0} tituloCard="Usuários Impactados"/>
+      <Cards iconeCard="https://img.icons8.com/?size=100&id=78230&format=png&color=143357" valorCard={0} tituloCard="Lojas Criadas"/>
+      <Cards iconeCard="https://img.icons8.com/?size=100&id=xGUZ15gQQ60G&format=png&color=143357" valorCard={0} tituloCard="Patrocinados"/>
+      <Grafico iconeCard="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" tituloCard="Estados Mais Atendidos"/>
+      <Footer linkInstagram="https://www.instagram.com/agenciaship/" linkWpp="https://api.whatsapp.com/send?phone=5512991235705" linkSite="https://agenciaship.com.br/" descEmpresa="Agência SHIP traça estratégias práticas para anunciar seu negócio online e encontrar clientes nas principais plataformas disponíveis para o Marketing Digital."/>
     </div>
   );
 }
