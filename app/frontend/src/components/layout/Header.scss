@@ -1,0 +1,29 @@
+@import './variaveis';
+
+.header {
+    align-items: start;
+    display: flex;
+    background-color: $background-color;
+    .logo {
+        justify-content: flex-start;
+        display: inline;
+        margin: 0.5em;
+        width: 15%;
+        height: 35% ;
+    }
+    .container{
+        margin: 0%;
+        padding: 1em;
+        h1 {
+            font-family: $font-stack;
+            color: $second-color;
+            font-size: 96px;
+            margin: 0px;
+        }
+        h2 {
+            font-family: $font-stack;
+            font-size: 34px;
+        }
+    }
+}
+
