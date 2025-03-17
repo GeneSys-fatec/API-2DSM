@@ -35,7 +35,8 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
  <span id="dor-dod">
 
 ## 📍 DoR Definition of Ready
-[DoR API.docx](https://github.com/user-attachments/files/19209101/DoR.API.docx)
+[DoR API.docx](https://github.com/user-attachments/files/19251411/DoR.API.docx)
+
 
 <br>
 
@@ -99,7 +100,7 @@ Sprint | Previsão | Status|
 
 ## 🎯 Backlog do Produto & User Stories
 **:link: Clique no link abaixo para visualizar o backlog do produto:**  
-> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1Qx6caXBjgTfsOwpYBH-3MVOZ7oo-DheCsgqlsbYvK0U/edit?usp=sharing)
+> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1H0PJxLwD0e1l6761r8PlPmms5jn0AvDcWyaNzSeVjQs/edit?usp=sharing)
 
 <details>
      <summary>Backlog - Sprint 1</summary>
@@ -112,6 +113,7 @@ Sprint | Previsão | Status|
 | BL02 | ALTA | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
 | BL03 | ALTA | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
 | BL04 | ALTA | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
+| BL05 | ALTA | Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.| 5 |
 
   </details>
 
@@ -122,9 +124,9 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL05 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 5 |
-| BL06 | ALTA | Engajamento e Uso da Plataforma |Como patrocinador, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.| 6 |
-| BL07 | MÉDIA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 7 |
+| BL06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 6 |
+| BL08 | BAIXA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 8 |
+| BL09 | BAIXA | Página de Exibição das Empresas | Como usuário, quero acessar uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| 9 |
 
   </details>
 
@@ -135,7 +137,7 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL08 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| 8 |
+| BL07 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| 7 |
 
   </details>
 
@@ -144,14 +146,14 @@ Sprint | Previsão | Status|
 
 |          Título           |                     User Story                      |
 | :-------------------: | :----------------------------------------------------------: |
-| Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.|
 | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
 | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
 | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
+| Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.|
 | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.|
-| Engajamento e Uso da Plataforma |Como patrocinador, quero visualizar métricas de engajamento e uso da plataforma, para avaliar a retenção de usuários e identificar possíveis melhorias.|
-| Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
 | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
+| Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
+| Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.|
 
 <br>
 
