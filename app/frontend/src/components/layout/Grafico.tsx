@@ -1,5 +1,5 @@
 import React from "react";
-import "./Graficos.scss"
+import "./Grafico.scss"
 
 interface GraficoProps {
     iconeCard: string,
@@ -8,9 +8,11 @@ interface GraficoProps {
 
 const Grafico: React.FC<GraficoProps> = ({ iconeCard, tituloCard }) => {
     return (
-        <div>
-            <img src={ iconeCard }></img>
+        <div className="graficos">
+            <div className="containerGraficos">
+            <img className="imgGrafico" src={ iconeCard }></img>
             <h3>{ tituloCard }</h3>
+            </div>
         </div>
     )
 }

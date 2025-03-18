@@ -8,10 +8,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ nomeEmpresa, logoEmpresa }) => {
     return (
-        <div>
-            <img src={ logoEmpresa }/>
+        <div className="header">
+            <img className="logo" src={ logoEmpresa }/>
+            <div className="container">
             <h2>Conheça a</h2>
             <h1>{ nomeEmpresa }</h1>
+            </div>
         </div>
     )
 }
