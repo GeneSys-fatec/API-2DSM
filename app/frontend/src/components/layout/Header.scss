@@ -13,17 +13,22 @@
     }
     .container{
         margin: 0%;
-        padding: 1em;
+        padding-top:3em ;
+        
         h1 {
+
             font-family: $font-stack;
             color: $second-color;
             font-size: 96px;
             margin: 0px;
+            text-transform: uppercase;
+
         }
         h2 {
             font-family: $font-stack;
             font-size: 34px;
+            text-transform: uppercase;
+
         }
     }
 }
-

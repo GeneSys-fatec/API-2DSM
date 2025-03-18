@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.scss"
 
 interface FooterProps {
     linkInstagram: string,
@@ -9,7 +10,8 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ linkInstagram, linkWpp, linkSite, descEmpresa }) => {
     return (
-        <div>
+        <div className="footer">
+            <div className="contatos">
             <a href={ linkInstagram } target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="102" height="102" viewBox="0 0 102 102" id="instagram">
                     <defs>
@@ -86,8 +88,11 @@ const Footer: React.FC<FooterProps> = ({ linkInstagram, linkWpp, linkSite, descE
                     <path fill="url(#g)" d="M119.602 36.508h-56.007c8.436.039 16.396 3.918 21.626 10.537l35.491-8.873"></path>
                 </svg>
             </a>
+            </div>
+            <div className="texto">
             <h1>Sobre</h1>
             <p>{ descEmpresa }</p>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,26 @@
-@import './_variaveis';
-div {
-    background-color: $backgroud-color;
+@import './variaveis';
 
+.card{
+    font-family: $font-stack;
+    background-color: $background-color;
+    text-align: center;
+    display: flex;
+
+    justify-content: center;
+    padding: 10px;
+
+    .conteudo{
+        background-color: $primary-color;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        h3{
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        p{
+            font-size: 23px;    
+        }
+    }
 }
+

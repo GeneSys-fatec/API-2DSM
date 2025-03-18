@@ -1,1 +1,20 @@
 @import './_variaveis';
+
+.graficos{
+    display: flex;
+    font-family: $font-stack;
+    font-size: 28px ;
+    background-color: $background-color;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .containerGraficos{
+        background-color: $primary-color;
+        
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+}
