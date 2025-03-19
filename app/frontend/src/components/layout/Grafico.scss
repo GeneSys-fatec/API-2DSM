@@ -10,11 +10,18 @@
     flex-direction: column;
     .containerGraficos{
         background-color: $primary-color;
-        
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-        flex-direction: column;
-        justify-content: center;
-    
+        display: flex;        
+        align-items : center;
+        flex-direction: column;   
+        gap: 10px;             
+        padding: 10px; 
+    }
+    .texto-foto{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        max-width: 400px;
     }
 }
