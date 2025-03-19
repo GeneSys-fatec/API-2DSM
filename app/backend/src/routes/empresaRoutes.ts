@@ -1,12 +1,12 @@
 import { FastifyInstance } from "fastify";
-import * as alunoController from "../controllers/empresaController";
+import * as empresaController from "../controllers/empresaController";
 
-const alunoRoutes = async (fastify: FastifyInstance) => {
-  fastify.post("/create", alunoController.createAluno);
-  fastify.get("/", alunoController.getAlunos);
-  fastify.get("/:id", alunoController.getAlunoById);
-  fastify.delete("/:id", alunoController.removeAluno);
-  fastify.patch("/:id", alunoController.updateAluno);
+const empresaRoutes = async (fastify: FastifyInstance) => {
+  fastify.post("/create", empresaController.createEmpresa);
+  fastify.get("/", empresaController.getEmpresas);
+  fastify.get("/:id", empresaController.getEmpresaById);
+  fastify.delete("/:id", empresaController.removeEmpresa);
+  fastify.patch("/:id", empresaController.updateEmpresa);
 };
 
-export default alunoRoutes;
+export default empresaRoutes;
