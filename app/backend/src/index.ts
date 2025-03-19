@@ -1,7 +1,7 @@
 import fastify from "fastify";
 import dotenv from "dotenv";
 import cors from "@fastify/cors";
-import alunoRoutes from "./routes/empresaRoutes";
+import empresaRoutes from "./routes/empresaRoutes";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.register(cors, {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true); // Permitir requisição
     } else {
-      callback(new Error("Not allowed by CORS")); // Bloquear requisição
+      callback(null, "Not allowed by CORS"); // Bloquear requisição
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
@@ -23,7 +23,7 @@ app.register(cors, {
 });
 
 // Registro das rotas
-app.register(alunoRoutes, { prefix: "/alunos" });
+app.register(empresaRoutes, { prefix: "/empresa" });
 
 const start = async () => {
   try {

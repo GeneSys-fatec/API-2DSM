@@ -1,0 +1,58 @@
+@base_url=http://localhost:3005
+@empresa_url={{base_url}}/empresa
+
+## CREATE EMPRESA
+POST {{empresa_url}}/create
+Content-Type: application/json
+
+{
+  "nameSponsor": "Patrocinador TWOPERTOPIWERTOPIERTWIOP",
+  "descriptionTitle": "Título da Descrição",
+  "descriptionSponsor": "Uma descrição detalhada do patrocinador.",
+  "exclusiveUrl": "url-exclusiva-3t3243",
+  "sponsorLogo": "https://exemplo.com/logo.png",
+  "site_web": "https://exemplo.com",
+  "urlSponsor": "https://exemplo.com/sponsor",
+  "whatsapp": "https://wa.me/5511999999999",
+  "facebook": "https://facebook.com/patrocinador"
+}
+
+
+###
+
+## REMOVE EMPRESA BY ID
+DELETE {{empresa_url}}/1
+
+###
+
+## GET ALL EMPRESAS
+GET {{empresa_url}}/
+
+###
+
+## GET EMPRESA BY ID
+GET {{empresa_url}}/2
+
+### 
+
+## UPDATE EMPRESA BY ID
+PATCH {{empresa_url}}/2
+Content-Type: application/json
+
+{
+  "nameSponsor": "Patrocinador Atualizado",
+  "descriptionTitle": "Título Atualizado",
+  "descriptionSponsor": "Uma descrição atualizada do patrocinador.",
+  "exclusiveUrl": "url-exclusiva-atualizada",
+  "sponsorLogo": "https://exemplo.com/logo-atualizada.png",
+  "site_web": "https://exemplo.com",
+  "urlSponsor": "https://exemplo.com/sponsor/atualizado",
+  "whatsapp": "55 11 98888-8888",
+  "facebook": "https://facebook.com/patrocinadorAtualizado",
+  "instagram": "https://instagram.com/patrocinadorAtualizado",
+  "linkedin": "https://linkedin.com/in/patrocinadorAtualizado",
+  "tiktok": "https://tiktok.com/@patrocinadorAtualizado",
+  "kawai": "https://kawai.com/patrocinadorAtualizado",
+  "x": "https://x.com/patrocinadorAtualizado",
+  "createdAt": "2024-03-19 00:00:00"
+}

@@ -18,13 +18,12 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    dialect: "mysql", // Define que o banco de dados é MySQL
-    port: Number(process.env.DB_PORT), // Porta do MySQL
-    logging: false, // Desativa os logs do Sequelize (opcional)
+    dialect: "mysql",
+    port: Number(process.env.DB_PORT), 
+    logging: false, 
   }
 );
 
-// Testando a conexão
 sequelize
   .authenticate()
   .then(() => console.log("Conectado ao banco de dados MySQL com sucesso!"))

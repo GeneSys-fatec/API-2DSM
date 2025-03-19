@@ -1,100 +1,139 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../database/db";
-import { AlunoInput } from "../validators/empresaValidator";
-import { AlunoType } from "../types/empresaTypes";
+import { EmpresaInput } from "../validators/empresaValidator";
+import { EmpresaType } from "../types/empresaTypes";
 
-class Aluno extends Model {
+class Empresa extends Model {
   public id!: number;
-  public name!: string;
-  public email!: string;
-  public phone!: string;
-  public base_monthly_fee!: number;
-  public total_monthly_fee!: number;
+  public nameSponsor!: string;
+  public descriptionTitle!: string;
+  public descriptionSponsor!: string;
+  public exclusiveUrl!: string;
+  public sponsorLogo!: string;
+  public site_web!: string;
+  public urlSponsor!: string;
+  public whatsapp!: string;
+  public facebook?: string;
+  public instagram?: string;
+  public linkedin?: string;
+  public tiktok?: string;
+  public kawai?: string;
+  public x?: string;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
 
-Aluno.init(
+Empresa.init(
   {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
       autoIncrement: true,
       primaryKey: true,
     },
-    name: {
+    nameSponsor: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    phone: {
+    descriptionTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    base_monthly_fee: {
-      type: DataTypes.FLOAT,
+    descriptionSponsor: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    total_monthly_fee: {
-      type: DataTypes.FLOAT,
+    exclusiveUrl: {
+      type: DataTypes.STRING,
       allowNull: false,
+    },
+    sponsorLogo:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    site_web: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    urlSponsor: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    whatsapp: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    linkedin: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    tiktok: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    kawai: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    x: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true, // Permite valor NULL
+    },    
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true, // Permite valor NULL
     },
   },
   {
     sequelize,
-    tableName: "alunos", // Nome da tabela no banco
+    tableName: "empresa",
+    timestamps: true
   }
 );
 
-export const createAluno = async (data: AlunoInput): Promise<AlunoType> => {
-  const aluno = await Aluno.create({
-    name: data.name,
-    email: data.email,
-    phone: data.phone,
-    base_monthly_fee: data.base_monthly_fee,
-    total_monthly_fee: data.base_monthly_fee, // + product price,
-  });
-  return aluno;
+export const createEmpresa = async (data: EmpresaInput): Promise<EmpresaType> => {
+  const empresa = await Empresa.create(data);
+  return empresa.toJSON();
 };
 
-export const getAlunos = async (): Promise<AlunoType[]> => {
-  return await Aluno.findAll();
+export const getEmpresas = async (): Promise<EmpresaType[]> => {
+  const empresas = await Empresa.findAll();
+  return empresas.map((empresa) => empresa.toJSON());
 };
 
-export const getAlunoById = async (id: number): Promise<AlunoType | null> => {
-  return await Aluno.findByPk(id);
+export const getEmpresaById = async (id: number): Promise<EmpresaType | null> => {
+  const empresa = await Empresa.findByPk(id);
+  return empresa ? empresa.toJSON() : null;
 };
 
-export const getAlunoByEmail = async (
-  email: string
-): Promise<AlunoType | null> => {
-  return await Aluno.findOne({ where: { email } });
+export const getEmpresaByExclusiveUrl = async (exclusiveUrl: string): Promise<EmpresaType | null> => {
+  const empresa = await Empresa.findOne({ where: { exclusiveUrl } });
+  return empresa ? empresa.toJSON() : null;
 };
 
-export const removeAluno = async (id: number): Promise<number> => {
-  return await Aluno.destroy({ where: { id } });
+export const removeEmpresa = async (id: number): Promise<number> => {
+  return await Empresa.destroy({ where: { id } });
 };
 
-export const updateAluno = async (
-  id: number,
-  alunoData: AlunoInput
-): Promise<Aluno | null> => {
-  const aluno = await Aluno.findByPk(id);
-  if (aluno) {
-    await aluno.update({
-      name: alunoData.name,
-      email: alunoData.email,
-      phone: alunoData.phone,
-      base_monthly_fee: alunoData.base_monthly_fee,
-      total_monthly_fee: alunoData.base_monthly_fee,
-    });
-    return aluno;
+export const updateEmpresa = async (id: number, empresaData: EmpresaInput): Promise<EmpresaType | null> => {
+  const empresa = await Empresa.findByPk(id);
+  if (empresa) {
+    await empresa.update(empresaData);
+    return empresa.toJSON();
   }
   return null;
 };
 
-export default Aluno;
+export default Empresa;
