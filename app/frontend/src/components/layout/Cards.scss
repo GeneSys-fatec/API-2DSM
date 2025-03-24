@@ -3,13 +3,19 @@
 .card{
     font-family: $font-stack;
     background-color: $background-color;
-    text-align: center;
     display: flex;
-
+    text-align: center;
+    align-items: center;
     justify-content: center;
     padding: 10px;
 
     .conteudo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5em;
+        padding: 1em;
+        width: 90%;
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
@@ -23,4 +29,3 @@
         }
     }
 }
-
