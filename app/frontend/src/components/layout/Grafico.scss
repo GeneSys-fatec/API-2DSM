@@ -1,27 +1,29 @@
 @import './_variaveis';
 
-.graficos{
+.graficos {
     display: flex;
     font-family: $font-stack;
-    font-size: 28px ;
+    font-size: 28px;
     background-color: $background-color;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     max-width: 40%;
-    .containerGraficos{
+
+    .containerGraficos {
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-        display: flex;        
-        align-items : center;
-        flex-direction: column;   
-        gap: 10px;             
-        padding: 10px; 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
         margin: 2em;
         max-width: 90%;
     }
-    .texto-foto{
+
+    .texto-foto {
         display: flex;
         align-items: center;
         gap: 1em;

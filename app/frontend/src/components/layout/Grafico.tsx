@@ -34,7 +34,7 @@ const Grafico: React.FC<GraficoProps> = ({ iconeCard, tituloCard }) => {
                             labelLine={false}
                             label={({ name, quantidade, x, y, midAngle, innerRadius, outerRadius, percent }) => {
                                 const RADIAN = Math.PI / 180;
-                                const radius = innerRadius + (outerRadius - innerRadius) * 0.1 ;
+                                const radius = innerRadius + (outerRadius - innerRadius) * 0.1;
                                 const xPos = radius * Math.cos(-midAngle * RADIAN) + x;
                                 const yPos = radius * Math.sin(-midAngle * RADIAN) + y;
                                 return (

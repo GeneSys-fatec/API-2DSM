@@ -1,6 +1,6 @@
 @import './variaveis';
 
-.card{
+.card {
     font-family: $font-stack;
     background-color: $background-color;
     display: flex;
@@ -8,24 +8,65 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    position: relative;
 
-    .conteudo{
+    .conteudo {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        max-width: 43.75em;
         gap: 5em;
         padding: 1em;
-        width: 90%;
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-        h3{
+
+        h3 {
             font-size: 40px;
             font-weight: bold;
         }
-        
-        p{
-            font-size: 23px;    
+
+        p {
+            font-size: 23px;
         }
+    }
+
+    .conteudo-card {
+        gap: 5em;
+        margin: 0.8em;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 13%;
+        bottom: 13%;
+        left: 50%;
+        width: 2px;
+        background: repeating-linear-gradient(
+            to bottom,
+            black,
+            black 5px,
+            transparent 5px,
+            transparent 10px
+        );
+        transform: translateX(-50%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 50%;
+        height: 2px;
+        background: repeating-linear-gradient(
+            to right,
+            black,
+            black 5px,
+            transparent 5px,
+            transparent 10px
+        );
+        transform: translateY(-50%);
     }
 }
