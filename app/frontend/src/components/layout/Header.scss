@@ -4,17 +4,19 @@
     align-items: start;
     display: flex;
     background-color: $background-color;
+
     .logo {
         justify-content: flex-start;
         display: inline;
         margin: 0.5em;
-        width: 15%;
+        width: 17%;
         height: 35%;
     }
-    .container{
+
+    .container {
         margin: 0%;
         padding-top: 3em;
-        
+
         h1 {
 
             font-family: $font-stack;
@@ -24,6 +26,7 @@
             text-transform: uppercase;
 
         }
+
         h2 {
             font-family: $font-stack;
             font-size: 34px;

@@ -1,3 +1,14 @@
+@import 'components/layout/variaveis'; 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background-color;
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +41,7 @@
 
 .dashboard{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
 }
