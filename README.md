@@ -35,7 +35,8 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
  <span id="dor-dod">
 
 ## 📍 DoR Definition of Ready
-[DoR API.docx](https://github.com/user-attachments/files/19251411/DoR.API.docx)
+**:link: Clique no link abaixo para visualizar o DoR do projeto:**  
+> [Definition of Ready](https://docs.google.com/document/d/1_yX0LBt2_SmMM5A1oGvAi57aOLmhgI5GVjWYFB8OikM/edit?usp=sharing)
 
 
 <br>
@@ -61,11 +62,11 @@ Sprint | Previsão | Status|
 <details>
   <summary>Tasks - Sprint 1</summary>
  
-- [ ] Criar Componentes no React;
-- [ ] Criar Página Principal do Dashboard;
-- [ ] Criar Gráfico Simulando Dados Reais;
-- [ ] Criar Lógica de Criação Dinâmica das Rotas;
-- [ ] Implementar Estilização e Responsividade.
+- [x] Criar Componentes no React;
+- [x] Criar Página Principal do Dashboard;
+- [x] Criar Gráfico Simulando Dados Reais;
+- [x] Criar Lógica de Criação Dinâmica das Rotas;
+- [x] Implementar Estilização.
 </details>
 
 <br>
@@ -100,7 +101,7 @@ Sprint | Previsão | Status|
 
 ## 🎯 Backlog do Produto & User Stories
 **:link: Clique no link abaixo para visualizar o backlog do produto:**  
-> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1H0PJxLwD0e1l6761r8PlPmms5jn0AvDcWyaNzSeVjQs/edit?usp=sharing)
+> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1-QpBBtd0Oluz9lutFUXGW1rQKdcMt9MUiGGMR-kGaT4/edit?usp=sharing)
 
 <details>
      <summary>Backlog - Sprint 1</summary>
@@ -124,7 +125,7 @@ Sprint | Previsão | Status|
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.| 6 |
+| BL06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| 6 |
 | BL08 | BAIXA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 8 |
 | BL09 | BAIXA | Página de Exibição das Empresas | Como usuário, quero acessar uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| 9 |
 
@@ -150,7 +151,7 @@ Sprint | Previsão | Status|
 | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
 | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
 | Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.|
-| Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas e usuários em um gráfico dinâmico, para identificar as cidades de maior adoção.|
+| Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.|
 | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
 | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
 | Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.|
@@ -186,6 +187,7 @@ Sprint | Previsão | Status|
 | Scrum Master  | Gabriel Calebe |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-medeiros-516ab3325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gbmedeiros00)          |
 |  Team Member  | Ana Júlia Gaspar |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-gaspar-957775325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/anajgaspar)        |
 | Team Member |   Emmanuel Yokoyama         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuelyokoyama/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/EmmanuelJYokoyama)              |
+| Team Member |   Gabriel Fernando       |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-fernando-bb430b330) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Gabriel-Fernando-Lima)              |
 | Team Member |   Lavínia Piratello         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lavinia-piratello-6a82101b1/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/laviniappiratello)             |
 | Team Member | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
 
