@@ -6,10 +6,10 @@ POST {{empresa_url}}/create
 Content-Type: application/json
 
 {
-  "nameSponsor": "Patrocinador TWOPERTOPIWERTOPIERTWIOP",
-  "descriptionTitle": "Título da Descrição",
-  "descriptionSponsor": "Uma descrição detalhada do patrocinador.",
-  "exclusiveUrl": "url-exclusiva-3t3243",
+  "nameSponsor": "HELPNEI",
+  "descriptionTitle": "TITULO",
+  "descriptionSponsor": "Uma descrição detalhada.",
+  "exclusiveUrl": "url-exclusiva",
   "sponsorLogo": "https://exemplo.com/logo.png",
   "site_web": "https://exemplo.com",
   "urlSponsor": "https://exemplo.com/sponsor",
