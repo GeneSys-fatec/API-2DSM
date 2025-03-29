@@ -1,10 +1,10 @@
 import React from "react";
-import "./TransacoesRealizadas.scss";
+import "./Grafico.scss";
 import { BarChart, Bar, Rectangle, ResponsiveContainer, XAxis, YAxis, CartesianGrid } from "recharts";
 
 interface TransacoesRealizadasProps {
-  totalDoisAnos: number;
-  totalSeisMeses: number;
+  ultimos3Dias: number;
+  ultimaSemana: number;
 }
 
 const info = [
@@ -20,27 +20,33 @@ const info = [
   { name: "Out", quantidade: 1390 }
 ];
 
-const TransacoesRealizadas: React.FC<TransacoesRealizadasProps> = ({ totalDoisAnos, totalSeisMeses }) => {
+const TransacoesRealizadas: React.FC<TransacoesRealizadasProps> = ({ ultimos3Dias, ultimaSemana }) => {
   return (
-    <div className="transacoes-realizadas">
-      <h3>Transações Realizadas</h3>
-      <p>Total últimos 2 anos: {totalDoisAnos}</p>
-      <p>Total últimos 6 meses: {totalSeisMeses}</p>
-      <div>
-      <ResponsiveContainer width={700} height={400}>
-        <BarChart
-          width={500}
-          height={400}
-          data={info}>
-          <CartesianGrid strokeDasharray="3 3"/>
-          <XAxis dataKey="name" fontSize={20}/>
-          <YAxis fontSize={20}/>
-          <Bar dataKey="quantidade" fill="#9dda97" barSize={30} activeBar={<Rectangle fill="#143357"/>}/>
-        </BarChart>
-      </ResponsiveContainer>
+    <div className="graficos">
+      <div className="containerGraficos">
+        <div className="dadosGraficos">
+          <img src="https://img.icons8.com/?size=100&id=G7xxWUssqjYw&format=png&color=143357" />
+          <h3>Transações Realizadas</h3>
+        </div>
+        <div className="textoGraficos">
+          <p>Nos últimos 3 dias: <br /><span className="linhaPontilhada"></span>{ultimos3Dias}</p>
+          <p>Na última semana: <br /><span className="linhaPontilhada"></span>{ultimaSemana}</p>
+        </div>
+        <div>
+          <ResponsiveContainer width={600} height={300}>
+            <BarChart
+              width={500}
+              height={400}
+              data={info}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" fontSize={20} />
+              <YAxis fontSize={20} />
+              <Bar dataKey="quantidade" fill="#9dda97" barSize={30} activeBar={<Rectangle fill="#143357" />} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
-    
   );
 };
 

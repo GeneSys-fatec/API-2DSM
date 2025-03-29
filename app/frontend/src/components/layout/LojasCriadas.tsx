@@ -2,14 +2,21 @@ import React from "react";
 import "./LojasCriadas.scss";
 
 interface LojasCriadasProps {
-  valor: number;
+  valorCard: number;
 }
 
-const LojasCriadas: React.FC<LojasCriadasProps> = ({ valor }) => {
+const LojasCriadas: React.FC<LojasCriadasProps> = ({ valorCard }) => {
   return (
-    <div className="lojas-criadas">
-      <h3>Lojas Criadas</h3>
-      <p>{valor}</p>
+    <div className="card">
+      <div className="conteudo">
+        <div className="conteudo-card">
+          <img src="https://img.icons8.com/?size=100&id=78230&format=png&color=143357" />
+          <div className="dados-card">
+            <h3>{valorCard}</h3>
+            <p>Lojas Criadas</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

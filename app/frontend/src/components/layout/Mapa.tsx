@@ -1,5 +1,5 @@
 import React from "react";
-import "./Grafico.scss";
+import "./Mapa.scss";
 import { PieChart, Pie, Cell } from "recharts";
 
 interface GraficoProps {
@@ -19,8 +19,8 @@ const colors = ["#17f9ff", "#00b4fc", "#005bc5", "#012677", "#001449"];
 
 const Grafico: React.FC<GraficoProps> = ({ iconeCard, tituloCard }) => {
     return (
-        <div className="graficos">
-            <div className="containerGraficos">
+        <div className="mapa">
+            <div className="containerMapa">
                 <div className="texto-foto">
                     <img className="imgGrafico" src={iconeCard} alt="Ícone do Gráfico" />
                     <h3 className="titulo-grafico">{tituloCard}</h3>
