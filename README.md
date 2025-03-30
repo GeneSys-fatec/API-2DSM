@@ -9,7 +9,7 @@ Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da 
 <span id="sumario">
 
 <div align=center>
-<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="dor-dod"> DoR e DoD </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
+<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="#dor-dod"> DoR e DoD </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
 <a href ="#backlog&userstories"> Backlog & User Stories </a> | <a href ="#registros"> Registros das Sprints </a> | <a href ="#equipe"> Equipe </a>
 </div>
 
@@ -38,10 +38,11 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
 **:link: Clique no link abaixo para visualizar o DoR do projeto:**  
 > [Definition of Ready](https://docs.google.com/document/d/1_yX0LBt2_SmMM5A1oGvAi57aOLmhgI5GVjWYFB8OikM/edit?usp=sharing)
 
-
 <br>
 
 ## 📍 DoD Definition of Done
+**:link: Clique no link abaixo para visualizar o DoD do projeto:**  
+> [Definition of Done](https://docs.google.com/document/d/142-spFvZzo04tRTbLO0dZs-c4uruG32qb-unrMd3bJ0/edit?usp=sharing)
 
 <br>
  
@@ -52,7 +53,7 @@ Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da
 Sprint | Previsão | Status|
 |------|--------|------|
 |Kick Off | 24/02/2025 - 28/02/2025 |✔️Finalizado|
-|01 | 10/03/2025 - 30/03/2025 |Em Andamento|
+|01 | 10/03/2025 - 30/03/2025 |✔️Finalizado|
 |02|  07/04/2025 - 27/04/2025 |a fazer|
 |03| 05/05/2025 - 25/05/2025 |a fazer|
 |Feira de Soluções| 29/05/2025 |a fazer|
@@ -167,6 +168,7 @@ Sprint | Previsão | Status|
 ## 📸 Registros das Sprints
 
 <h3>📌Sprint 1</h3>
+![Registro da Sprint 1](https://github.com/user-attachments/assets/1e9a4d63-9ad3-46f7-894d-cc82b396f51b)
 
 <br>
 
