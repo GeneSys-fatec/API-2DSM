@@ -168,7 +168,7 @@ Sprint | Previsão | Status|
 ## 📸 Registros das Sprints
 
 <h3>📌Sprint 1</h3>
-![Registro da Sprint 1](https://github.com/user-attachments/assets/1e9a4d63-9ad3-46f7-894d-cc82b396f51b)
+<img src="app/frontend/assets-readme/dashboard1.png">
 
 <br>
 
