@@ -168,7 +168,7 @@ Sprint | Previsão | Status|
 ## 📸 Registros das Sprints
 
 <h3>📌Sprint 1</h3>
-<img src="app/frontend/assets-readme/dashboard1.png">
+<img src="assets-readme/dashboard1.png">
 
 <br>
 
