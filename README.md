@@ -1,199 +1,57 @@
-## 💻 Aprendizado por Projeto Integrado (API) 
+<span id="topo">
 
-Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
-Uso de estratégias para entender o problema, conceber uma solução viável ao desenvolver e implementar o MVP seguido de sua operação (CDIO). 
-Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da Fatec SJC com definição das datas do kickoff e das sprints.
+<h1 align="center">Sprint 1: 10/03/2025 - 30/03/2025</h1>
+
+<p align="center">
+    <a href="#objetivos">Objetivos da sprint</a> &nbsp |&nbsp &nbsp
+    <a href="#entregas">Entregas</a> &nbsp |&nbsp &nbsp
+    <a href="#metricas">Métricas do time</a> 
+</p>
 
 <br>
 
-<span id="sumario">
+O projeto baseia-se no desenvolvimento de um Dashboard de Indicadores para monitorar e visualizar o impacto das empresas parceiras à Helpnei. Tendo em mente o MVP, a primeira sprint se deu com a criação da versão web, focada em desktop, do Dashboard com dados fictícios para facilitar o entendimento e a validação da estrutura. Para isso, foram levantados e validados os requisitos e o protótipo, construindo a interface visando uma entrega de valor condizente com a dor do cliente.
 
-<div align=center>
-<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="#dor-dod"> DoR e DoD </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
-<a href ="#backlog&userstories"> Backlog & User Stories </a> | <a href ="#registros"> Registros das Sprints </a> | <a href ="#equipe"> Equipe </a>
+<br>
+
+<span id="objetivos">
+    
+## :dart: Objetivos da Sprint
+Os requisitos (tanto do cliente como da instituição de ensino) abrangidos por essa sprint são:
+- **RF 01:** Visão Geral do Dashboard com os Indicadores de Crescimento, que são: Número de Lojas Criadas, Número de Patrocinados, Número de Comunidade, Usuários Impactados e Distribuição Geográfica (cidades atendidas).
+- **RNF:** Utilizar HTML, CSS e JavaScript.
+
+<br>
+
+<span id="entregas">
+        
+## :heavy_check_mark: Entregas
+
+Para entregas da sprint, tivemos os artefatos SCRUM validados, como Backlog do Produto, Backlog da Sprint e User Stories, através de comunicação direta entre o PO e o cliente.
+Para extrair e entender os desejos do cliente, foi construído um protótipo inicial no Figma, criando a identidade visual e design do sistema e apresentado para validação com o cliente, onde o resultado deste protótipo, escrito utilizando React com dados fictícios, simulando os dados reais, acordadas para a primeira sprint pode ser observado a seguir:
+
+<a href='https://youtu.be/FqiySP5TJ9k'>Vídeo do Projeto</a>
+
+<br>
+
+### RF 01: Visão Geral do Dashboard com os Indicadores de Crescimento
+O Dashboard deve exibir Indicadores de Crescimento, como o número de lojas criadas, usuários impactados, número de patrocinados e a distribuição geográfica (cidades atendidas). Os dados devem ser apresentados de forma clara, com gráficos e métricas numéricas, e devem ser atualizados em tempo real ou em um intervalo definido. O usuário deve conseguir filtrar os indicadores de crescimento por períodos específicos.
+Foi desenvolvido o layout (front-end) desse requisito, com dados fictícios para simular os dados reais, e passará por refinamento e incremento na sprint 2.
+
+<br>
+
+<span id="metricas">
+    
+## :chart_with_upwards_trend: Métricas do Time
+Para essa primeira sprint, a equipe toda focou no front-end do projeto.
+Cada um ficou responsável por uma tarefa diferente para ser implementado no layout do Dashboard, como na criação dos componentes em React, na estilização e estruturação da página e na criação dos gráficos, seguindo o mockup realizado no Figma. 
+O acompanhamento de atividades, responsabilidade do Scrum Master, se encontra na imagem adiante, que contém o gráfico Burndown gerado pela equipe, onde o eixo X são os dias trabalhados na sprint e os valores do eixo Y representam as entregas e esforços realizados com o passar do tempo, incluindo as atividades desenvolvidas e seus responsáveis.
+
+<div align="center">
+    
+![Burndown Chart](https://github.com/gbmedeiros00/testeee/blob/main/burndown-sprin1.jpg)
 </div>
 
 <br>
 
-<span id="projeto">
-
-## 📋 Sobre o projeto
-> **📌 Status do Projeto: Em Desenvolvimento**
- 
-Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da plataforma, facilitando o acompanhamento do crescimento do projeto e oferecendo dados estratégicos e detalhados para patrocinadores e stakeholders.
- 
-<br>
- 
-<span id="tecnologias">
- 
-## 🔧 Tecnologias
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&logo=sass) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) 
- 
-<br>
-
- <span id="dor-dod">
-
-## 📍 DoR Definition of Ready
-**:link: Clique no link abaixo para visualizar o DoR do projeto:**  
-> [Definition of Ready](https://docs.google.com/document/d/1_yX0LBt2_SmMM5A1oGvAi57aOLmhgI5GVjWYFB8OikM/edit?usp=sharing)
-
-<br>
-
-## 📍 DoD Definition of Done
-**:link: Clique no link abaixo para visualizar o DoD do projeto:**  
-> [Definition of Done](https://docs.google.com/document/d/142-spFvZzo04tRTbLO0dZs-c4uruG32qb-unrMd3bJ0/edit?usp=sharing)
-
-<br>
- 
- <span id="sprints">
-
-## 📊 Sprints
- 
-Sprint | Previsão | Status|
-|------|--------|------|
-|Kick Off | 24/02/2025 - 28/02/2025 |✔️Finalizado|
-|01 | 10/03/2025 - 30/03/2025 |✔️Finalizado|
-|02|  07/04/2025 - 27/04/2025 |a fazer|
-|03| 05/05/2025 - 25/05/2025 |a fazer|
-|Feira de Soluções| 29/05/2025 |a fazer|
- 
-<br>
-
-<details>
-  <summary>Tasks - Sprint 1</summary>
- 
-- [x] Criar Componentes no React;
-- [x] Criar Página Principal do Dashboard;
-- [x] Criar Gráfico Simulando Dados Reais;
-- [x] Criar Lógica de Criação Dinâmica das Rotas;
-- [x] Implementar Estilização.
-</details>
-
-<br>
-
-<details>
-  <summary>Tasks - Sprint 2</summary>
-- [ ]
-</details>
-
-<br>
-
-<details>
-  <summary>Tasks - Sprint 3</summary>
-- [ ]
-</details> 
-
-<br>
-
-→ <a href="#sumario"> Voltar ao topo </a>
-
-<br>
-
-<span id="protótipo">
-
-## 💡 Protótipo
-**:link: Clique no link abaixo para visualizar o protótipo do projeto:**  
-> [Protótipo do Projeto](https://www.figma.com/design/SH4lK6gOZIokeUNJQtBIiI/GeneSys-API?node-id=0-1&p=f&t=shfLLSMznF3evchS-0)
-
-<br>
-
-<span id="backlog&userstories">
-
-## 🎯 Backlog do Produto & User Stories
-**:link: Clique no link abaixo para visualizar o backlog do produto:**  
-> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1-QpBBtd0Oluz9lutFUXGW1rQKdcMt9MUiGGMR-kGaT4/edit?usp=sharing)
-
-<details>
-     <summary>Backlog - Sprint 1</summary>
-      <div align="center">
-      <br>
-
-| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
-| --- | --- | --- | --- | --- |
-| BL01 | ALTA | Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| 1 |
-| BL02 | ALTA | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
-| BL03 | ALTA | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
-| BL04 | ALTA | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
-| BL05 | ALTA | Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.| 5 |
-
-  </details>
-
-<details>
-     <summary>Backlog - Sprint 2</summary>
-      <div align="center">
-      <br>
-
-| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
-| --- | --- | --- | --- | --- |
-| BL06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| 6 |
-| BL08 | BAIXA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 8 |
-| BL09 | BAIXA | Página de Exibição das Empresas | Como usuário, quero acessar uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| 9 |
-
-  </details>
-
-<details>
-     <summary>Backlog - Sprint 3</summary>
-      <div align="center">
-      <br>
-
-| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
-| --- | --- | --- | --- | --- |
-| BL07 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| 7 |
-
-  </details>
-
-<br>
-
-
-|          Título           |                     User Story                      |
-| :-------------------: | :----------------------------------------------------------: |
-| Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
-| Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
-| Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
-| Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.|
-| Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.|
-| Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
-| Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
-| Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.|
-
-<br>
-
-→ <a href="#sumario"> Voltar ao topo </a>
-
-<br>
-
-<span id="registros">
-
-## 📸 Registros das Sprints
-
-<h3>📌Sprint 1</h3>
-
-<img src="/assets-readme/Registro Sprint 1.png">
-
-<br>
-
-<h3>📌Sprint 2</h3>
-
-<br>
-
-<h3>📌Sprint 3</h3>
-
-<br>
-
-<span id="equipe">
-
-## 👤 Equipe
-|    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
-| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Product Owner |   Ana Beatriz Coelho         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abeatrizcoelho/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/abeatrizdscoelho)              |
-| Scrum Master  | Gabriel Calebe |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-medeiros-516ab3325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gbmedeiros00)          |
-|  Team Member  | Ana Júlia Gaspar |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-gaspar-957775325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/anajgaspar)        |
-| Team Member |   Emmanuel Yokoyama         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuelyokoyama/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/EmmanuelJYokoyama)              |
-| Team Member |   Gabriel Fernando       |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-fernando-bb430b330) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Gabriel-Fernando-Lima)              |
-| Team Member |   Lavínia Piratello         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lavinia-piratello-6a82101b1/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/laviniappiratello)             |
-| Team Member | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
-
-<br>
-
-→ <a href="#sumario"> Voltar ao topo </a>
+→ [Voltar ao topo](#topo)
