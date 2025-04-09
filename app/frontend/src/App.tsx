@@ -1,12 +1,12 @@
 import './App.scss';
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import LojasCriadas from "./components/layout/LojasCriadas"
-import Patrocinado from "./components/layout/Patrocinado"
-import UsuariosInseridos from "./components/layout/UsuariosInseridos"
-import TransacoesRealizadas from "./components/layout/TransacoesRealizadas"
-import Grafico from "./components/layout/Mapa";
-import "./components/layout/Cards.scss"
+import Header from "./components/pages/Dashboard/Header";
+import Footer from "./components/pages/Dashboard/Footer";
+import LojasCriadas from "./components/pages/Dashboard/LojasCriadas"
+import Patrocinado from "./components/pages/Dashboard/Patrocinado"
+import UsuariosInseridos from "./components/pages/Dashboard/UsuariosInseridos"
+import TransacoesRealizadas from "./components/pages/Dashboard/TransacoesRealizadas"
+import Grafico from "./components/pages/Dashboard/Mapa";
+import "./components/pages/Dashboard/Cards.scss"
 
 function App() {
   return (
