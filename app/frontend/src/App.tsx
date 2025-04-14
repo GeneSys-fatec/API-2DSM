@@ -3,6 +3,7 @@ import Header from "./components/pages/Dashboard/Header";
 import Footer from "./components/pages/Dashboard/Footer";
 import LojasCriadas from "./components/pages/Dashboard/LojasCriadas"
 import Patrocinado from "./components/pages/Dashboard/Patrocinado"
+import Navbar from "./components/layout/Navbar"
 import UsuariosInseridos from "./components/pages/Dashboard/UsuariosInseridos"
 import TransacoesRealizadas from "./components/pages/Dashboard/TransacoesRealizadas"
 import Grafico from "./components/pages/Dashboard/Mapa";
@@ -11,6 +12,7 @@ import "./components/pages/Dashboard/Cards.scss"
 function App() {
   return (
     <body>
+      <Navbar></Navbar>
       <div>
         <Header logoEmpresa="https://agenciaship.com.br/wp-content/uploads/2023/05/Design-sem-nome-6-1-300x300.png" nomeEmpresa="Agência Ship" />
         <div className='dashboard'>
