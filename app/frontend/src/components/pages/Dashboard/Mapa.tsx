@@ -1,62 +1,48 @@
 import React from "react";
-import "./Mapa.scss";
-import { PieChart, Pie, Cell } from "recharts";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import type { LatLngTuple, LatLngBoundsExpression } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import '../Dashboard/Mapa.scss';
+import L from 'leaflet';
 
-interface GraficoProps {
-    iconeCard: string;
-    tituloCard: string;
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: "/leaflet/marker-icon-2x.png",
+    iconUrl: "/leaflet/marker-icon.png",
+    shadowUrl: "/leaflet/marker-shadow.png",
+});
+
+const Mapa: React.FC = ({ }) => {
+    const center: LatLngTuple = [-14.235, -51.9253]
+
+    const brasilBounds: LatLngBoundsExpression = [
+        [-34.0, -74.0],
+        [5.5, -34.0]
+    ];
+
+    return (
+        <div>
+            <MapContainer className="map-container"
+                center={center}
+                zoom={4.6}
+                maxZoom={5}
+                minZoom={4.6}
+                scrollWheelZoom={false}
+                maxBounds={brasilBounds}
+                maxBoundsViscosity={1.0}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={center}>
+                    <Popup>
+                        Mensagem pop-up!
+                    </Popup>
+                </Marker>
+            </MapContainer>
+        </div>
+    )
 }
 
-const data = [
-    { name: "SP", quantidade: 48.2 },
-    { name: "RJ", quantidade: 7.4 },
-    { name: "MG", quantidade: 22.1 },
-    { name: "GO", quantidade: 25.6 },
-    { name: "PR", quantidade: 13.7 }
-];
+export default Mapa;
 
-const colors = ["#17f9ff", "#00b4fc", "#005bc5", "#012677", "#001449"];
 
-const Grafico: React.FC<GraficoProps> = ({ iconeCard, tituloCard }) => {
-    return (
-        <div className="mapa">
-            <div className="containerMapa">
-                <div className="texto-foto">
-                    <img className="imgGrafico" src={iconeCard} alt="Ícone do Gráfico" />
-                    <h3 className="titulo-grafico">{tituloCard}</h3>
-                </div>
-                <div className="grafico">
-                    <PieChart width={700} height={400}>
-                        <Pie
-                            data={data}
-                            cx="50%"
-                            cy="50%"
-                            labelLine={false}
-                            label={({ name, quantidade, x, y, midAngle, innerRadius, outerRadius, percent }) => {
-                                const RADIAN = Math.PI / 180;
-                                const radius = innerRadius + (outerRadius - innerRadius) * 0.1;
-                                const xPos = radius * Math.cos(-midAngle * RADIAN) + x;
-                                const yPos = radius * Math.sin(-midAngle * RADIAN) + y;
-                                return (
-                                    <text x={xPos} y={yPos} fill="black" textAnchor="middle" dominantBaseline="central" fontSize={15}>
-                                        {`${name}: ${quantidade}%`}
-                                    </text>
-                                );
-                            }}
-                            outerRadius={120}
-                            fill="#8884d8"
-                            dataKey="quantidade"
-                        >
-                            {data.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                            ))}
-                        </Pie>
-                    </PieChart>
-
-                </div>
-            </div>
-        </div>
-    );
-};
-
-export default Grafico;
