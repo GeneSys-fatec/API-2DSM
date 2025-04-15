@@ -24,9 +24,9 @@ const Mapa: React.FC = ({ }) => {
             <MapContainer className="map-container"
                 center={center}
                 zoom={4.6}
-                maxZoom={5}
+                maxZoom={9}
                 minZoom={4.6}
-                scrollWheelZoom={false}
+                scrollWheelZoom={true}
                 maxBounds={brasilBounds}
                 maxBoundsViscosity={1.0}>
                 <TileLayer

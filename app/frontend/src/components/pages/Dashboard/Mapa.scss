@@ -1,7 +1,19 @@
 @import '../../layout/variaveis';
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: $background-color; /* Cor de fundo */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+}
 
 .map-container {
-    height: 70vh;
-    width: 70vh;
+    width: 600px; /* Largura fixa */
+    height: 600px; /* Altura fixa */
     z-index: 2;
+    border: 2px solid $primary-color; /* Borda para destacar */
+    border-radius: 10px;
 }
