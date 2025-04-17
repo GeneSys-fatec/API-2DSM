@@ -5,7 +5,6 @@ import LojasCriadas from "./components/pages/Dashboard/LojasCriadas"
 import Patrocinado from "./components/pages/Dashboard/Patrocinado"
 import Navbar from "./components/layout/Navbar"
 import UsuariosInseridos from "./components/pages/Dashboard/UsuariosInseridos"
-import Grafico from "./components/pages/Dashboard/Mapa";
 import "./components/pages/Dashboard/Cards.scss"
 import Mapa from './components/pages/Dashboard/Mapa';
 
