@@ -6,45 +6,80 @@ $navbar-hover-color: lighten($navbar-bg-color, 10%);
 $navbar-height: 60px;
 
 .navbar {
-    font-family: $font-stack;
-    background-color: $navbar-bg-color;
-    height: $navbar-height;
+  font-family: $font-stack;
+  background-color: $navbar-bg-color;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  img{
+    margin-top: 5px;
+    width: 170px;
+    height: fit-content;
+  }
+  .logo-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
+    
+    .navbar-logo {
+      width: 80px;
+      height: auto;
+      display: block; // Evita problemas de alinhamento inline
+    }
+  }
 
-    .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: $navbar-text-color;
-        text-decoration: none;
+  .contatos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+    }
+  
+    svg {
+      width: 40px; /* Ajustado para manter proporção */
+      height: 40px;
+      fill: currentColor; /* Adiciona cor automática */
+    }
+  }
+  
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: $navbar-text-color;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $navbar-hover-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+
+    .logo-container {
+      justify-content: center;
+      margin-bottom: 1rem;
     }
 
     .nav-links {
-        display: flex;
-        gap: 1.5rem;
-
-        a {
-            color: $navbar-text-color;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-
-            &:hover {
-                color: $navbar-hover-color;
-            }
-        }
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
     }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        padding: 1rem;
-
-        .nav-links {
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-    }
+  }
 }
