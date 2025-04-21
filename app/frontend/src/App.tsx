@@ -7,6 +7,8 @@ import Navbar from "./components/layout/Navbar"
 import UsuariosInseridos from "./components/pages/Dashboard/UsuariosInseridos"
 import "./components/pages/Dashboard/Cards.scss"
 import Mapa from './components/pages/Dashboard/Mapa';
+import Cadastro from './components/pages/Registro/Cadastro'
+import Login from './components/pages/Registro/Login'
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Navbar></Navbar>
       <div>
         <Header logoEmpresa="https://agenciaship.com.br/wp-content/uploads/2023/05/Design-sem-nome-6-1-300x300.png" nomeEmpresa="Agência Ship" />
+<<<<<<< HEAD
         <div className='dashboard'>
           <div className='cards-esquerda'>
             <Patrocinado valorCard={322} />
@@ -28,6 +31,21 @@ function App() {
             <Mapa />
           </div>
         </div>
+=======
+        {/* <div className='dashboard'>
+          <Patrocinado valorCard={322} />
+          <LojasCriadas valorCard={46} />
+          <div className='estatisticas'>
+            <UsuariosInseridos ultimos3Dias={50} ultimaSemana={127} />
+            <TransacoesRealizadas ultimos3Dias={10} ultimaSemana={25} />
+          </div>
+          <Mapa></Mapa> */}
+          <div>
+            <Cadastro></Cadastro>
+            <Login></Login>
+          </div>
+        {/* </div> */}
+>>>>>>> 328ad47c39e075c965d147a89fe7be9dcfe1293e
         <Footer linkInstagram="https://www.instagram.com/agenciaship/" linkWpp="https://api.whatsapp.com/send?phone=5512991235705" linkSite="https://agenciaship.com.br/" descEmpresa="Agência SHIP traça estratégias práticas para anunciar seu negócio online e encontrar clientes nas principais plataformas disponíveis para o Marketing Digital." />
       </div>
     </body>
