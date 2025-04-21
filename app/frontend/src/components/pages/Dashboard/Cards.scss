@@ -4,13 +4,16 @@
     font-family: $font-stack;
     background-color: $background-color;
     display: flex;
+    flex:1;
     text-align: center;
+    height: fit-content;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 25px;
 
     .conteudo {
         display: flex;
+        
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 10px;

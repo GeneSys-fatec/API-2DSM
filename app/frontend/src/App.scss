@@ -45,9 +45,23 @@ body {
   color: #61dafb;
 }
 
-.dashboard{
+.dashboard {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  height: fit-content;
+  justify-content: space-evenly;
+  align-items: stretch; /* Garante que todos os elementos tenham a mesma altura */
+  gap: 20px;
   max-width: 100%;
+}
+
+
+.graficos {
+  max-width: 60%; /* Expande um pouco mais */
+  width: auto; /* Para tornar mais flexível */
+}
+
+.map-container {
+  max-width: 100%;
+  height: auto;
 }

@@ -2,12 +2,14 @@
 
 .graficos {
     display: flex;
+    flex: 1;
     font-family: $font-stack;
     font-size: 28px;
     background-color: $background-color;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 100%;
     max-width: 40%;
 
     .containerGraficos {
