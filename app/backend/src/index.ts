@@ -2,6 +2,7 @@ import fastify from "fastify";
 import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import empresaRoutes from "./routes/empresaRoutes";
+import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ app.register(cors, {
 
 // Registro das rotas
 app.register(empresaRoutes, { prefix: "/empresa" });
+
+app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
 
 const start = async () => {
   try {

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import type { LatLngTuple, LatLngBoundsExpression } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -11,8 +12,17 @@ L.Icon.Default.mergeOptions({
     shadowUrl: "/leaflet/marker-shadow.png",
 });
 
-const Mapa: React.FC = ({ }) => {
+interface EstadoInfo {
+    estado: string;
+    quantidadeUsuarios: number;
+    quantidadeLojas: number;
+}
+
+const Mapa: React.FC = () => {
+    const [dadosEstados, setDadosEstados] = useState<EstadoInfo[]>([]);
+
     const center: LatLngTuple = [-14.235, -51.9253]
+
     const estadosDoBrasil: { estado: string; center: LatLngTuple }[] = [
         { estado: 'Acre', center: [-9.0238, -70.8120] },
         { estado: 'Alagoas', center: [-9.5713, -36.7820] },
@@ -48,30 +58,41 @@ const Mapa: React.FC = ({ }) => {
         [5.5, -34.0]
     ];
 
+    useEffect(() => {
+        fetch("http://localhost:3000/localizacao-estado")
+            .then((res) => res.json())
+            .then((data: EstadoInfo[]) => setDadosEstados(data))
+            .catch((err) => console.error("Erro ao buscar quantidades:", err));
+    }, []);
+
     return (
-        <div>
-            <MapContainer className="map-container"
-                center={center}
-                zoom={4.6}
-                maxZoom={4.6}
-                minZoom={4.6}
-                scrollWheelZoom={true}
-                maxBounds={brasilBounds}
-                maxBoundsViscosity={1.0}>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {estadosDoBrasil.map(({ estado, center }, index) => (
-                    <Marker key={index} position={center as [number, number]}>
+        <MapContainer className="map-container"
+            center={center}
+            zoom={4.6}
+            maxZoom={4.6}
+            minZoom={4.6}
+            scrollWheelZoom={true}
+            maxBounds={brasilBounds}
+            maxBoundsViscosity={1.0}>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            {estadosDoBrasil.map(({ estado, center }, index) => {
+                const info = dadosEstados.find(d => d.estado === estado);
+                return (
+                    <Marker key={index} position={center}>
                         <Popup>
-                            Mensagem pop-up!
+                            <strong>{estado}</strong><br />
+                            Usuários Impactados: {info?.quantidadeUsuarios ?? 0}<br />
+                            Lojas Criadas: {info?.quantidadeLojas ?? 0}
                         </Popup>
                     </Marker>
-                ))}
-            </MapContainer>
-        </div>
-    )
-}
+                );
+            })}
+        </MapContainer>
+    );
+};
 
 export default Mapa;
