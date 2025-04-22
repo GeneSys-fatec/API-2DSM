@@ -5,8 +5,8 @@
 <p align="center">
     <a href="#dor-dod">DoR e DoD</a> &nbsp |&nbsp &nbsp
     <a href="#objetivos">Objetivos da Sprint</a> &nbsp |&nbsp &nbsp
-    <a href="#entregas">Entregas</a> &nbsp |&nbsp &nbsp
-    <a href="#metricas">Métricas do time</a> 
+    <a href="#entrega">Entrega</a> &nbsp |&nbsp &nbsp
+    <a href="#metricas">Métricas do Time</a> 
 </p>
 
 <br>
@@ -50,9 +50,9 @@ O principal objetivo para essa primeira sprint era de desenvolver o front-end do
 
 <br>
 
-<span id="entregas">
+<span id="entrega">
         
-## ☑️ Entregas
+## ☑️ Entrega
 
 Para a primeira entrega, tivemos os artefatos SCRUM validados, como Backlog do Produto, Backlog da Sprint e User Stories, através de comunicação direta entre o PO e o cliente.
 Para extrair e entender os desejos do cliente, foi construído um protótipo inicial no Figma, criando a identidade visual e design do sistema e apresentado para validação com o cliente, onde o resultado deste protótipo, escrito utilizando React com dados fictícios, simulando os dados reais, acordadas para a primeira sprint pode ser observado a seguir:
