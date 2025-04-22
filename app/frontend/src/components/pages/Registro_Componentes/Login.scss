@@ -1,0 +1,101 @@
+@import '../../layout/variaveis';
+
+.login-page {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+  
+    h2 {
+      font-size: 1.6rem;
+      color: black;
+      margin: 0 auto;
+    }
+  
+    .cadastro-btn {
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      color: $second-color;
+      border: 1px solid $second-color;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: $second-color;
+        color: white;
+      }
+    }
+  }
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+
+    &:focus {
+      border-color: $second-color;
+    }
+  }
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  button {
+    background-color: $second-color;
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($second-color, 10%);
+    }
+  }
+}

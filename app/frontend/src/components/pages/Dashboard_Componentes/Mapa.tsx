@@ -13,6 +13,7 @@ L.Icon.Default.mergeOptions({
 
 const Mapa: React.FC = ({ }) => {
     const center: LatLngTuple = [-14.235, -51.9253]
+<<<<<<< HEAD
     const estadosDoBrasil: { estado: string; center: LatLngTuple }[] = [
         { estado: 'Acre', center: [-9.0238, -70.8120] },
         { estado: 'Alagoas', center: [-9.5713, -36.7820] },
@@ -42,6 +43,8 @@ const Mapa: React.FC = ({ }) => {
         { estado: 'Sergipe', center: [-10.5741, -37.3857] },
         { estado: 'Tocantins', center: [-10.1753, -48.2982] },
     ];
+=======
+>>>>>>> a53a0f4291b893cdad267b796fdbd4b40ac29d85
 
     const brasilBounds: LatLngBoundsExpression = [
         [-34.0, -74.0],
@@ -53,7 +56,11 @@ const Mapa: React.FC = ({ }) => {
             <MapContainer className="map-container"
                 center={center}
                 zoom={4.6}
+<<<<<<< HEAD
                 maxZoom={4.6}
+=======
+                maxZoom={9}
+>>>>>>> a53a0f4291b893cdad267b796fdbd4b40ac29d85
                 minZoom={4.6}
                 scrollWheelZoom={true}
                 maxBounds={brasilBounds}
@@ -62,6 +69,7 @@ const Mapa: React.FC = ({ }) => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+<<<<<<< HEAD
                 {estadosDoBrasil.map(({ estado, center }, index) => (
                     <Marker key={index} position={center as [number, number]}>
                         <Popup>
@@ -69,9 +77,22 @@ const Mapa: React.FC = ({ }) => {
                         </Popup>
                     </Marker>
                 ))}
+=======
+                <Marker position={center}>
+                    <Popup>
+                        Mensagem pop-up!
+                    </Popup>
+                </Marker>
+>>>>>>> a53a0f4291b893cdad267b796fdbd4b40ac29d85
             </MapContainer>
         </div>
     )
 }
 
+<<<<<<< HEAD
 export default Mapa;
+=======
+export default Mapa;
+
+
+>>>>>>> a53a0f4291b893cdad267b796fdbd4b40ac29d85
