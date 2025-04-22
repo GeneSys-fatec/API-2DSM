@@ -4,23 +4,20 @@
     font-family: $font-stack;
     background-color: $background-color;
     display: flex;
-    flex:1;
     text-align: center;
-    height: fit-content;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
+    padding: 10px;
 
     .conteudo {
         display: flex;
-        
         flex-wrap: wrap;
         justify-content: space-around;
-        padding: 10px;
+        padding: 15px;
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         width: 600px;
+        margin-bottom: -3px;
+        margin-top: -3px;
 
         h3 {
             font-size: 40px;
@@ -34,7 +31,7 @@
 
     .conteudo-card {
         gap: 5em;
-        margin: 0.8em;
+        margin: 1em;
         display: flex;
         align-items: center;
     }

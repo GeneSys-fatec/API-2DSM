@@ -1,0 +1,29 @@
+@import "./variaveis";
+
+$navbar-bg-color: #143357;
+$navbar-height: 100px;
+
+.navbar {
+  background-color: $navbar-bg-color;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: center; // Centraliza o logo
+  padding: 0 2rem;
+
+  .navbar-logo {
+    height: 60px; // Altura fixa para o logo
+    width: auto; // Largura proporcional
+    max-width: 300px; // Largura máxima
+  }
+
+  @media (max-width: 768px) {
+    height: 80px; // Altura menor em mobile
+    padding: 0 1rem;
+
+    .navbar-logo {
+      height: 50px;
+      max-width: 200px;
+    }
+  }
+}
