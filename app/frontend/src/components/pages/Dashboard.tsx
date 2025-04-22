@@ -15,13 +15,15 @@ function Dashboard() {
       <div>
         <Header logoEmpresa="https://agenciaship.com.br/wp-content/uploads/2023/05/Design-sem-nome-6-1-300x300.png" nomeEmpresa="Agência Ship" />
         <div className='dashboard'>
-          <div className='cards-esquerda'>
-            <Patrocinado valorCard={322} />
-            <LojasCriadas valorCard={46} />
-            <LojasCriadas valorCard={46} />
-          </div>
-          <div className='usuarios-impactados'>
-            <UsuariosInseridos ultimos3Dias={50} ultimaSemana={127} />
+          <div className='top-dashboard'>
+            <div className='cards-esquerda'>
+              <Patrocinado valorCard={322} />
+              <LojasCriadas valorCard={46} />
+              <LojasCriadas valorCard={46} />
+            </div>
+            <div className='usuarios-impactados'>
+              <UsuariosInseridos ultimos3Dias={50} ultimaSemana={127} />
+            </div>
           </div>
           <div className='distribuicao-geografica'>
             <Mapa />
