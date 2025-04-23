@@ -1,14 +1,14 @@
 import React from 'react';
 import './Cadastro.scss';
 
-const Cadastro: React.FC = ({ }) => {
+const Cadastro: React.FC = () => {
   return (
     <div className="cadastro-page">
       <div className="form-wrapper">
         <div className="form-container">
           <div className="form-header">
             <h2>Cadastre-se</h2>
-            <button className="login-btn">Já tem login?</button>
+            <a className="login-btn" href="/login">Já tem login?</a>
           </div>
 
           <form className="form-grid">

@@ -1,0 +1,37 @@
+@import '../../layout/variaveis';
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    flex-wrap: wrap;
+}
+
+.card-empresas {
+    display: flex;
+    background-color: #f3f2f2;
+    font-family: $font-stack;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 20%;
+    margin: 10px;
+    .logo-empresa {
+        height: 250px;
+        width: 250px;
+    }
+    .nome-empresa {
+        margin-bottom: 30px;
+    }
+    .botao-dashboard {
+        background-color: #143357;
+        color: $primary-color;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 30px;
+    }
+}

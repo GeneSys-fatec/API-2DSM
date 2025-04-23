@@ -1,0 +1,22 @@
+@import "./variaveis";
+
+$navbar-bg-color: #143357;
+$navbar-text-color: #ffffff;
+$navbar-hover-color: lighten($navbar-bg-color, 10%);
+$navbar-height: 10%;
+
+.header {
+  font-family: $font-stack;
+  background-color: $navbar-bg-color;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  img{
+    margin-top: 5px;
+    width: 170px;
+    height: fit-content;
+  }
+}
