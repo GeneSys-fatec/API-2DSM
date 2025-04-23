@@ -2,12 +2,12 @@ import { FastifyInstance } from 'fastify';
 import db from '../database/db';
 
 async function quantidadesPorEstadoRoutes(fastify: FastifyInstance) {
-  fastify.get('/localizacao-estado', async (request, reply) => {
+  fastify.get('/', async (request, reply) => {
     try {
       const [rows] = await db.query(
         `SELECT 
         c.estado AS estado,
-        COUNT(DISTINCT u.idUsuario) AS quantidadeUsuarios,
+        COUNT(DISTINCT u.id) AS quantidadeUsuarios,
         COUNT(DISTINCT l.idLojas) AS quantidadeLojas
         FROM cidade c
         LEFT JOIN usuarios u ON c.idCidade = u.idCidade
