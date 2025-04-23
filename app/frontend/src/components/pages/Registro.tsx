@@ -1,17 +1,17 @@
-import Nav from "../layout/NavbarVazia"
 import Cadastro from './Registro_Componentes/Cadastro'
- 
- 
+import Nav from "../layout/NavbarVazia";
+
+
 function Registro() {
     return (
-        <body>
+        <div>
             <div>
                 <Nav/>
                 <Cadastro></Cadastro>
             </div>
-        </body>
+        </div>
     );
 }
- 
- 
+
+
 export default Registro;

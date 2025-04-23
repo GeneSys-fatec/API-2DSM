@@ -10,7 +10,7 @@ import Mapa from './Dashboard_Componentes/Mapa';
 
 function Dashboard() {
   return (
-    <body>
+    <div>
       <Navbar linkInstagram="https://www.instagram.com/agenciaship/" linkWpp="https://api.whatsapp.com/send?phone=5512991235705" linkSite="https://agenciaship.com.br/" ></Navbar>
       <div>
         <Header logoEmpresa="https://agenciaship.com.br/wp-content/uploads/2023/05/Design-sem-nome-6-1-300x300.png" nomeEmpresa="Agência Ship" />
@@ -31,7 +31,7 @@ function Dashboard() {
         </div>
         <Footer descEmpresa="Agência SHIP traça estratégias práticas para anunciar seu negócio online e encontrar clientes nas principais plataformas disponíveis para o Marketing Digital."/>
       </div>
-    </body>
+    </div>
   );
 }
 

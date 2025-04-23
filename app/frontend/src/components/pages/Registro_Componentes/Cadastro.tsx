@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cadastro.scss';
 
-const Cadastro: React.FC = ({ }) => {
+const Cadastro: React.FC = () => {
   return (
     <div className="cadastro-page">
       <div className="form-wrapper">

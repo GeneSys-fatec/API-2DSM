@@ -5,12 +5,12 @@ import Nav from "../layout/NavbarVazia"
  
 function Registro() {
     return (
-        <body>
+        <div>
             <div>
                 <Nav/>
                 <Login></Login>
             </div>
-        </body>
+        </div>
     );
 }
  
