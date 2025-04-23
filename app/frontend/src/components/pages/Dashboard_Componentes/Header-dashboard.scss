@@ -1,0 +1,39 @@
+@import '../../layout/variaveis';
+
+.header {
+    justify-content: center;
+    display: flex;
+    background-color: $background-color;
+
+    .logo {
+        justify-content: flex-start;
+        display: inline;
+        margin: 0.5em;
+        width: 17%;
+        height: 32%;
+    }
+
+    .container {
+        margin: 0%;
+        padding-top: 7em;
+        flex-direction: column;
+        padding-bottom: 60px;
+
+        h1 {
+
+            font-family: $font-stack;
+            color: $second-color;
+            font-size: 64px;
+            margin: 0px;
+            text-transform: uppercase;
+
+        }
+
+        h2 {
+            font-family: $font-stack;
+            font-size: 25px;
+            text-transform: uppercase;
+
+        }
+    }
+}

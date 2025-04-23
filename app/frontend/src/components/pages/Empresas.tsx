@@ -1,19 +1,19 @@
-import Cadastro from './Registro_Componentes/Cadastro'
+import EmpresaCard from "./Home_Componentes/Empresa-card"; 
 import Nav from "../layout/NavbarVazia";
+import FooterPrincipal from "../layout/Footer"
 import NavbarPrincipal from "../layout/NavbarPrincipal";
 
-function Registro() {
+function Empresas() {
     return (
         <div>
             <div>
                 <Nav/>
                 <NavbarPrincipal></NavbarPrincipal>
                 <hr />
-                <Cadastro></Cadastro>
+                <EmpresaCard></EmpresaCard>
+                <FooterPrincipal></FooterPrincipal>
             </div>
         </div>
     );
 }
-
-
-export default Registro;
+export default Empresas;

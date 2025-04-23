@@ -8,7 +8,7 @@ const Cadastro: React.FC = () => {
         <div className="form-container">
           <div className="form-header">
             <h2>Cadastre-se</h2>
-            <button className="login-btn">Já tem login?</button>
+            <a className="login-btn" href="/login">Já tem login?</a>
           </div>
 
           <form className="form-grid">

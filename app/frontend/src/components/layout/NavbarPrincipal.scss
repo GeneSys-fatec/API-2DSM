@@ -1,0 +1,31 @@
+@import "./variaveis";
+
+.conte {
+    display: flex
+}
+
+.navbarprincipal {
+    background-color: $background-color;
+    margin: 1%;
+}
+.nav-item {
+    color: #000000;
+    margin: 0 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: -4px; 
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
