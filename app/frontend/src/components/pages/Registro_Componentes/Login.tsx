@@ -8,7 +8,7 @@ const Login: React.FC = ({ }) => {
         <div className="form-container">
           <div className="form-header">
             <h2>Login</h2>
-            <button className="cadastro-btn">Registre-se</button>
+            <a className="cadastro-btn" href='/registro'>Registre-se</a>
           </div>
           <form className="form-grid">
             <div className="form-row">

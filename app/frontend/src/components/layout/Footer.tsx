@@ -1,11 +1,14 @@
 import React from 'react';
+import "./Footer.scss";
 
-const Footer: React.FC = ({ }) => {
+const FooterPrincipal: React.FC = ({ }) => {
   return (
-    <footer>
-        Footer
-    </footer>
+    <div className='cont'>
+      <footer className='footer'>
+        <p>Helpnei - 2025 <br/> Todos os direitos reservados.</p>
+      </footer>
+    </div>
   );
 };
 
-export default Footer;
+export default FooterPrincipal;
