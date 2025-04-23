@@ -59,7 +59,7 @@ const Mapa: React.FC = () => {
     ];
 
     useEffect(() => {
-        fetch("http://localhost:3000/localizacao-estado")
+        fetch("http://localhost:3005/localizacao-estado")
             .then((res) => res.json())
             .then((data: EstadoInfo[]) => setDadosEstados(data))
             .catch((err) => console.error("Erro ao buscar quantidades:", err));
