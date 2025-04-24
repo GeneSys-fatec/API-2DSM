@@ -32,21 +32,24 @@ $navbar-height: 100px;
 
   .contatos {
     display: flex;
-    gap: 15px;
     align-items: center;
-  
+
     a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
+
+
     }
-  
-    svg {
-      width: 40px; /* Ajustado para manter proporção */
-      height: 40px;
-      fill: currentColor; /* Adiciona cor automática */
+    .ig{
+      width: 88%;
+      margin-right: 5px;
+    }
+    img {
+ 
+      width: 80%;
+
+      
     }
   }
   

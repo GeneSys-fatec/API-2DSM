@@ -10,6 +10,7 @@ function Registro() {
                 <NavbarPrincipal></NavbarPrincipal>
                 <hr />
                 <Cadastro></Cadastro>
+                
             </div>
         </div>
     );
