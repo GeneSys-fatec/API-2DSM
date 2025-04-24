@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import empresaRoutes from "./routes/empresaRoutes";
 import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
+import usuariosImpactadosDados from "./routes/usuariosEmpresa";
 
 dotenv.config();
 
@@ -27,6 +28,8 @@ app.register(cors, {
 app.register(empresaRoutes, { prefix: "/empresa" });
 
 app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
+
+app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
 
 const start = async () => {
   try {

@@ -10,7 +10,14 @@ import "./Dashboard_Componentes/Cards.scss"
 import Mapa from './Dashboard_Componentes/Mapa';
 import FooterPrincipal from "../layout/Footer"
 
+// function getData(n: number) {
+//   let dataAlvo = new Date()
+//   dataAlvo.setDate(dataAlvo.getDate() -n) 
+//   return dataAlvo
+// }
+
 function Dashboard() {
+
   return (
     <div>
       <Navbar linkInstagram="https://www.instagram.com/agenciaship/" linkWpp="https://api.whatsapp.com/send?phone=5512991235705" linkSite="https://agenciaship.com.br/" ></Navbar>

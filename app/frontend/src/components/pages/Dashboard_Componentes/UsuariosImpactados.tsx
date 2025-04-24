@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Grafico.scss";
 import { BarChart, Bar, Rectangle, ResponsiveContainer, XAxis, YAxis, CartesianGrid } from "recharts";
 
@@ -7,20 +7,62 @@ interface UsuariosImpactadosProps {
   ultimaSemana: number;
 }
 
-const info = [
-  { name: "Jan", quantidade: 1234 },
-  { name: "Fev", quantidade: 1321 },
-  { name: "Mar", quantidade: 1432 },
-  { name: "Abr", quantidade: 1132 },
-  { name: "Mai", quantidade: 1390 },
-  { name: "Jun", quantidade: 1234 },
-  { name: "Jul", quantidade: 1321 },
-  { name: "Ago", quantidade: 1432 },
-  { name: "Set", quantidade: 1132 },
-  { name: "Out", quantidade: 1390 }
-];
+const meses = {
+  "01": "Jan", "02": "Fev", "03": "Mar", "04": "Abr",
+  "05": "Mai", "06": "Jun", "07": "Jul", "08": "Ago",
+  "09": "Set", "10": "Out", "11": "Nov", "12": "Dez"
+};
+
+type UsuarioPorMes = {
+  mes: string;
+  total_usuarios: number;
+};
+
+//gera uma array com os ultimos 10 meses partindo da data atual
+
+function gerarUltimosMeses(qtd: number): string[] {
+  const hoje = new Date();  //salva a data atual
+  const resultado: string[] = [];
+
+  for (let i = qtd - 1; i >= 0; i--) { 
+    const data = new Date(hoje.getFullYear(), hoje.getMonth() - i, 1);  //guarda o mês de i meses atrás 
+    const ano = data.getFullYear();
+    const mes = (data.getMonth() + 1).toString().padStart(2, "0");  //deixa o mês no padrão 01, 02...
+    resultado.push(`${ano}-${mes}`);
+  }
+
+  return resultado;
+}
 
 const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({ ultimos3Dias, ultimaSemana }) => {
+
+  const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:3005/empresa-dados`)
+      .then(res => res.json())
+      .then((data: UsuarioPorMes[]) => {
+        const mapaDados: Record<string, number> = {};
+        data.forEach(item => {
+          mapaDados[item.mes] = item.total_usuarios;
+        });
+
+        //passa por cada mês do intervalo selecionado na função e verifica se tem algum usuario relacionado, se sim, quantidade recebe o total, se não, recebe 0
+        const ultimosMeses = gerarUltimosMeses(10).map(mesCompleto => {  
+          const [, mes] = mesCompleto.split("-");
+          return {
+            name: meses[mes as keyof typeof meses],
+            quantidade: mapaDados[mesCompleto] || 0
+          };
+        });
+  
+        setInfo(ultimosMeses);
+      })
+      .catch(err => {
+        console.error("Erro ao buscar dados do gráfico:", err);
+      });
+  }, []);
+
   return (
     <div className="graficos">
       <div className="containerGraficos">
