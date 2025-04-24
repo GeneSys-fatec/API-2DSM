@@ -1,7 +1,7 @@
 export type UserType = {
   nomeUsuario: string,
   emailUsuario: string,
-  senhausuario: string,
+  senhaUsuario: string,
   dataNasc: Date,
   telUsuario: string,
   idEmpresaPatrocinio: string,

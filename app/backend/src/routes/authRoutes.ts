@@ -1,17 +1,12 @@
 import { FastifyInstance } from "fastify";
+import {register, login} from "../controllers/authController"
 
-export default async function authRoutes(fastify: FastifyInstance) {
-  fastify.post("/login", async (request, reply) => {
-    const { username, password } = request.body as {
-      username: string;
-      password: string;
-    };
-
-    if (username === "admin" && password === "1234") {
-      const token = fastify.jwt.sign({ user: username });
-      return { token };
-    }
-
-    return reply.status(401).send({ error: "Credenciais inválidas" });
+const authRoute = async (fastify: FastifyInstance)=> {
+  fastify.post("/login", login);
+  fastify.post("/register", register);
+  fastify.get("/test", async (request, reply) => {
+    reply.send({ message: "Rota de teste funcionando!" });
   });
-}
+};
+
+export default authRoute
