@@ -2,11 +2,13 @@ import '../../App.scss';
 import Header from "./Dashboard_Componentes/Header";
 import Footer from "./Dashboard_Componentes/Footer";
 import LojasCriadas from "./Dashboard_Componentes/LojasCriadas"
+import Comunidades from "./Dashboard_Componentes/Comunidades"
 import Patrocinado from "./Dashboard_Componentes/Patrocinado"
 import Navbar from "../layout/Navbar"
-import UsuariosInseridos from "./Dashboard_Componentes/UsuariosInseridos"
+import UsuariosInseridos from "./Dashboard_Componentes/UsuariosImpactados"
 import "./Dashboard_Componentes/Cards.scss"
 import Mapa from './Dashboard_Componentes/Mapa';
+import FooterPrincipal from "../layout/Footer"
 
 function Dashboard() {
   return (
@@ -19,18 +21,25 @@ function Dashboard() {
             <div >
               <Patrocinado valorCard={322} />
               <LojasCriadas valorCard={46} />
-              <LojasCriadas valorCard={46} />
+              <Comunidades valorCard={100} />
             </div>
             <div className='usuarios-impactados'>
               <UsuariosInseridos ultimos3Dias={50} ultimaSemana={127} />
             </div>
           </div>
           <div className='distribuicao-geografica'>
+            <div className='mapalegenda'style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
+              <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" />
+              <h1 >Distribuição Geográfica</h1>
+            </div>
             <Mapa />
           </div>
         </div>
-        <Footer descEmpresa="Agência SHIP traça estratégias práticas para anunciar seu negócio online e encontrar clientes nas principais plataformas disponíveis para o Marketing Digital."/>
+        <Footer descEmpresa="Transformamos seu investimento em resultados reais, com estratégias personalizadas que conectam você ao cliente certo, no momento certo. 
+Simplificamos o marketing digital para você focar no que realmente importa: crescer o seu negócio."/>
+        <FooterPrincipal></FooterPrincipal>
       </div>
+      
     </div>
   );
 }

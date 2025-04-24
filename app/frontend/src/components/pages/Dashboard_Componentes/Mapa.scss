@@ -1,4 +1,19 @@
 @import '../../layout/variaveis';
+
+.distribuicao-geografica{
+    background-color: $primary-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 180px;
+    margin: 0em 1em 1em 1em;
+    margin-right: 30px;
+    
+}
+
 .map-wrapper {
     display: flex;
     justify-content: center;
@@ -11,9 +26,9 @@
 }
 
 .map-container {
-    width: 600px; /* Largura fixa */
-    height: 600px; /* Altura fixa */
+    width: 900px; 
+    height: 400px; 
     z-index: 2;
-    border: 2px solid $primary-color; /* Borda para destacar */
+    border: 2px solid $primary-color; 
     border-radius: 10px;
 }
