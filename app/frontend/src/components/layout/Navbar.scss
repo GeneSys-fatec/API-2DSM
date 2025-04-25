@@ -14,45 +14,41 @@ $navbar-height: 100px;
   justify-content: space-between;
   padding: 0 2rem;
 
-  img{
+  .logo {
     margin-top: 5px;
     width: 170px;
     height: fit-content;
   }
+
   .logo-container {
     display: flex;
     align-items: center;
-    
-    .navbar-logo {
-      width: 80px;
-      height: auto;
-      display: block; // Evita problemas de alinhamento inline
-    }
+
   }
 
   .contatos {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    width: 300px;
 
     a {
       display: flex;
-      align-items: center;
-      justify-content: center;
-
-
+      justify-content: end;
     }
-    .ig{
-      width: 88%;
-      margin-right: 5px;
-    }
+
     img {
- 
-      width: 80%;
+      padding: 5px;
+      width: 45%;
+      border: solid 1px #ffffff;
+      border-radius: 100%;
+      transition: background-color 0.3s;
 
-      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2)
+      }
     }
+
   }
-  
 
   .nav-links {
     display: flex;
