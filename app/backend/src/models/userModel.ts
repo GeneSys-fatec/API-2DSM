@@ -10,10 +10,10 @@ class User extends Model {
   public nomeUsuario!: string;
   public emailUsuario!: string;
   public senhaUsuario!: string;
-  public dataNasc!: Date;
-  public telUsuario!: string;
-  public idEmpresaPatrocinio!: number;
-  public idCidade!: number;
+  public dataNasc!: string | null;
+  public telUsuario!: string | null;
+  public idEmpresaPatrocinio!: number | null; // Permitir NULL
+  public idCidade!: number | null;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -56,11 +56,11 @@ User.init(
     },
     createdAt: {
       type: DataTypes.DATE,
-      allowNull: true, // Permite valor NULL
+      allowNull: true, 
     },    
     updatedAt: {
       type: DataTypes.DATE,
-      allowNull: true, // Permite valor NULL
+      allowNull: true, 
     },
   },
   {

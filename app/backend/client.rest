@@ -66,12 +66,12 @@ POST {{register_url}}
 Content-Type: application/json
 
 {
-  "nomeUsuario": "John Doe",
-  "emailUsuario": "johndoe@example.com",
-  "senhaUsuario": "senhaSegura123",
-  "dataNasc": "1990-05-01",
-  "telUsuario": "+55 11 98888-8888",
-  "idEmpresaPatrocinio": 58, 
+  "nomeUsuario": "John DAN",
+  "emailUsuario": "joana@mail.com",
+  "senhaUsuario": "senhasenha",
+  "dataNasc": "1995-05-01",
+  "telUsuario": "5512987654321",
+  "idEmpresaPatrocinio": 59, 
   "idCidade": 24
 }
 

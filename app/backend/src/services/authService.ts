@@ -17,7 +17,7 @@ export async function registerUser(userData: {
     senhaUsuario: string;
     dataNasc?: string;
     telUsuario?: string;
-    idEmpresaPatrocinio?: number;
+    idEmpresaPatrocinio: number;
     idCidade?: number;
   }) {
     try {

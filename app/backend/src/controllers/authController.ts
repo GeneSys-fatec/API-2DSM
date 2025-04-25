@@ -10,8 +10,8 @@ export const register = async (req: FastifyRequest, reply: FastifyReply) => {
       senhaUsuario: string;
       dataNasc?: string;
       telUsuario?: string;
-      idEmpresaPatrocinio?: number;
-      idCidade?: number;
+      idEmpresaPatrocinio: number;
+      idCidade: number;
     };
 
     const newUser = await registerUser(userData);
