@@ -1,5 +1,7 @@
 @base_url=http://localhost:3005
 @empresa_url={{base_url}}/empresa
+@login_url={{base_url}}/auth/login
+@register_url={{base_url}}/auth/register
 
 ## CREATE EMPRESA
 POST {{empresa_url}}/create
@@ -56,3 +58,24 @@ Content-Type: application/json
   "x": "https://x.com/patrocinadorAtualizado",
   "createdAt": "2024-03-19 00:00:00"
 }
+
+### 
+
+## INSERT USUARIO
+POST {{register_url}}
+Content-Type: application/json
+
+{
+  "nomeUsuario": "John DAN",
+  "emailUsuario": "joana@mail.com",
+  "senhaUsuario": "senhasenha",
+  "dataNasc": "1995-05-01",
+  "telUsuario": "5512987654321",
+  "idEmpresaPatrocinio": 59, 
+  "idCidade": 24
+}
+
+### 
+
+## teste
+GET {{base_url}}/auth/test

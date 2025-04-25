@@ -9,9 +9,9 @@ export const createEmpresa = async (req: FastifyRequest, reply: FastifyReply) =>
     const empresaData: EmpresaInput = empresaSchema.parse(req.body); // validate data
 
     const empresa = await empresaService.createEmpresa(empresaData);
-    reply.status(201).send(empresa);
+    reply.code(201).send(empresa); // Corrigido para Fastify
   } catch (error) {
-    reply.status(400).send({ message: "Invalid data", error });
+    reply.code(400).send({ message: "Invalid data", error });
   }
 };
 
@@ -20,11 +20,11 @@ export const getEmpresas = async (req: FastifyRequest, reply: FastifyReply) => {
   try {
     const empresas = await empresaService.getEmpresa();
     if (!empresas.length) {
-      return reply.status(404).send({ message: "No empresas found" });
+      return reply.code(404).send({ message: "No empresas found" });
     }
-    reply.status(200).send(empresas);
+    reply.code(200).send(empresas);
   } catch (error) {
-    reply.status(500).send({ message: "Internal server error", error });
+    reply.code(500).send({ message: "Internal server error", error });
   }
 };
 
@@ -38,12 +38,12 @@ export const getEmpresaById = async (
     const empresa = await empresaService.getEmpresaById(id);
 
     if (!empresa) {
-      return reply.status(404).send({ message: "Empresa not found" });
+      return reply.code(404).send({ message: "Empresa not found" });
     }
 
-    reply.status(200).send(empresa);
+    reply.code(200).send(empresa);
   } catch (error) {
-    reply.status(500).send({ message: "Internal server error", error });
+    reply.code(500).send({ message: "Internal server error", error });
   }
 };
 
@@ -57,13 +57,13 @@ export const removeEmpresa = async (
     const empresa = await empresaService.getEmpresaById(id);
 
     if (!empresa) {
-      return reply.status(404).send({ message: "Empresa not found" });
+      return reply.code(404).send({ message: "Empresa not found" });
     }
 
     await empresaService.removeEmpresa(id);
-    return reply.status(200).send({ message: "Empresa was removed successfully" });
+    return reply.code(200).send({ message: "Empresa was removed successfully" });
   } catch (error) {
-    reply.status(500).send({ message: "Internal server error", error });
+    reply.code(500).send({ message: "Internal server error", error });
   }
 };
 
@@ -77,14 +77,14 @@ export const updateEmpresa = async (
     const empresaExists = await empresaService.getEmpresaById(id);
 
     if (!empresaExists) {
-      return reply.status(404).send({ message: "Empresa not found" });
+      return reply.code(404).send({ message: "Empresa not found" });
     }
 
     const empresaData: EmpresaInput = empresaSchema.parse(req.body); // validate data
     const updatedEmpresa = await empresaService.updateEmpresa(id, empresaData);
 
-    return reply.status(200).send({ message: "Empresa was updated successfully", updatedEmpresa });
+    return reply.code(200).send({ message: "Empresa was updated successfully", updatedEmpresa });
   } catch (error) {
-    reply.status(400).send({ message: "Invalid data or update failed", error });
+    reply.code(400).send({ message: "Invalid data or update failed", error });
   }
 };

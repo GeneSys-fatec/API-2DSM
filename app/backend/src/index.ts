@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import empresaRoutes from "./routes/empresaRoutes";
 import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
+import authRoutes from "./routes/authRoutes"; // Rota de login básico
 import usuariosImpactadosDados from "./routes/usuariosEmpresa";
 
 dotenv.config();
@@ -11,22 +12,23 @@ const port = process.env.SERVER_PORT || 3005;
 
 const app = fastify();
 
+// Configuração do CORS
 app.register(cors, {
   origin: (origin, callback) => {
-    const allowedOrigins = ["http://localhost:3000"]; // Lista de origens permitidas
+    const allowedOrigins = ["http://localhost:3000"];
     if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true); // Permitir requisição
+      callback(null, true);
     } else {
-      callback(null, "Not allowed by CORS"); // Bloquear requisição
+      callback(new Error("Não permitido pelo CORS"), false);
     }
   },
-  methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
-  credentials: true, // Permitir cookies ou cabeçalhos de autenticação
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
 });
 
-// Registro das rotas
+// Registra rotas
+app.register(authRoutes, { prefix: "/auth" }); 
 app.register(empresaRoutes, { prefix: "/empresa" });
-
 app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
 
 app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
@@ -36,7 +38,7 @@ const start = async () => {
     await app.listen({ port: Number(port) });
     console.log(`Server running on port ${port}`);
   } catch (err) {
-    console.error(err);
+    console.error("Erro ao iniciar servidor:", err);
     process.exit(1);
   }
 };
