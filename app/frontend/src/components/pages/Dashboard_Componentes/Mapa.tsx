@@ -66,32 +66,36 @@ const Mapa: React.FC = () => {
     }, []);
 
     return (
-        <MapContainer className="map-container"
-            center={center}
-            zoom={4.6}
-            maxZoom={4.6}
-            minZoom={4.6}
-            scrollWheelZoom={true}
-            maxBounds={brasilBounds}
-            maxBoundsViscosity={1.0}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+        <>
+            <div className='mapa-legenda'>
+                <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" />
+                <h1>Distribuição Geográfica</h1>
+            </div>
+            <MapContainer className="map-container"
+                center={center}
+                zoom={4.6}
+                maxZoom={4.6}
+                minZoom={4.6}
+                scrollWheelZoom={true}
+                maxBounds={brasilBounds}
+                maxBoundsViscosity={1.0}>
+                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
 
-            {estadosDoBrasil.map(({ estado, center }, index) => {
-                const info = dadosEstados.find(d => d.estado === estado);
-                return (
-                    <Marker key={index} position={center}>
-                        <Popup>
-                            <strong>{estado}</strong><br />
-                            Usuários Impactados: {info?.quantidadeUsuarios ?? 0}<br />
-                            Lojas Criadas: {info?.quantidadeLojas ?? 0}
-                        </Popup>
-                    </Marker>
-                );
-            })}
-        </MapContainer>
+                {estadosDoBrasil.map(({ estado, center }, index) => {
+                    const info = dadosEstados.find(d => d.estado === estado);
+                    return (
+                        <Marker key={index} position={center}>
+                            <Popup>
+                                <strong>{estado}</strong><br />
+                                Usuários Impactados: {info?.quantidadeUsuarios ?? 0}<br />
+                                Lojas Criadas: {info?.quantidadeLojas ?? 0}
+                            </Popup>
+                        </Marker>
+                    );
+                })}
+            </MapContainer>
+        </>
     );
 };
 

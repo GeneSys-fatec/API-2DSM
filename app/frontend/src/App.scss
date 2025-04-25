@@ -51,16 +51,10 @@ body {
   justify-content: space-evenly;
 }
 
-.map-container {
-  max-width: 100%;
-  height: auto;
-}
-
 .top-dashboard{
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
-
 }
 
 @media (prefers-reduced-motion: no-preference) {

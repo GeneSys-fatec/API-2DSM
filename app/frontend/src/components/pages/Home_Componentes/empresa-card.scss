@@ -3,7 +3,7 @@
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 7%;
+    margin: 7% 0;
     flex-wrap: wrap;
 }
 
@@ -20,18 +20,28 @@
     border-radius: 10px;
     width: 20%;
     margin: 10px;
+
     .logo-empresa {
         height: 250px;
         width: 250px;
     }
+
     .nome-empresa {
         margin-bottom: 30px;
     }
-    .botao-dashboard {
-        background-color: #143357;
-        color: $primary-color;
-        text-decoration: none;
-        padding: 10px;
-        border-radius: 30px;
+}
+
+.botao-dashboard {
+    background-color: #143357;
+    color: $primary-color;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($second-color, 10%);
     }
 }

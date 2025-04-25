@@ -4,8 +4,9 @@
     font-family: $font-stack;
     background-color: $background-color;
     display: flex;
+    flex-direction: column;
+    margin-bottom: 1.35em;
     text-align: center;
-    padding: 10px;
 
     .conteudo {
         display: flex;
@@ -15,9 +16,7 @@
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-        width: 600px;
-        margin-bottom: -3px;
-        margin-top: -3px;
+        width: 620px;
 
         h3 {
             font-size: 40px;

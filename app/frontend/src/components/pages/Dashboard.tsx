@@ -8,7 +8,7 @@ import Navbar from "../layout/Navbar"
 import UsuariosInseridos from "./Dashboard_Componentes/UsuariosImpactados"
 import "./Dashboard_Componentes/Cards.scss"
 import Mapa from './Dashboard_Componentes/Mapa';
-import FooterPrincipal from "../layout/Footer"
+import FooterPrincipal from "../layout/FooterCopy"
 
 // function getData(n: number) {
 //   let dataAlvo = new Date()
@@ -25,7 +25,7 @@ function Dashboard() {
         <Header logoEmpresa="https://agenciaship.com.br/wp-content/uploads/2023/05/Design-sem-nome-6-1-300x300.png" nomeEmpresa="Agência Ship" />
         <div className='dashboard'>
           <div className='top-dashboard'>
-            <div >
+            <div className='cards-dados'>
               <Patrocinado valorCard={322} />
               <LojasCriadas valorCard={46} />
               <Comunidades valorCard={100} />
@@ -35,10 +35,6 @@ function Dashboard() {
             </div>
           </div>
           <div className='distribuicao-geografica'>
-            <div className='mapalegenda'style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
-              <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" />
-              <h1 >Distribuição Geográfica</h1>
-            </div>
             <Mapa />
           </div>
         </div>
