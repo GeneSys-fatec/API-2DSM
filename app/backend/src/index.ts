@@ -1,10 +1,10 @@
 import fastify from "fastify";
 import dotenv from "dotenv";
 import cors from "@fastify/cors";
-
 import empresaRoutes from "./routes/empresaRoutes";
 import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
 import authRoutes from "./routes/authRoutes"; // Rota de login básico
+import usuariosImpactadosDados from "./routes/usuariosEmpresa";
 
 dotenv.config();
 
@@ -31,7 +31,8 @@ app.register(authRoutes, { prefix: "/auth" });
 app.register(empresaRoutes, { prefix: "/empresa" });
 app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
 
-// Inicializa o servidor
+app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
+
 const start = async () => {
   try {
     await app.listen({ port: Number(port) });
