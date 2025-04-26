@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 interface UsuariosImpactadosProps {
-  ultimos3Dias: number;
+  Total: number;
   ultimaSemana: number;
 }
 
@@ -53,7 +53,7 @@ function gerarUltimosMeses(qtd: number): string[] {
 }
 
 const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
-  ultimos3Dias,
+  Total,
   ultimaSemana,
 }) => {
   const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
@@ -107,9 +107,9 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
         </div>
         <div className="textoGraficos">
           <p>
-            Nos últimos 3 dias: <br />
+            Total de impactados: <br />
             <span className="linhaPontilhada"></span>
-            {ultimos3Dias}
+            {Total}
           </p>
           <p>
             Na última semana: <br />
