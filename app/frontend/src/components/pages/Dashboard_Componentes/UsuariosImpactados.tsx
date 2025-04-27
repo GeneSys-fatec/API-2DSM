@@ -5,6 +5,7 @@ import { BarChart, Bar, Rectangle, ResponsiveContainer, XAxis, YAxis, CartesianG
 interface UsuariosImpactadosProps {
   ultimos3Dias: number;
   ultimaSemana: number;
+  idEmpresaPatrocinio: number;
 }
 
 const meses = {
@@ -16,6 +17,7 @@ const meses = {
 type UsuarioPorMes = {
   mes: string;
   total_usuarios: number;
+  idEmpresaPatrocinio: number;
 };
 
 //gera uma array com os ultimos 10 meses partindo da data atual
@@ -34,6 +36,7 @@ function gerarUltimosMeses(qtd: number): string[] {
   return resultado;
 }
 
+<<<<<<< Updated upstream
 const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({ ultimos3Dias, ultimaSemana }) => {
 
   const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
@@ -60,15 +63,49 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({ ultimos3Dias, u
       })
       .catch(err => {
         console.error("Erro ao buscar dados do gráfico:", err);
+=======
+const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
+  Total,
+  ultimaSemana,
+  idEmpresaPatrocinio,
+}) => {
+  const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
+
+  useEffect(() => {
+  fetch(`http://localhost:3005/empresa-dados`)
+    .then((res) => res.json())
+    .then((data: UsuarioPorMes[]) => {
+      // filtra os dados por idEmpresa recebido via props
+      const dadosFiltrados = data.filter(item => item.idEmpresaPatrocinio === Number(idEmpresaPatrocinio));
+
+      // cria um mapa com os totais por mês
+      const mapaDados: Record<string, number> = {};
+      dadosFiltrados.forEach((item) => {
+        mapaDados[item.mes] = item.total_usuarios;
+>>>>>>> Stashed changes
       });
-  }, []);
+
+      const ultimosMeses = gerarUltimosMeses(10).map((mesCompleto) => {
+        const [, mes] = mesCompleto.split("-");
+        return {
+          name: meses[mes as keyof typeof meses],
+          quantidade: mapaDados[mesCompleto] || 0,
+        };
+      });
+
+      setInfo(ultimosMeses);
+    })
+    .catch((err) => {
+      console.error("Erro ao buscar dados do gráfico:", err);
+    });
+}, [idEmpresaPatrocinio]);
 
   return (
     <div className="graficos">
       <div className="containerGraficos">
         <div className="dadosGraficos">
           <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=143357" />
-          <h3>Usuários Impactados</h3>
+          <h3>Pessoas Impactadas</h3>
         </div>
         <div className="textoGraficos">
           <p>Nos últimos 3 dias: <br /><span className="linhaPontilhada"></span>{ultimos3Dias}</p>
