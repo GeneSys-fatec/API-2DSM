@@ -93,7 +93,7 @@ Tópicos utilizados para definir o DoD das Sprints:
 Sprint | Previsão | Status | Relatório | Vídeo do Projeto |
 |------|--------|------|---------|----------|
 |01 | 10/03/2025 - 30/03/2025 |☑️ Finalizado| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint1/README.md) | <a href='https://youtu.be/FqiySP5TJ9k'>Ver Vídeo</a> |
-|02|  07/04/2025 - 27/04/2025 |Em andamento| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint2/README.md) | |
+|02|  07/04/2025 - 27/04/2025 |☑️ Finalizado| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint2/README.md) | <a href='https://youtu.be/iau4KI8iHJI'>Ver Vídeo</a> |
 |03| 05/05/2025 - 25/05/2025 |A fazer| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint3/README.md) | |
  
 <br>
@@ -120,22 +120,38 @@ Este guia oferece instruções detalhadas sobre como baixar, configurar e execut
 
 ---
 
-### Instalação
+### Como Executar Localmente
 
-#### 1. Baixando o Projeto
-- No repositório do GitHub, clique em **"Code"** e selecione **"Download ZIP"** ou [Clique aqui]().
-- Localize o arquivo ZIP baixado e extraia-o para uma pasta de sua escolha.
+#### 1. Clone o Repositório:
 
-#### 2. Abrindo o Projeto no VSCode
-- Inicie o VSCode.
-- Clique em **File > Open Folder...** e selecione a pasta extraída para abrir o projeto.
+```bash
+  git clone https://github.com/GeneSys-fatec/API-2DSM.git
+  ```
 
+#### 2. Acesse o Diretório do Projeto:
+
+```bash
+  cd app
+  ```
 ---
 
 ### Passos para Executar o Backend
-  
-#### 1. Configuração do Banco de Dados
 
+#### 1. Configuração e Execução do Frontend
+> Navegue até a pasta do backend:
+```bash
+cd backend
+```
+
+> Instale as dependências do backend:
+```bash
+npm i
+```
+
+> Inicie o backend com o comando:
+```bash
+npm run dev
+```
 ---
 
 ###  Passos para Executar o Frontend
@@ -150,7 +166,7 @@ Este guia oferece instruções detalhadas sobre como baixar, configurar e execut
   ```
 > Instale as dependências do frontend:
   ```bash
-  npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+  npm install --force
   ```
 > Inicie o frontend com o comando:
   ```bash
