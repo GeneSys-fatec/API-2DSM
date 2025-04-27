@@ -137,7 +137,7 @@ Este guia oferece instruções detalhadas sobre como baixar, configurar e execut
 
 ### Passos para Executar o Backend
 
-#### 1. Configuração e Execução do Frontend
+#### 1. Configuração e Execução do Backend
 > Navegue até a pasta do backend:
 ```bash
 cd backend
