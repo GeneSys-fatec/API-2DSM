@@ -31,7 +31,8 @@ app.register(cors, {
 app.register(authRoutes, { prefix: "/auth" }); 
 app.register(empresaRoutes, { prefix: "/empresa" });
 app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
-
+app.register(usuariosTotal, { prefix: "/empresa-dadosTotal" });
+app.register(usuariosUltimos7Dias, { prefix: "/empresa-dados7dias" });
 app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
 app.register(empresaComunidades, { prefix: "/empresa-comunidades" });
 app.register(empresaLojas, { prefix: "/empresa-lojas" });

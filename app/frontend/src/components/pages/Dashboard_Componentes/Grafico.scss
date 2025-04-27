@@ -6,6 +6,8 @@
     font-size: 28px;
     background-color: $background-color;
 
+
+    
     .containerGraficos {
         background-color: $primary-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -15,8 +17,6 @@
         flex-direction: column;
         gap: 25px;
         padding: 10px;
-        margin: 0em 1em 1em 1em;
-
 
         .dadosGraficos {
             display: flex;
@@ -45,4 +45,28 @@
         gap: 1em;
         max-width: 400px;
     }
+
+
+    .custom-tooltip {
+        background-color: white;
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        transition: opacity 0.3s ease; /* Transição suave ao aparecer */
+      
+        .label {
+          font-weight: bold;
+          color: #69d6ce; /* Cor do título */
+          margin-bottom: 5px;
+        }
+      
+        .value {
+          color: #143357; /* Cor do valor (igual às barras) */
+          font-size: 18px;
+        }
+      }
+      .recharts-tooltip-cursor {
+        fill: rgba(105, 214, 206, 0.1) !important; /* Cor suave (transparência 10%) */
+      }
 }

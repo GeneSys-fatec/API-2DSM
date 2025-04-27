@@ -1,45 +1,30 @@
 @import '../../layout/variaveis';
+
 * {
     margin: 0px;
 
 }
 
-.footer {
+footer {
     font-family: $font-stack;
     background-color: $background-color;
-    max-width: fit-content;
-
-    gap: 5em;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    padding: 2em;
-
-    .contatos {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-
-    }
 
     .texto {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: flex-end;
         text-align: right;
-        padding: 80px;
-        margin-right: 8%;
         font-weight: 100;
+        margin: 4% 11%;
 
         h1 {
             color: $second-color;
-            padding-bottom: -30px;
-            font-size: 48px;
+            font-size: 40px;
         }
 
         p {
-            font-size: 32px;
+            font-size: 28px;
         }
     }
 

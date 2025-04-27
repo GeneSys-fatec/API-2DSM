@@ -8,15 +8,6 @@ import Navbar from "../layout/Navbar";
 import UsuariosInseridos from "./Dashboard_Componentes/UsuariosImpactados";
 import "./Dashboard_Componentes/Cards.scss";
 import Mapa from './Dashboard_Componentes/Mapa';
-<<<<<<< Updated upstream
-import FooterPrincipal from "../layout/Footer"
-
-// function getData(n: number) {
-//   let dataAlvo = new Date()
-//   dataAlvo.setDate(dataAlvo.getDate() -n) 
-//   return dataAlvo
-// }
-=======
 import FooterPrincipal from "../layout/FooterCopy";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -43,7 +34,6 @@ interface Dados7dias {
   idEmpresaPatrocinio: number;
   Total7dias: number;
 }
->>>>>>> Stashed changes
 
 // interface para número de lojas criadas por empresa
 interface DadosLojas {
@@ -51,8 +41,6 @@ interface DadosLojas {
   quantidadelojas: number;
 }
 
-<<<<<<< Updated upstream
-=======
 // interface para número de comunidades criadas por empresa
 interface DadosComunidades {
   idEmpresaPatrocinio: number;
@@ -164,7 +152,6 @@ function Dashboard() {
       .catch((err) => console.error("Erro ao buscar dados de patrocinados", err));
   }, [idEmpresa]);
 
->>>>>>> Stashed changes
   return (
     <div>
       <Navbar
@@ -179,23 +166,6 @@ function Dashboard() {
         />
         <div className='dashboard'>
           <div className='top-dashboard'>
-<<<<<<< Updated upstream
-            <div >
-              <Patrocinado valorCard={322} />
-              <LojasCriadas valorCard={46} />
-              <Comunidades valorCard={100} />
-            </div>
-            <div className='usuarios-impactados'>
-              <UsuariosInseridos ultimos3Dias={50} ultimaSemana={127} />
-            </div>
-          </div>
-          <div className='distribuicao-geografica'>
-            <div className='mapalegenda'style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
-              <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" />
-              <h1 >Distribuição Geográfica</h1>
-            </div>
-            <Mapa />
-=======
             <div className='cards-dados'>
               <Patrocinado valorCard={quantidadePatrocinados} />
               <LojasCriadas valorCard={quantidadelojas} />
@@ -211,16 +181,11 @@ function Dashboard() {
           </div>
           <div className='distribuicao-geografica'>
             <Mapa idEmpresa={Number(idEmpresa)} />
->>>>>>> Stashed changes
           </div>
         </div>
         <Footer descEmpresa={empresa?.descriptionSponsor || ""} />
         <FooterPrincipal />
       </div>
-<<<<<<< Updated upstream
-      
-=======
->>>>>>> Stashed changes
     </div>
   );
 }

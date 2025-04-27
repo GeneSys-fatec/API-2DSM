@@ -43,8 +43,7 @@
       right: 0;
       background-color: transparent;
       color: $second-color;
-      border: 1px solid $second-color;
-      padding: 0.4rem 1rem;
+      padding: 0.4rem 0.7rem;
       border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 500;
@@ -54,6 +53,7 @@
   
       &:hover {
         background-color: $second-color;
+        border: 1px solid $second-color;
         color: white;
       }
     }

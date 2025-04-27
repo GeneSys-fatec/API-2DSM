@@ -1,5 +1,5 @@
 import Nav from "../layout/NavbarVazia";
-import FooterPrincipal from "../layout/Footer"
+import FooterPrincipal from "../layout/FooterCopy"
 import NavbarPrincipal from "../layout/NavbarPrincipal";
 import ListaEmpresas from "./Home_Componentes/Empresa-card";
 
