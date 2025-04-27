@@ -1,199 +1,82 @@
-## 💻 Aprendizado por Projeto Integrado (API) 
+<span id="topo">
 
-Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
-Uso de estratégias para entender o problema, conceber uma solução viável ao desenvolver e implementar o MVP seguido de sua operação (CDIO). 
-Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da Fatec SJC com definição das datas do kickoff e das sprints.
+<h1 align="center">Sprint 2: 07/04/2025 - 27/04/2025</h1>
 
-<br>
-
-<span id="sumario">
-
-<div align=center>
-<a href ="#projeto"> Projeto </a> | <a href ="#tecnologias"> Tecnologias </a> | <a href ="#dor-dod"> DoR e DoD </a> | <a href ="#sprints"> Sprints </a> | <a href ="#protótipo"> Protótipo </a> <br>
-<a href ="#backlog&userstories"> Backlog & User Stories </a> | <a href ="#registros"> Registros das Sprints </a> | <a href ="#equipe"> Equipe </a>
-</div>
+<p align="center">
+    <a href="#dor-dod">DoR e DoD</a> &nbsp |&nbsp &nbsp
+    <a href="#objetivos">Objetivos da Sprint</a> &nbsp |&nbsp &nbsp
+    <a href="#entrega">Entrega</a> &nbsp |&nbsp &nbsp
+    <a href="#metricas">Métricas do Time</a> 
+</p>
 
 <br>
 
-<span id="projeto">
+O projeto consiste no desenvolvimento de um Dashboard de Indicadores para monitorar e visualizar o impacto das empresas parceiras da Helpnei.
+Com foco no MVP, a segunda sprint teve como objetivo tornar o Dashboard de Indicadores funcional e completo, já integrando os dados extraídos do banco de dados.
+Paralelamente, iniciamos o desenvolvimento de novas funcionalidades do projeto, como a Tela de Cadastramento de Dados (front-end), destinada a usuários interessados em serem patrocinados por empresas que se alinhem ao seu perfil cadastrado, e a Tela de Empresas Disponíveis para Patrocínio, voltada à visualização de informações detalhadas sobre as empresas.
+Para isso, os requisitos foram levantados e validados, e o protótipo foi construído com o objetivo de entregar uma interface alinhada às necessidades e dores do cliente.
 
-## 📋 Sobre o projeto
-> **📌 Status do Projeto: Em Desenvolvimento**
- 
-Desenvolver um Dashboard de Indicadores para monitorar e visualizar o impacto da plataforma, facilitando o acompanhamento do crescimento do projeto e oferecendo dados estratégicos e detalhados para patrocinadores e stakeholders.
- 
-<br>
- 
-<span id="tecnologias">
- 
-## 🔧 Tecnologias
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&logo=sass) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) 
- 
 <br>
 
- <span id="dor-dod">
+<span id="dor-dod">
 
 ## 📍 DoR Definition of Ready
-**:link: Clique no link abaixo para visualizar o DoR do projeto:**  
-> [Definition of Ready](https://docs.google.com/document/d/1_yX0LBt2_SmMM5A1oGvAi57aOLmhgI5GVjWYFB8OikM/edit?usp=sharing)
+**:link: Clique no link abaixo para visualizar o DoR da Sprint 02:**  
+> [Definition of Ready](https://docs.google.com/document/d/1_yX0LBt2_SmMM5A1oGvAi57aOLmhgI5GVjWYFB8OikM/edit?tab=t.4j6zacb4i64c)
 
 <br>
 
 ## 📍 DoD Definition of Done
-**:link: Clique no link abaixo para visualizar o DoD do projeto:**  
-> [Definition of Done](https://docs.google.com/document/d/142-spFvZzo04tRTbLO0dZs-c4uruG32qb-unrMd3bJ0/edit?usp=sharing)
-
-<br>
- 
- <span id="sprints">
-
-## 📊 Sprints
- 
-Sprint | Previsão | Status|
-|------|--------|------|
-|Kick Off | 24/02/2025 - 28/02/2025 |✔️Finalizado|
-|01 | 10/03/2025 - 30/03/2025 |✔️Finalizado|
-|02|  07/04/2025 - 27/04/2025 |a fazer|
-|03| 05/05/2025 - 25/05/2025 |a fazer|
-|Feira de Soluções| 29/05/2025 |a fazer|
- 
-<br>
-
-<details>
-  <summary>Tasks - Sprint 1</summary>
- 
-- [x] Criar Componentes no React;
-- [x] Criar Página Principal do Dashboard;
-- [x] Criar Gráfico Simulando Dados Reais;
-- [x] Criar Lógica de Criação Dinâmica das Rotas;
-- [x] Implementar Estilização.
-</details>
+**:link: Clique no link abaixo para visualizar o DoD da Sprint 02:**  
+> [Definition of Done](https://docs.google.com/document/d/142-spFvZzo04tRTbLO0dZs-c4uruG32qb-unrMd3bJ0/edit?tab=t.qgc4e7w6objb)
 
 <br>
 
-<details>
-  <summary>Tasks - Sprint 2</summary>
-- [ ]
-</details>
+<span id="objetivos">
+    
+## 🎯 Objetivos da Sprint
+O principal objetivo para essa segunda sprint era de desenvolver o back-end do Dashboard de Indicadores, e começar o desenvolvimento das novas funcionalidades do projeto, com os seguintes requisitos (tanto do cliente como da instituição de ensino):
+- **RF01:** O Dashboard deve conter métricas numéricas essenciais como: Número de Lojas Criadas, Número de Patrocinados, Usuários Impactados e Distribuição Geográfica (cidades atendidas).
+- **RF02**: O Dashboard deve conter um Gráfico Dinâmico que exibe a quantidade de usuários impactados.
+- **RF03**: O Dashboard deve conter um Mapa Interativo que exibe a distribuição geográfica dos usuários e das lojas criadas.
+- **RF04**: Desenvolver uma página onde o usuário se cadastra e onde o usuário escolhe por qual empresa gostaria de ser patrocinado.
+- **RNF:** Utilizar React e TypeScript.
 
 <br>
 
-<details>
-  <summary>Tasks - Sprint 3</summary>
-- [ ]
-</details> 
-
-<br>
-
-→ <a href="#sumario"> Voltar ao topo </a>
-
-<br>
-
-<span id="protótipo">
-
-## 💡 Protótipo
-**:link: Clique no link abaixo para visualizar o protótipo do projeto:**  
-> [Protótipo do Projeto](https://www.figma.com/design/SH4lK6gOZIokeUNJQtBIiI/GeneSys-API?node-id=0-1&p=f&t=shfLLSMznF3evchS-0)
-
-<br>
-
-<span id="backlog&userstories">
-
-## 🎯 Backlog do Produto & User Stories
-**:link: Clique no link abaixo para visualizar o backlog do produto:**  
-> [Backlog do Produto](https://docs.google.com/spreadsheets/d/1-QpBBtd0Oluz9lutFUXGW1rQKdcMt9MUiGGMR-kGaT4/edit?usp=sharing)
-
-<details>
-     <summary>Backlog - Sprint 1</summary>
-      <div align="center">
-      <br>
+### Backlog da Sprint 
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
-| BL01 | ALTA | Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| 1 |
-| BL02 | ALTA | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.| 2 |
-| BL03 | ALTA | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| 3 |
-| BL04 | ALTA | Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.| 4 |
-| BL05 | ALTA | Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.| 5 |
-
-  </details>
-
-<details>
-     <summary>Backlog - Sprint 2</summary>
-      <div align="center">
-      <br>
-
-| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
-| --- | --- | --- | --- | --- |
-| BL06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| 6 |
-| BL08 | BAIXA | Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 8 |
-| BL09 | BAIXA | Página de Exibição das Empresas | Como usuário, quero acessar uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| 9 |
-
-  </details>
-
-<details>
-     <summary>Backlog - Sprint 3</summary>
-      <div align="center">
-      <br>
-
-| ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
-| --- | --- | --- | --- | --- |
-| BL07 | MÉDIA | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| 7 |
-
-  </details>
+ US06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| RF01 |
+ US07 | MÉDIA | Cadastramento de Dados | Como usuário, quero cadastrar minhas informações pessoais e de perfil, para que possa visualizar quais empresas patrocinadoras têm vagas disponíveis compatíveis comigo e escolher aquela com a qual mais me identifico.| RF02 |
+ US08 | MÉDIA | Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| RF02 |
 
 <br>
 
+<span id="entrega">
+        
+## ☑️ Entrega
 
-|          Título           |                     User Story                      |
-| :-------------------: | :----------------------------------------------------------: |
-| Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
-| Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
-| Exibição do Volume de Transações |Como patrocinador, quero acompanhar o volume total de transações realizadas, para avaliar a atividade econômica e o desempenho do negócio.|
-| Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.|
-| Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.|
-| Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva e moderna, para facilitar a leitura dos dados.| 
-| Cadastramento de Dados | Como administrador, quero um campo para cadastrar os dados das empresas, para que possa gerenciar as informações fornecidas.| 
-| Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.|
+Para a segunda entrega, os artefatos SCRUM, como o Backlog do Produto, o Backlog da Sprint e as User Stories, foram validados por meio de comunicação direta entre o PO e o cliente.
+Para extrair e compreender os requisitos do cliente para esta sprint, foi desenvolvido um novo protótipo no Figma, adaptado às novas funcionalidades solicitadas. Esse protótipo definiu a identidade visual e o design do sistema e foi apresentado para validação.
+O resultado validado serviu de base para a implementação utilizando React, com dados extraídos do banco de dados (MySQL), conforme acordado para esta segunda sprint, e pode ser observado a seguir:
+
+<a href='https://youtu.be/iau4KI8iHJI'>Vídeo do Projeto</a>
 
 <br>
 
-→ <a href="#sumario"> Voltar ao topo </a>
+<span id="metricas">
+    
+## 📈 Métricas do Time
+Nesta segunda sprint, a equipe se dividiu entre front-end e back-end. Alguns membros ficaram responsáveis pela reestilização do layout do Dashboard de Indicadores e pela criação do front-end das novas telas solicitadas, enquanto outros se dedicaram à implementação do CRUD para manipulação de dados, à funcionalidade do mapa e do gráfico do dashboard, além da criação da lógica para a exibição dinâmica das empresas.
+O acompanhamento de atividades, responsabilidade do Scrum Master, se encontra na imagem adiante, que contém o gráfico Burndown gerado pela equipe, onde o eixo X são os dias trabalhados na sprint e os valores do eixo Y representam as entregas e esforços realizados com o passar do tempo, incluindo as atividades desenvolvidas e seus responsáveis.
+
+<div align="center">
+    
+![Burndown Chart](https://github.com/gbmedeiros00/testeee/blob/main/burndown-sprint2.png)
+</div>
 
 <br>
 
-<span id="registros">
-
-## 📸 Registros das Sprints
-
-<h3>📌Sprint 1</h3>
-
-<img src="/assets-readme/Registro Sprint 1.png">
-
-<br>
-
-<h3>📌Sprint 2</h3>
-
-<br>
-
-<h3>📌Sprint 3</h3>
-
-<br>
-
-<span id="equipe">
-
-## 👤 Equipe
-|    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
-| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Product Owner |   Ana Beatriz Coelho         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abeatrizcoelho/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/abeatrizdscoelho)              |
-| Scrum Master  | Gabriel Calebe |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-medeiros-516ab3325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gbmedeiros00)          |
-|  Team Member  | Ana Júlia Gaspar |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-gaspar-957775325/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/anajgaspar)        |
-| Team Member |   Emmanuel Yokoyama         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuelyokoyama/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/EmmanuelJYokoyama)              |
-| Team Member |   Gabriel Fernando       |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-fernando-bb430b330) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Gabriel-Fernando-Lima)              |
-| Team Member |   Lavínia Piratello         |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lavinia-piratello-6a82101b1/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/laviniappiratello)             |
-| Team Member | Matheus Roberto |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-r-castro-70091a32b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Matheus-Roberto-Castro)          |
-
-<br>
-
-→ <a href="#sumario"> Voltar ao topo </a>
+→ [Voltar ao topo](#topo)
