@@ -14,6 +14,7 @@ import {
 interface UsuariosImpactadosProps {
   Total: number;
   ultimaSemana: number;
+  idEmpresaPatrocinio: number;
 }
 
 const meses = {
@@ -34,6 +35,7 @@ const meses = {
 type UsuarioPorMes = {
   mes: string;
   total_usuarios: number;
+  idEmpresaPatrocinio: number;
 };
 
 //gera uma array com os ultimos 10 meses partindo da data atual
@@ -55,33 +57,37 @@ function gerarUltimosMeses(qtd: number): string[] {
 const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
   Total,
   ultimaSemana,
+  idEmpresaPatrocinio,
 }) => {
   const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-dados`)
-      .then((res) => res.json())
-      .then((data: UsuarioPorMes[]) => {
-        const mapaDados: Record<string, number> = {};
-        data.forEach((item) => {
-          mapaDados[item.mes] = item.total_usuarios;
-        });
+  fetch(`http://localhost:3005/empresa-dados`)
+    .then((res) => res.json())
+    .then((data: UsuarioPorMes[]) => {
+      // filtra os dados por idEmpresa recebido via props
+      const dadosFiltrados = data.filter(item => item.idEmpresaPatrocinio === Number(idEmpresaPatrocinio));
 
-        //passa por cada mês do intervalo selecionado na função e verifica se tem algum usuario relacionado, se sim, quantidade recebe o total, se não, recebe 0
-        const ultimosMeses = gerarUltimosMeses(10).map((mesCompleto) => {
-          const [, mes] = mesCompleto.split("-");
-          return {
-            name: meses[mes as keyof typeof meses],
-            quantidade: mapaDados[mesCompleto] || 0,
-          };
-        });
-
-        setInfo(ultimosMeses);
-      })
-      .catch((err) => {
-        console.error("Erro ao buscar dados do gráfico:", err);
+      // cria um mapa com os totais por mês
+      const mapaDados: Record<string, number> = {};
+      dadosFiltrados.forEach((item) => {
+        mapaDados[item.mes] = item.total_usuarios;
       });
-  }, []);
+
+      const ultimosMeses = gerarUltimosMeses(10).map((mesCompleto) => {
+        const [, mes] = mesCompleto.split("-");
+        return {
+          name: meses[mes as keyof typeof meses],
+          quantidade: mapaDados[mesCompleto] || 0,
+        };
+      });
+
+      setInfo(ultimosMeses);
+    })
+    .catch((err) => {
+      console.error("Erro ao buscar dados do gráfico:", err);
+    });
+}, [idEmpresaPatrocinio]);
 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
@@ -103,7 +109,7 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
       <div className="containerGraficos">
         <div className="dadosGraficos">
           <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=143357" />
-          <h3>Usuários Impactados</h3>
+          <h3>Pessoas Impactadas</h3>
         </div>
         <div className="textoGraficos">
           <p>

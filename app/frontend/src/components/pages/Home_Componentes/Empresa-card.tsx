@@ -26,9 +26,10 @@ const ListaEmpresas: React.FC = () => {
         <div className='card-empresas' key={empresa.id}>
           <img className='logo-empresa' src={empresa.sponsorLogo} alt={empresa.nameSponsor} />
           <p className='nome-empresa'>{empresa.nameSponsor}</p>
-          <a href={`/dashboard`}>
+          <a href={`/dashboard/${empresa.id}`}>
             <button className='botao-dashboard'>Saiba Mais</button>
           </a>
+
         </div>
       ))}
     </div>
