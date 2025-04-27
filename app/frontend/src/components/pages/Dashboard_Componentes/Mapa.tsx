@@ -92,40 +92,6 @@ const siglaParaNomeCompleto: { [sigla: string]: string } = {
 const Mapa: React.FC<MapaProps> = ({ idEmpresa }) => {
   const [dadosEstados, setDadosEstados] = useState<EstadoInfo[]>([]);
 
-<<<<<<< Updated upstream
-    return (
-        <>
-            <div className='mapa-legenda'>
-                <img src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357" />
-                <h1>Distribuição Geográfica</h1>
-            </div>
-            <MapContainer className="map-container"
-                center={center}
-                zoom={4.6}
-                maxZoom={4.6}
-                minZoom={4.6}
-                scrollWheelZoom={true}
-                maxBounds={brasilBounds}
-                maxBoundsViscosity={1.0}>
-                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-
-                {estadosDoBrasil.map(({ estado, center }, index) => {
-                    const info = dadosEstados.find(d => d.estado === estado);
-                    return (
-                        <Marker key={index} position={center}>
-                            <Popup>
-                                <strong>{estado}</strong><br />
-                                Usuários Impactados: {info?.quantidadeUsuarios ?? 0}<br />
-                                Lojas Criadas: {info?.quantidadeLojas ?? 0}
-                            </Popup>
-                        </Marker>
-                    );
-                })}
-            </MapContainer>
-        </>
-    );
-=======
   const center: LatLngTuple = [-14.235, -51.9253];
   const brasilBounds: LatLngBoundsExpression = [
     [-34.0, -74.0],
@@ -183,7 +149,6 @@ const Mapa: React.FC<MapaProps> = ({ idEmpresa }) => {
                   empresas.map((e, i) => (
                     <div key={i} style={{ marginTop: i > 0 ? 6 : 0 }}>
                       <hr style={{ margin: '4px 0' }} />
-                      <strong>Empresa {e.idEmpresa}</strong><br />
                       Usuários: {e.quantidadeUsuarios}<br />
                       Lojas: {e.quantidadeLojas}
                     </div>
@@ -201,7 +166,6 @@ const Mapa: React.FC<MapaProps> = ({ idEmpresa }) => {
       </MapContainer>
     </>
   );
->>>>>>> Stashed changes
 };
 
 export default Mapa;
