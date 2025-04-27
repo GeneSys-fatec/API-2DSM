@@ -121,7 +121,7 @@ const Cadastro: React.FC = () => {
               />
             </div>
 
-            <div className="form-row">
+            {/* <div className="form-row">
               <input
                 type="number"
                 name="idCidade"
@@ -129,7 +129,7 @@ const Cadastro: React.FC = () => {
                 value={formData.idCidade}
                 onChange={handleInputChange}
               />
-            </div>
+            </div> */}
 
 {/*--------- VERIFICAR UTILIDADE DE TODOS OS CAMPOS --------- */}
 
@@ -143,7 +143,7 @@ const Cadastro: React.FC = () => {
 
             <div className="form-row">
               <input type="text" placeholder="Complemento" />
-            </div>
+            </div>*/}
 
             <div className="form-row">
               <input type="text" placeholder="Estado" />
@@ -151,7 +151,7 @@ const Cadastro: React.FC = () => {
 
             <div className="form-row">
               <input type="text" placeholder="Cidade" />
-            </div> */}
+            </div>
 
 {/*--------- SERA IMPLEMENTADO --------- */}
 
