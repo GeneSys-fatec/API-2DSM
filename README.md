@@ -48,6 +48,8 @@ O principal objetivo para essa segunda sprint era de desenvolver o back-end do D
 
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
+ US01 | ALTA | Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.| RF01 |
+ US03 | ALTA | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.| RF01 |
  US06 | ALTA | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| RF01 |
  US07 | MÉDIA | Cadastramento de Dados | Como usuário, quero cadastrar minhas informações pessoais e de perfil, para que possa visualizar quais empresas patrocinadoras têm vagas disponíveis compatíveis comigo e escolher aquela com a qual mais me identifico.| RF02 |
  US08 | MÉDIA | Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| RF02 |
