@@ -1,5 +1,5 @@
 import React from 'react';
-import "./empresa-card.scss";
+import "./EmpresaCard.scss";
 import { useEffect, useState } from 'react';
 
 interface Empresa {

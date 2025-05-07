@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/pages/Dashboard';
 import Registro from './components/pages/Registro';
 import Login from './components/pages/Login';
-import Empresas from './components/pages/Empresas'
+import Empresas from './components/pages/Inicio';
 
 function App() {
   return (

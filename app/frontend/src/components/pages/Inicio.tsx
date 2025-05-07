@@ -1,14 +1,14 @@
-import Nav from "../layout/NavbarVazia";
-import FooterPrincipal from "../layout/FooterCopy"
-import NavbarPrincipal from "../layout/NavbarPrincipal";
-import ListaEmpresas from "./Home_Componentes/Empresa-card";
+import Nav from "../layout/Navbar/NavbarVazia";
+import FooterPrincipal from "../layout/Footer/FooterCopy"
+import NavbarRotas from "../layout/Navbar/NavbarRotas";
+import ListaEmpresas from "./Inicio/EmpresaCard";
 
 function Empresas() {
     return (
         <div>
             <div>
                 <Nav/>
-                <NavbarPrincipal></NavbarPrincipal>
+                <NavbarRotas></NavbarRotas>
                 <hr />
                 <ListaEmpresas></ListaEmpresas>
                 <FooterPrincipal></FooterPrincipal>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header-dashboard.scss"
+import "./Header.scss"
 
 interface HeaderProps {
     nomeEmpresa: string

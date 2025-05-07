@@ -1,14 +1,14 @@
 import '../../App.scss';
-import Header from "./Dashboard_Componentes/Header";
-import Footer from "./Dashboard_Componentes/Footer";
-import LojasCriadas from "./Dashboard_Componentes/LojasCriadas";
-import Comunidades from "./Dashboard_Componentes/Comunidades";
-import Patrocinado from "./Dashboard_Componentes/Patrocinado";
-import Navbar from "../layout/Navbar";
-import UsuariosInseridos from "./Dashboard_Componentes/UsuariosImpactados";
-import "./Dashboard_Componentes/Cards.scss";
-import Mapa from './Dashboard_Componentes/Mapa';
-import FooterPrincipal from "../layout/FooterCopy";
+import Header from "./Dashboard/Header";
+import Footer from "./Dashboard/Footer";
+import LojasCriadas from "./Dashboard/LojasCriadas";
+import Comunidades from "./Dashboard/Comunidades";
+import Patrocinado from "./Dashboard/Patrocinados";
+import Navbar from "../layout/Navbar/NavbarEmpresa";
+import UsuariosInseridos from "./Dashboard/UsuariosImpactados";
+import "./Dashboard/Cards.scss";
+import Mapa from './Dashboard/Mapa';
+import FooterPrincipal from "../layout/Footer/FooterCopy";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
