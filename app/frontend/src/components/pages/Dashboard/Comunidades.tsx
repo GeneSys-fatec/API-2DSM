@@ -1,4 +1,3 @@
-import "./Comunidades.scss";
 import React from "react";
 
 interface ComunidadesProps {

@@ -4,7 +4,7 @@ import cors from "@fastify/cors";
 import empresaRoutes from "./routes/empresaRoutes";
 import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
 import authRoutes from "./routes/authRoutes"; // Rota de login básico
-import { usuariosTotal, usuariosUltimos7Dias, usuariosImpactadosDados } from "./routes/usuariosEmpresa";
+import { usuariosTotal, usuariosUltimos7Dias, usuariosImpactadosDados } from "./routes/usuariosEmpresaRoutes";
 import { empresaComunidades, empresaLojas, empresaPatrocinados } from "./routes/indicadoresRoutes";
 
 dotenv.config();

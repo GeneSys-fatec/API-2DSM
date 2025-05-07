@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Grafico.scss";
+import "./UsuariosImpactados.scss";
 import {
   BarChart,
   Bar,

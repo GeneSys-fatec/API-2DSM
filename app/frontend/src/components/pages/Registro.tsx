@@ -1,6 +1,6 @@
-import Cadastro from './Registro_Componentes/Cadastro'
-import Nav from "../layout/NavbarVazia";
-import NavbarPrincipal from "../layout/NavbarPrincipal";
+import Cadastro from './Registro/Cadastro'
+import Nav from "../layout/Navbar/NavbarVazia";
+import NavbarPrincipal from "../layout/Navbar/NavbarRotas";
 
 function Registro() {
     return (
@@ -15,6 +15,5 @@ function Registro() {
         </div>
     );
 }
-
 
 export default Registro;

@@ -1,7 +1,7 @@
-import Login from './Registro_Componentes/Login'
+import Login from './Registro/Login'
 
-import Nav from "../layout/NavbarVazia"
-import NavbarPrincipal from "../layout/NavbarPrincipal";
+import Nav from "../layout/Navbar/NavbarVazia"
+import NavbarPrincipal from "../layout/Navbar/NavbarRotas";
  
 function Registro() {
     return (
