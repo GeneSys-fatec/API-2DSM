@@ -23,7 +23,7 @@ Content-Type: application/json
 ###
 
 ## REMOVE EMPRESA BY ID
-DELETE {{empresa_url}}/1
+DELETE {{empresa_url}}/68
 
 ###
 
@@ -38,7 +38,7 @@ GET {{empresa_url}}/2
 ### 
 
 ## UPDATE EMPRESA BY ID
-PATCH {{empresa_url}}/2
+PATCH {{empresa_url}}/68  
 Content-Type: application/json
 
 {
@@ -49,7 +49,7 @@ Content-Type: application/json
   "sponsorLogo": "https://exemplo.com/logo-atualizada.png",
   "site_web": "https://exemplo.com",
   "urlSponsor": "https://exemplo.com/sponsor/atualizado",
-  "whatsapp": "55 11 98888-8888",
+  "whatsapp": "https://wa.me/5511988888888",
   "facebook": "https://facebook.com/patrocinadorAtualizado",
   "instagram": "https://instagram.com/patrocinadorAtualizado",
   "linkedin": "https://linkedin.com/in/patrocinadorAtualizado",
@@ -76,6 +76,16 @@ Content-Type: application/json
 }
 
 ### 
+
+## VERIFICA LOGIN
+POST {{{{login_url}}}}{
+Content-Type: application/json
+
+{
+  "emailUsuario": "joana@mail.com",
+  "senhaUsuario": "senhasenha",
+}
+}
 
 ## teste
 GET {{base_url}}/auth/test
