@@ -1,6 +1,7 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { registerUser } from "../services/authService";
-import User from "../models/userModel"; 
+import User, { getUserByEmail } from "../models/userModel"; 
+import { userInfo } from "node:os";
 
 export const register = async (req: FastifyRequest, reply: FastifyReply) => {
   try {
@@ -28,10 +29,10 @@ export const register = async (req: FastifyRequest, reply: FastifyReply) => {
 };
 
 export const login = async (request: FastifyRequest, reply: FastifyReply) => {
-    const { username, password } = request.body as { username: string; password: string };
+    const { email, password } = request.body as { email: string; password: string };
   
     try {
-      const user = await User.findOne({ where: { nomeUsuario: username } });
+      const user = await getUserByEmail(email);
   
       if (!user) {
         return reply.code(404).send({ message: "Usuário não encontrado" });

@@ -1,0 +1,48 @@
+.custom-alert {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border: 2px solid transparent;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  
+  &.success {
+    background-color: #198754; 
+    border-color: #146c43;
+    color: white;
+  }
+
+  &.error {
+    background-color: #dc3545; 
+    border-color: #bb2d3b;
+    color: white;
+  }
+
+  &.warning {
+    background-color: #ffc107;
+    border-color: #cc9a06;
+    color: #664d03;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+
+  .message {
+    flex-grow: 1;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    color: inherit;
+  }
+}
