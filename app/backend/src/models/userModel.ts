@@ -85,8 +85,8 @@ export const getUserById = async (id: number): Promise<UserType | null> => {
   return user ? user.toJSON() : null;
 };  
 
-export const getUserByEmail = async (exclusiveUrl: string): Promise<UserType | null> => {
-  const user = await User.findOne({ where: { exclusiveUrl } });
+export const getUserByEmail = async (emailUsuario: string): Promise<UserType | null> => {
+  const user = await User.findOne({ where: { emailUsuario } });
   return user ? user.toJSON() : null;
 };
 

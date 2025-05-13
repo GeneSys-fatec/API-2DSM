@@ -1,48 +1,59 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa o hook de navegação
 import './Login.scss';
-import { useNavigate } from 'react-router-dom';
+import Alert from './Alert';
 
 const Login: React.FC = () => {
-  const navigate = useNavigate();
-
-  const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-  });
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const navigate = useNavigate(); // Inicializa o hook de navegação
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [name]: value,
-    }));
+    });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('http://localhost:3005/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+    fetch('http://localhost:3005/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Erro: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('Login bem-sucedido:', data);
+
+        setTimeout(() => {
+          setAlert({ type: 'success', message: 'Login realizado com sucesso!' });
+
+          setTimeout(() => {
+            setAlert(null);
+            navigate('/'); // Redireciona para a página principal
+          }, 4000);
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error('Erro ao realizar login:', error);
+        setTimeout(() => {
+          setAlert({ type: 'error', message: 'Erro no login!' });
+
+          setTimeout(() => {
+            setAlert(null);
+          }, 4000);
+        }, 1000);
       });
-
-      if (!response.ok) {
-        throw new Error(`Erro: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      localStorage.setItem('token', data.token);
-      alert('Login realizado com sucesso!');
-      navigate('/');
-    } catch (error) {
-      console.error('Erro ao realizar login:', error);
-      alert('Erro ao realizar o login. Verifique suas credenciais.');
-    }
   };
 
   return (
@@ -53,13 +64,17 @@ const Login: React.FC = () => {
             <h2>Login</h2>
             <a className="cadastro-btn" href="/registro">Registre-se</a>
           </div>
+
+          {/* Alerta de sucesso ou erro */}
+          {alert && <Alert type={alert.type} message={alert.message} onClose={() => setAlert(null)} />}
+
           <form className="form-grid" onSubmit={handleSubmit}>
             <div className="form-row">
               <input
                 type="text"
-                name="username"
-                value={formData.username}
-                placeholder="Usuário"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
                 onChange={handleInputChange}
                 required
               />
@@ -69,15 +84,15 @@ const Login: React.FC = () => {
               <input
                 type="password"
                 name="password"
-                value={formData.password}
                 placeholder="Senha"
+                value={formData.password}
                 onChange={handleInputChange}
                 required
               />
             </div>
 
             <div className="form-footer">
-              <button type="submit">Entrar</button>
+              <button type="submit" className="btn btn-primary">Entrar</button>
             </div>
           </form>
         </div>
