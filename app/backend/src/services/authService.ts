@@ -15,8 +15,16 @@ export async function registerUser(userData: {
     nomeUsuario: string;
     emailUsuario: string;
     senhaUsuario: string;
+    cpfUsuario: string,
+    sexoUsuario: string,
     dataNasc?: string;
     telUsuario?: string;
+    estadoUsuario: string,
+    cidadeUsuario: string,
+    ruaUsuario: string,
+    numeroUsuario: string,
+    rendaUsuario: string,
+    escolaridadeUsuario: string,
     idEmpresaPatrocinio: number;
     idCidade?: number;
   }) {
