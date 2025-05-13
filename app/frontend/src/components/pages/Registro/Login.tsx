@@ -40,8 +40,7 @@ const Login: React.FC = () => {
 
           setTimeout(() => {
             setAlert(null);
-            navigate('/'); // Redireciona para a página principal
-          }, 4000);
+            navigate('/')}, 2000);
         }, 1000);
       })
       .catch((error) => {
@@ -51,7 +50,7 @@ const Login: React.FC = () => {
 
           setTimeout(() => {
             setAlert(null);
-          }, 4000);
+          }, 2000);
         }, 1000);
       });
   };
