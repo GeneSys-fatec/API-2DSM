@@ -7,14 +7,22 @@ const Cadastro: React.FC = () => {
     nomeUsuario: '',
     emailUsuario: '',
     senhaUsuario: '',
+    cpfUsuario: '',
+    sexoUsuario:'',
     dataNasc: '',
     telUsuario: '',
+    estadoUsuario: '',
+    cidadeUsuario: '',
+    ruaUsuario: '',
+    numeroUsuario: '',
+    rendaUsuario: '',
+    escolaridadeUsuario: '',
     idEmpresaPatrocinio: 0,
     idCidade: '',
   });
 
   //manipula o input do usuario para a recepcao de informacao
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const {name, value} = e.target;
     setFormData({
       ...formData,
@@ -96,20 +104,25 @@ const Cadastro: React.FC = () => {
                 onChange={handleInputChange}/>
             </div>
 
-{/*--------- SERA IMPLEMENTADO --------- */}
+            <div className="form-row">
+              <input type="text" 
+              name="cpfUsuario"
+              placeholder="CPF" 
+              value={formData.cpfUsuario}
+              onChange={handleInputChange}/>
+            </div>
 
-            {/* <div className="form-row">
-              <input type="text" placeholder="CPF" />
-            </div> */}
-
-            {/* <div className="form-row">
-              <select>
+            <div className="form-row">
+              <select
+              name='sexoUsuario'
+              value={formData.sexoUsuario}
+              onChange={handleInputChange}>
                 <option value="">Sexo</option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="outro">Outro</option>
               </select>
-            </div> */}
+            </div>
 
             <div className="form-row">
               <input
@@ -131,42 +144,57 @@ const Cadastro: React.FC = () => {
               />
             </div> */}
 
-{/*--------- VERIFICAR UTILIDADE DE TODOS OS CAMPOS --------- */}
-
-            {/* <div className="form-row">
-              <input type="text" placeholder="Rua" />
+            <div className="form-row">
+              <input type="text" 
+              name='estadoUsuario'
+              placeholder="Estado"
+              value={formData.estadoUsuario}
+              onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" placeholder="Número" />
+              <input type="text" 
+              name='cidadeUsuario'
+              placeholder="Cidade"
+              value={formData.cidadeUsuario}
+              onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" placeholder="Complemento" />
-            </div>*/}
-
-            <div className="form-row">
-              <input type="text" placeholder="Estado" />
+              <input type="text" 
+              name='ruaUsuario'
+              placeholder="Rua"
+              value={formData.ruaUsuario}
+              onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" placeholder="Cidade" />
-            </div>
-
-{/*--------- SERA IMPLEMENTADO --------- */}
-
-            {/* <div className="form-row">
-              <input type="text" placeholder="Renda Familiar" />
+              <input type="text" 
+              name='numeroUsuario'
+              placeholder="Número"
+              value={formData.numeroUsuario}
+              onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <select>
+              <input type="text" 
+              name='rendaUsuario'
+              placeholder="Renda Familiar" 
+              value={formData.rendaUsuario}
+              onChange={handleInputChange}/>
+            </div>
+
+            <div className="form-row">
+              <select
+              name='escolaridadeUsuario'
+              value={formData.escolaridadeUsuario}
+              onChange={handleInputChange}>
                 <option value="">Escolaridade</option>
                 <option value="fundamental">Fundamental</option>
                 <option value="medio">Médio</option>
                 <option value="superior">Superior</option>
               </select>
-            </div> */}
+            </div>
 
             <div className="form-footer">
               <button type="submit">Cadastrar</button>

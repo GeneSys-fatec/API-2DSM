@@ -9,9 +9,17 @@ export const register = async (req: FastifyRequest, reply: FastifyReply) => {
       nomeUsuario: string;
       emailUsuario: string;
       senhaUsuario: string;
-      dataNasc?: string;
-      telUsuario?: string;
+      cpfUsuario: string;
+      sexoUsuario: string;
+      dataNasc: string;
+      telUsuario: string;
       idEmpresaPatrocinio: number;
+      estadoUsuario: string;
+      cidadeUsuario: string;
+      ruaUsuario: string;
+      numeroUsuario: string;
+      rendaUsuario: string;
+      escolaridadeUsuario: string;
       idCidade: number;
     };
 

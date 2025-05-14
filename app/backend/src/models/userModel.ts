@@ -10,9 +10,17 @@ class User extends Model {
   public nomeUsuario!: string;
   public emailUsuario!: string;
   public senhaUsuario!: string;
+  public cpfUsuario!: string;
+  public sexoUsuario!: string;
   public dataNasc!: string | null;
   public telUsuario!: string | null;
-  public idEmpresaPatrocinio!: number | null; // Permitir NULL
+  public idEmpresaPatrocinio!: number | null;
+  public estadoUsuario!: string;
+  public cidadeUsuario!: string;
+  public ruaUsuario!: string;
+  public numeroUsuario!: string;
+  public rendaUsuario!: string;
+  public escolaridadeUsuario!: string;
   public idCidade!: number | null;
 
   public readonly createdAt!: Date;
@@ -38,16 +46,48 @@ User.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    cpfUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    sexoUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     dataNasc: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    telUsuario:{
+    telUsuario: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     idEmpresaPatrocinio: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    estadoUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    cidadeUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ruaUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    numeroUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rendaUsuario: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    escolaridadeUsuario: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     idCidade: {
