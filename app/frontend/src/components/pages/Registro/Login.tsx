@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa o hook de navegação
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 import Alert from './Alert';
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-  const navigate = useNavigate(); // Inicializa o hook de navegação
+  const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -35,12 +35,16 @@ const Login: React.FC = () => {
       .then((data) => {
         console.log('Login bem-sucedido:', data);
 
+        // Salva o token JWT no localStorage
+        localStorage.setItem('token', data.token);
+
         setTimeout(() => {
           setAlert({ type: 'success', message: 'Login realizado com sucesso!' });
 
           setTimeout(() => {
             setAlert(null);
-            navigate('/')}, 2000);
+            navigate('/');
+          }, 2000);
         }, 1000);
       })
       .catch((error) => {
@@ -64,7 +68,6 @@ const Login: React.FC = () => {
             <a className="cadastro-btn" href="/registro">Registre-se</a>
           </div>
 
-          {/* Alerta de sucesso ou erro */}
           {alert && <Alert type={alert.type} message={alert.message} onClose={() => setAlert(null)} />}
 
           <form className="form-grid" onSubmit={handleSubmit}>
