@@ -6,6 +6,7 @@ import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
 import authRoutes from "./routes/authRoutes"; // Rota de login básico
 import { usuariosTotal, usuariosUltimos7Dias, usuariosImpactadosDados } from "./routes/usuariosEmpresaRoutes";
 import { empresaComunidades, empresaLojas, empresaPatrocinados } from "./routes/indicadoresRoutes";
+import patrocinioRoutes from "./routes/patrocinioRoutes";
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
 app.register(empresaComunidades, { prefix: "/empresa-comunidades" });
 app.register(empresaLojas, { prefix: "/empresa-lojas" });
 app.register(empresaPatrocinados, { prefix: "/empresa-patrocinados" });
+app.register(patrocinioRoutes, { prefix: "/empresas-aprovadas/:id" });
 
 const start = async () => {
   try {
