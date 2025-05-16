@@ -5,7 +5,7 @@ const NavbarRotas: React.FC = ({ }) => {
   return (
     <nav className='navbar-rotas'>
       <a className='nav-item' href="/">Empresas Disponíveis</a>
-      <a className='nav-item' href="/registro">Seja Patrocinado</a>
+      <a className='nav-item' href={localStorage.getItem("userId") ? "/empresas-disponiveis" : "/registro"}>Seja Patrocinado</a>
     </nav>
   );
 };

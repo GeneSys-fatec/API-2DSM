@@ -35,12 +35,14 @@ const Login: React.FC = () => {
       .then((data) => {
         console.log('Login bem-sucedido:', data);
 
+        localStorage.setItem("userId", data.user.id);
+
         setTimeout(() => {
           setAlert({ type: 'success', message: 'Login realizado com sucesso!' });
 
           setTimeout(() => {
             setAlert(null);
-            navigate('/'); // Redireciona para a página principal
+            navigate('/empresas-disponiveis'); // Redireciona para a página de empresas disponíveis para patrocínio
           }, 4000);
         }, 1000);
       })
