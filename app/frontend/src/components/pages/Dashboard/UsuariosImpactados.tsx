@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./UsuariosImpactados.scss";
 import {
-  BarChart,
-  Bar,
-  Rectangle,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
+  LineChart, 
+  Line, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  Legend, 
+  ResponsiveContainer
 } from "recharts";
 
 interface UsuariosImpactadosProps {
@@ -82,7 +82,16 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
         };
       });
 
-      setInfo(ultimosMeses);
+      let acumulado = 0;
+      const ultimosMesesAcumulados = ultimosMeses.map((usuarios) => {
+        acumulado += usuarios.quantidade;
+        return {
+          ...usuarios,
+          quantidade: acumulado,
+        };
+      });
+
+      setInfo(ultimosMesesAcumulados);
     })
     .catch((err) => {
       console.error("Erro ao buscar dados do gráfico:", err);
@@ -125,7 +134,7 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
         </div>
         <div>
           <ResponsiveContainer width={600} height={300}>
-            <BarChart width={500} height={400} data={info}>
+            <LineChart width={500} height={400} data={info}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" fontSize={20} />
               <YAxis fontSize={20} />
@@ -134,13 +143,14 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
                 cursor={{ fill: "rgba(0, 0, 0, 0.1)" }} 
                 animationDuration={200} 
               />
-              <Bar
+              <legend/>
+              <Line
                 dataKey="quantidade"
-                fill="#69d6ce"
-                barSize={30}
-                activeBar={<Rectangle fill="#143357" />}
+                stroke="#69d6ce"
+                type={"monotone"}
+                strokeWidth={2}
               />
-            </BarChart>
+            </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
