@@ -26,6 +26,56 @@ $navbar-height: 100px;
 
   }
 
+  .logout {
+    position: relative;
+  }
+
+  .icone-logout {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+
+    img {
+      padding: 5px;
+      width: 45%;
+      border: solid 1px #ffffff;
+      border-radius: 100%;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2)
+      }
+    }
+  }
+
+  .dropdown-logout {
+    padding: 30%;
+    background-color: #ffffff;
+    opacity: 0.9;
+    position: absolute;
+    border-radius: 5px;
+    left: 25%;
+    top: 100%;
+    transform: translateX(-50%);
+
+    .botao-logout {
+      background-color: #143357;
+      color: $primary-color;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      opacity: 1;
+
+      &:hover {
+        background-color: darken($second-color, 10%);
+      }
+    }
+  }
+
   .contatos {
     display: flex;
     flex-direction: row;
@@ -95,18 +145,18 @@ $navbar-height: 100px;
     text-decoration: none;
     position: relative;
   }
-  
+
   .nav-item::after {
     content: '';
     position: absolute;
     width: 0;
     height: 1px;
     left: 0;
-    bottom: -4px; 
+    bottom: -4px;
     background-color: #000000;
     transition: width 0.3s ease;
   }
-  
+
   .nav-item:hover::after {
     width: 100%;
   }

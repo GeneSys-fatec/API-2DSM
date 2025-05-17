@@ -11,26 +11,45 @@ interface Empresa {
 const ListaEmpresasDisponiveis: React.FC = () => {
     const userId = localStorage.getItem("userId");
     const [empresas, setEmpresas] = useState<Empresa[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (!userId) {
-        console.error("Usuário não logado.");
-        return;
+            console.error("Usuário não logado.");
+            setLoading(false);
+            return;
         }
         fetch(`http://localhost:3005/empresas-aprovadas/${userId}`)
             .then(res => res.json())
-            .then(data => setEmpresas(data))
-            .catch((err) => console.error("Erro ao buscar empresas aprovadas:", err));
+            .then(data => {
+                setEmpresas(data)
+                setLoading(false)
+            })
+            .catch((err) => {
+                console.error("Erro ao buscar empresas aprovadas:", err);
+                setLoading(false)
+            });
     }, [userId]);
 
     const alertaSolicitarPatrocinio = (nameSponsor: string) => {
-    alert(`Patrocínio solicitado para a empresa ${nameSponsor}!`);
+        alert(`Patrocínio solicitado para a empresa ${nameSponsor}!`);
     };
 
-    if (!userId) {
-    return <p>Você precisa estar logado para ver as empresas aprovadas.</p>;
+    if (loading) {
+        return (
+            <div className='msg-centralizada'>
+                <p>Carregando empresa...</p>
+            </div>
+        )
+    } 
+
+    if (empresas.length === 0) {
+        return (
+            <div className='msg-centralizada'>
+                <p>Nenhuma empresa disponível para patrocínio.</p>
+            </div>
+        )
     }
-    if (!empresas) return <p>Carregando empresa...</p>;
 
     return (
         <div className='container'>

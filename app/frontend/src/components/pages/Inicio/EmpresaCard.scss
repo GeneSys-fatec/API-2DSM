@@ -45,3 +45,10 @@
         background-color: darken($second-color, 10%);
     }
 }
+
+.msg-centralizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
