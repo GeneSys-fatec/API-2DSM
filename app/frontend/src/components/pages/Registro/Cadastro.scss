@@ -10,12 +10,12 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  // overflow-y: auto; // scroll
- 
-  // &::-webkit-scrollbar {//scroll invisivel
-  //   display: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
-// }
+}
+
 
 
 .form-wrapper {
