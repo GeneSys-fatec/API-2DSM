@@ -13,8 +13,8 @@ const Footer: React.FC<FooterProps> = ({  descEmpresa }) => {
         <footer className="footer">
             
             <div className="texto">
-                <h1>Sobre</h1>
-                <p>{descEmpresa}</p>
+                <h1 className="titulo-footer">Sobre</h1>
+                <p className="texto-footer">{descEmpresa}</p>
             </div>
         </footer>
     )

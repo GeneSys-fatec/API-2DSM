@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./UsuariosImpactados.scss";
 import {
-  LineChart, 
-  Line, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  Legend, 
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
   ResponsiveContainer
 } from "recharts";
 
@@ -62,47 +62,47 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
   const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
 
   useEffect(() => {
-  fetch(`http://localhost:3005/empresa-dados`)
-    .then((res) => res.json())
-    .then((data: UsuarioPorMes[]) => {
-      // filtra os dados por idEmpresa recebido via props
-      const dadosFiltrados = data.filter(item => item.idEmpresaPatrocinio === Number(idEmpresaPatrocinio));
+    fetch(`http://localhost:3005/empresa-dados`)
+      .then((res) => res.json())
+      .then((data: UsuarioPorMes[]) => {
+        // filtra os dados por idEmpresa recebido via props
+        const dadosFiltrados = data.filter(item => item.idEmpresaPatrocinio === Number(idEmpresaPatrocinio));
 
-      // cria um mapa com os totais por mês
-      const mapaDados: Record<string, number> = {};
-      dadosFiltrados.forEach((item) => {
-        mapaDados[item.mes] = item.total_usuarios;
+        // cria um mapa com os totais por mês
+        const mapaDados: Record<string, number> = {};
+        dadosFiltrados.forEach((item) => {
+          mapaDados[item.mes] = item.total_usuarios;
+        });
+
+        const ultimosMeses = gerarUltimosMeses(10).map((mesCompleto) => {
+          const [, mes] = mesCompleto.split("-");
+          return {
+            name: meses[mes as keyof typeof meses],
+            quantidade: mapaDados[mesCompleto] || 0,
+          };
+        });
+
+        let acumulado = 0;
+        const ultimosMesesAcumulados = ultimosMeses.map((usuarios) => {
+          acumulado += usuarios.quantidade;
+          return {
+            ...usuarios,
+            quantidade: acumulado,
+          };
+        });
+
+        setInfo(ultimosMesesAcumulados);
+      })
+      .catch((err) => {
+        console.error("Erro ao buscar dados do gráfico:", err);
       });
-
-      const ultimosMeses = gerarUltimosMeses(10).map((mesCompleto) => {
-        const [, mes] = mesCompleto.split("-");
-        return {
-          name: meses[mes as keyof typeof meses],
-          quantidade: mapaDados[mesCompleto] || 0,
-        };
-      });
-
-      let acumulado = 0;
-      const ultimosMesesAcumulados = ultimosMeses.map((usuarios) => {
-        acumulado += usuarios.quantidade;
-        return {
-          ...usuarios,
-          quantidade: acumulado,
-        };
-      });
-
-      setInfo(ultimosMesesAcumulados);
-    })
-    .catch((err) => {
-      console.error("Erro ao buscar dados do gráfico:", err);
-    });
-}, [idEmpresaPatrocinio]);
+  }, [idEmpresaPatrocinio]);
 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       const valor = payload[0].value;
       const textoUsuario = valor === 1 ? "usuário" : "usuários"; // Lógica singular/plural
-  
+
       return (
         <div className="custom-tooltip">
           <p className="label">{label}</p>
@@ -117,33 +117,28 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
     <div className="graficos">
       <div className="containerGraficos">
         <div className="dadosGraficos">
-          <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=143357" />
-          <h3>Pessoas Impactadas</h3>
+          <img className="grafico-icone" src="https://img.icons8.com/?size=100&id=98957&format=png&color=143357" />
+          <h3 className="grafico-titulo" >Pessoas Impactadas</h3>
         </div>
         <div className="textoGraficos">
-          <p>
+          <p className="texto1" >
             Total de impactados: <br />
             <span className="linhaPontilhada"></span>
             {Total}
           </p>
-          <p>
-            Na última semana: <br />
-            <span className="linhaPontilhada"></span>
-            {ultimaSemana}
-          </p>
         </div>
-        <div>
-          <ResponsiveContainer width={600} height={300}>
-            <LineChart width={500} height={400} data={info}>
+        <div style={{ width: "100%", height: "300px" }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={info}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" fontSize={20} />
-              <YAxis fontSize={20} />
+              <XAxis dataKey="name" fontSize={17} />
+              <YAxis fontSize={17} />
               <Tooltip
                 content={<CustomTooltip />}
-                cursor={{ fill: "rgba(0, 0, 0, 0.1)" }} 
-                animationDuration={200} 
+                cursor={{ fill: "rgba(0, 0, 0, 0.1)" }}
+                animationDuration={200}
               />
-              <legend/>
+              <legend />
               <Line
                 dataKey="quantidade"
                 stroke="#69d6ce"
