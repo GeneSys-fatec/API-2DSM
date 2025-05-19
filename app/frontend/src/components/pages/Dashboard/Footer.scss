@@ -1,31 +1,117 @@
 @import '../../styles/variaveis';
 
 * {
-    margin: 0px;
+  margin: 0px;
 
 }
 
 footer {
-    font-family: $font-stack;
-    background-color: $background-color;
+  font-family: $font-stack;
+  background-color: $background-color;
 
-    .texto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        text-align: right;
-        font-weight: 100;
-        margin: 4% 11%;
+  .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    font-weight: 100;
+    margin: 4% 11%;
 
-        h1 {
-            color: $second-color;
-            font-size: 40px;
-        }
-
-        p {
-            font-size: 28px;
-        }
+    .titulo-footer {
+      color: $second-color;
+      font-size: 40px;
     }
 
+    .texto-footer {
+      font-size: 28px;
+    }
+  }
+
 }
+
+/* Responsividade */
+
+@media (max-width: 320px) {
+  footer .texto {
+    margin: 4% 11%;
+
+    .titulo-footer {
+      font-size: 20px;
+    }
+
+    .texto-footer {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  footer .texto {
+    margin: 4% 16%;
+
+    .titulo-footer {
+      font-size: 24px;
+    }
+
+    .texto-footer {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  footer .texto {
+    margin: 4% 15%;
+
+    .titulo-footer {
+      font-size: 28px;
+    }
+
+    .texto-footer {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .texto {
+    margin: 4% 11%;
+
+    .titulo-footer {
+      font-size: 32px;
+    }
+
+    .texto-footer {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  footer .texto {
+    margin: 4% 11%;
+
+    .titulo-footer {
+      font-size: 36px;
+    }
+
+    .texto-footer {
+      font-size: 26px;
+    }
+  }
+}
+
+// @media (min-width: 1201px) {
+//   footer .texto {
+//     margin: 4% 11%;
+
+//     .titulo-footer {
+//       font-size: 40px;
+//     }
+
+//     .texto-footer {
+//       font-size: 28px;
+//     }
+//   }
+// }

@@ -1,6 +1,7 @@
 import Cadastro from './Registro/Cadastro'
 import Nav from "../layout/Navbar/NavbarVazia";
 import NavbarPrincipal from "../layout/Navbar/NavbarRotas";
+import FooterPrincipal from '../layout/Footer/FooterCopy';
 
 function Registro() {
     return (
@@ -10,7 +11,7 @@ function Registro() {
                 <NavbarPrincipal></NavbarPrincipal>
                 <hr />
                 <Cadastro></Cadastro>
-                
+                <FooterPrincipal/>
             </div>
         </div>
     );

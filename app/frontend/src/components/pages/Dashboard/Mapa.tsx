@@ -116,8 +116,8 @@ const Mapa: React.FC<MapaProps> = ({ idEmpresa }) => {
   return (
     <>
       <div className='mapa-legenda'>
-        <img
-          src="https://img.icons8.com/?size=100&id=111425&format=png&color=143357"
+        <img className="mapa-icone"
+          src="https://img.icons8.com/?&id=111425&format=png&color=143357"
           alt="ícone"
         />
         <h1>Distribuição Geográfica</h1>

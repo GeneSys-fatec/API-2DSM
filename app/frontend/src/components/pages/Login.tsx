@@ -1,5 +1,5 @@
 import Login from './Registro/Login'
-
+import FooterPrincipal from '../layout/Footer/FooterCopy';
 import Nav from "../layout/Navbar/NavbarVazia"
 import NavbarPrincipal from "../layout/Navbar/NavbarRotas";
  
@@ -11,7 +11,7 @@ function Registro() {
                 <NavbarPrincipal></NavbarPrincipal>
                 <hr />
                 <Login></Login>
-                
+                <FooterPrincipal/>
             </div>
         </div>
     );
