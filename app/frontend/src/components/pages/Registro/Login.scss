@@ -26,38 +26,38 @@
 }
 
 .form-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 2rem;
-  
-    h2 {
-      font-size: 1.6rem;
-      color: black;
-      margin: 0 auto;
-    }
-  
-    .cadastro-btn {
-      position: absolute;
-      right: 0;
-      background-color: transparent;
-      color: $second-color;
-      padding: 0.4rem 0.7rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-  
-      &:hover {
-        background-color: $second-color;
-        border: 1px solid $second-color;
-        color: white;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.6rem;
+    color: black;
+    margin: 0 auto;
+  }
+
+  .cadastro-btn {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    color: $second-color;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $second-color;
+      border: 1px solid $second-color;
+      color: white;
     }
   }
+}
 
 .form-grid {
   display: flex;
@@ -98,5 +98,49 @@
     &:hover {
       background-color: darken($second-color, 10%);
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 1rem;
+  }
+
+  .form-container {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .form-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .cadastro-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .form-footer button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .cadastro-btn {
+    font-size: 0.8rem;
+  }
+
+  .form-footer button {
+    width: 100%;
+    padding: 0.6rem;
   }
 }

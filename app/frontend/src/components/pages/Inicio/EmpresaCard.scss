@@ -1,47 +1,65 @@
 @import '../../styles/variaveis';
 
 .container {
-    display: flex;
-    justify-content: center;
-    margin: 7% 0;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 7% 0;
+  flex-wrap: wrap;
 }
 
 .card-empresas {
-    display: flex;
-    background-color: #f3f2f2;
-    font-family: $font-stack;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    width: 20%;
-    margin: 10px;
+  display: flex;
+  background-color: #f3f2f2;
+  font-family: $font-stack;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 20%;
+  margin: 10px;
 
-    .logo-empresa {
-        height: 250px;
-        width: 250px;
-    }
+  .logo-empresa {
+    height: 250px;
+    width: 250px;
+  }
 
-    .nome-empresa {
-        margin-bottom: 30px;
-    }
+  .nome-empresa {
+    margin-bottom: 30px;
+  }
 }
 
 .botao-dashboard {
-    background-color: #143357;
-    color: $primary-color;
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #143357;
+  color: $primary-color;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-    &:hover {
-        background-color: darken($second-color, 10%);
+  &:hover {
+    background-color: darken($second-color, 10%);
+  }
+}
+@media (max-width: 768px) {
+  .card-empresas {
+    width: 80%;
+    padding: 15px;
+
+    .logo-empresa {
+      height: 150px;
+      width: 150px;
     }
+  }
+
+  .msg-centralizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
 }

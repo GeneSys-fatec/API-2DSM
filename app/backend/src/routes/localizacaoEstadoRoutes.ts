@@ -7,13 +7,14 @@ async function quantidadesPorEstadoRoutes(fastify: FastifyInstance) {
       const [rows] = await db.query(
         `SELECT 
         l.idempresapatrocinio,
-        c.estado AS estado,
+        e.sigla AS estado,
         COUNT(DISTINCT u.id) AS quantidadeUsuarios,
         COUNT(DISTINCT l.idLojas) AS quantidadeLojas
         FROM cidade c
+        JOIN estados e ON c.estado_id = e.id
         LEFT JOIN usuarios u ON c.idCidade = u.idCidade
         LEFT JOIN lojas l ON c.idCidade = l.idCidade
-        GROUP BY l.idempresapatrocinio, c.estado`
+        GROUP BY l.idempresapatrocinio, e.sigla`
       );
 
       reply.send(rows);

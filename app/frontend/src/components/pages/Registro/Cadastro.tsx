@@ -1,14 +1,15 @@
 import './Cadastro.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Cadastro: React.FC = () => {
-  
-  const [formData, setFormData]= useState({
+
+  const [formData, setFormData] = useState({
     nomeUsuario: '',
     emailUsuario: '',
     senhaUsuario: '',
     cpfUsuario: '',
-    sexoUsuario:'',
+    sexoUsuario: '',
     dataNasc: '',
     telUsuario: '',
     estadoUsuario: '',
@@ -21,47 +22,98 @@ const Cadastro: React.FC = () => {
     idCidade: '',
   });
 
+  const [estados, setEstados] = useState([])
+  const [cidades, setCidades] = useState([])
+  const [sugestoes, setSugestoes] = useState<string[]>([]);
+  const [buscaCidade, setBuscaCidade] = useState('');
+
+  useEffect(() => {
+    axios.get('http://localhost:3005/estados')
+      .then(response => {
+        setEstados(response.data)
+      })
+      .catch(error => {
+        console.error('Erro ao buscar estados:', error)
+      })
+  }, [])
+
+  const handleEstadoChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const estadoId = e.target.value;
+
+    setFormData({
+      ...formData,
+      estadoUsuario: estadoId,
+    });
+
+    axios.get(`http://localhost:3005/cidades/${estadoId}`)
+      .then(response => {
+        setCidades(response.data);
+        setSugestoes([]);
+        setBuscaCidade('');
+      })
+      .catch(error => {
+        console.error('Erro ao buscar cidades:', error);
+      });
+  };
+
+  const handleCidadeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = e.target.value;
+    setBuscaCidade(valor);
+
+    if (valor.length > 0) {
+      const filtradas = cidades
+        .filter((cidade: any) =>
+          cidade?.nomeCidade && cidade.nomeCidade.toLowerCase().includes(valor.toLowerCase())
+        )
+        .map((cidade: any) => cidade.nomeCidade);
+
+      setSugestoes(filtradas);
+    } else {
+      setSugestoes([]);
+    }
+  };
+
   //manipula o input do usuario para a recepcao de informacao
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e:React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     fetch('http://localhost:3005/auth/register', {
       method: 'POST',
       credentials: 'include',
       headers: {
-        'Content-type' : 'application/json',
+        'Content-type': 'application/json',
       },
       body: JSON.stringify(formData),
-      
+
     })
 
-    .then((response) => {
-      if (!response.ok){
-        throw new Error(`Erro: ${response.status}`);
-      }
-      return response.json();
-    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Erro: ${response.status}`);
+        }
+        return response.json();
+      })
 
-    .then((data) => {
-      console.log('Usuário cadastrado com sucesso:', data);
-      alert('Cadastro realizado com sucesso!');
-    })
+      .then((data) => {
+        console.log('Usuário cadastrado com sucesso:', data);
+        alert('Cadastro realizado com sucesso!');
+      })
 
-    .catch((error) => {
-      console.error('Erro ao cadastrar usuário:', error);
-      alert('Erro ao realizar o cadastro. Por favor, tente novamente.');
-    });
+      .catch((error) => {
+        console.error('Erro ao cadastrar usuário:', error);
+        alert('Erro ao realizar o cadastro. Por favor, tente novamente.');
+      });
 
   }
-  
+
 
   return (
     <div className="cadastro-page">
@@ -101,26 +153,26 @@ const Cadastro: React.FC = () => {
                 name="dataNasc"
                 placeholder="Data de Nascimento"
                 value={formData.dataNasc}
-                onChange={handleInputChange}/>
+                onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" 
-              name="cpfUsuario"
-              placeholder="CPF" 
-              value={formData.cpfUsuario}
-              onChange={handleInputChange}/>
+              <input type="text"
+                name="cpfUsuario"
+                placeholder="CPF"
+                value={formData.cpfUsuario}
+                onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
               <select
-              name='sexoUsuario'
-              value={formData.sexoUsuario}
-              onChange={handleInputChange}>
+                name='sexoUsuario'
+                value={formData.sexoUsuario}
+                onChange={handleInputChange}>
                 <option value="">Sexo</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
               </select>
             </div>
 
@@ -145,54 +197,78 @@ const Cadastro: React.FC = () => {
             </div> */}
 
             <div className="form-row">
-              <input type="text" 
-              name='estadoUsuario'
-              placeholder="Estado"
-              value={formData.estadoUsuario}
-              onChange={handleInputChange} />
+              <select name="estadoUsuario" value={formData.estadoUsuario} onChange={handleEstadoChange}>
+                <option value="">Selecione o Estado</option>
+                {estados.map((estado: any) => (
+                  <option key={estado.id} value={estado.id}>
+                    {estado.nome}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="form-row autocomplete-container">
+              <input
+                type="text"
+                name="cidadeUsuario"
+                placeholder="Digite a Cidade"
+                value={buscaCidade}
+                onChange={handleCidadeChange}
+                onBlur={() => setTimeout(() => setSugestoes([]), 200)}
+                className="autocomplete-input"
+              />
+              {sugestoes.length > 0 && (
+                <ul className="autocomplete-suggestions">
+                  {sugestoes.map((cidade, index) => (
+                    <li
+                      key={index}
+                      onClick={() => {
+                        setBuscaCidade(cidade);
+                        setFormData({ ...formData, cidadeUsuario: cidade });
+                        setSugestoes([]);
+                      }}
+                      className="autocomplete-item"
+                    >
+                      {cidade}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <div className="form-row">
-              <input type="text" 
-              name='cidadeUsuario'
-              placeholder="Cidade"
-              value={formData.cidadeUsuario}
-              onChange={handleInputChange} />
+              <input type="text"
+                name='ruaUsuario'
+                placeholder="Rua"
+                value={formData.ruaUsuario}
+                onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" 
-              name='ruaUsuario'
-              placeholder="Rua"
-              value={formData.ruaUsuario}
-              onChange={handleInputChange} />
+              <input type="text"
+                name='numeroUsuario'
+                placeholder="Número"
+                value={formData.numeroUsuario}
+                onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
-              <input type="text" 
-              name='numeroUsuario'
-              placeholder="Número"
-              value={formData.numeroUsuario}
-              onChange={handleInputChange} />
-            </div>
-
-            <div className="form-row">
-              <input type="text" 
-              name='rendaUsuario'
-              placeholder="Renda Familiar" 
-              value={formData.rendaUsuario}
-              onChange={handleInputChange}/>
+              <input type="text"
+                name='rendaUsuario'
+                placeholder="Renda Familiar"
+                value={formData.rendaUsuario}
+                onChange={handleInputChange} />
             </div>
 
             <div className="form-row">
               <select
-              name='escolaridadeUsuario'
-              value={formData.escolaridadeUsuario}
-              onChange={handleInputChange}>
+                name='escolaridadeUsuario'
+                value={formData.escolaridadeUsuario}
+                onChange={handleInputChange}>
                 <option value="">Escolaridade</option>
-                <option value="fundamental">Fundamental</option>
-                <option value="medio">Médio</option>
-                <option value="superior">Superior</option>
+                <option value="Fundamental">Fundamental</option>
+                <option value="Médio">Médio</option>
+                <option value="Superior">Superior</option>
               </select>
             </div>
 
