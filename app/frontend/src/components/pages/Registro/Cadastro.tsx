@@ -1,6 +1,7 @@
 import './Cadastro.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate  } from 'react-router-dom';
 
 const Cadastro: React.FC = () => {
 
@@ -26,6 +27,7 @@ const Cadastro: React.FC = () => {
   const [cidades, setCidades] = useState([])
   const [sugestoes, setSugestoes] = useState<string[]>([]);
   const [buscaCidade, setBuscaCidade] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:3005/estados')
@@ -105,6 +107,7 @@ const Cadastro: React.FC = () => {
       .then((data) => {
         console.log('Usuário cadastrado com sucesso:', data);
         alert('Cadastro realizado com sucesso!');
+        navigate('/empresas-disponiveis');
       })
 
       .catch((error) => {
@@ -169,7 +172,7 @@ const Cadastro: React.FC = () => {
                 name='sexoUsuario'
                 value={formData.sexoUsuario}
                 onChange={handleInputChange}>
-                <option value="">Sexo</option>
+                
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Outro">Outro</option>

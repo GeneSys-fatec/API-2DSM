@@ -1,100 +1,58 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import { registerUser } from "../services/authService";
+import User, { getUserByEmail } from "../models/userModel";
+import { userInfo } from "node:os";
 
-// Banco de dados simulado (em memória)
-const usersDB: {
-  id: number;
-  nomeUsuario: string;
-  emailUsuario: string;
-  passwordHash: string;
-  cpfUsuario: string;
-  sexoUsuario: string;
-  dataNasc: string;
-  telUsuario: string;
-  idEmpresaPatrocinio: number;
-  estadoUsuario: string;
-  cidadeUsuario: string;
-  ruaUsuario: string;
-  numeroUsuario: string;
-  rendaUsuario: string;
-  escolaridadeUsuario: string;
-  idCidade: number;
-}[] = [];
-
-let nextId = 1;
-
-export async function register(req: FastifyRequest, reply: FastifyReply) {
+export const register = async (req: FastifyRequest, reply: FastifyReply) => {
   try {
-    const {
-      nomeUsuario,
-      emailUsuario,
-      senhaUsuario,
-      cpfUsuario,
-      sexoUsuario,
-      dataNasc,
-      telUsuario,
-      idEmpresaPatrocinio,
-      estadoUsuario,
-      cidadeUsuario,
-      ruaUsuario,
-      numeroUsuario,
-      rendaUsuario,
-      escolaridadeUsuario,
-      idCidade,
-    } = req.body as any;
-
-    const userExists = usersDB.find((u) => u.emailUsuario === emailUsuario);
-    if (userExists) {
-      return reply.status(400).send({ message: "E-mail já cadastrado" });
-    }
-
-    const passwordHash = await bcrypt.hash(senhaUsuario, 10);
-
-    const newUser = {
-      id: nextId++,
-      nomeUsuario,
-      emailUsuario,
-      passwordHash,
-      cpfUsuario,
-      sexoUsuario,
-      dataNasc,
-      telUsuario,
-      idEmpresaPatrocinio,
-      estadoUsuario,
-      cidadeUsuario,
-      ruaUsuario,
-      numeroUsuario,
-      rendaUsuario,
-      escolaridadeUsuario,
-      idCidade,
+    const userData = req.body as {
+      nomeUsuario: string;
+      emailUsuario: string;
+      senhaUsuario: string;
+      cpfUsuario: string;
+      sexoUsuario: string;
+      dataNasc: string;
+      telUsuario: string;
+      idEmpresaPatrocinio: number;
+      estadoUsuario: string;
+      cidadeUsuario: string;
+      ruaUsuario: string;
+      numeroUsuario: string;
+      rendaUsuario: string;
+      escolaridadeUsuario: string;
+      idCidade: number;
     };
 
-    usersDB.push(newUser);
-
-    return reply.status(201).send({ message: "Usuário registrado com sucesso" });
-  } catch (err) {
-    console.error("Erro no registro:", err);
-    return reply.status(500).send({ message: "Erro interno ao registrar" });
+    const newUser = await registerUser(userData);
+    reply.code(201).send({ message: "Usuário registrado com sucesso", user: newUser });
+  } catch (error) {
+    if (error instanceof Error) {
+      // Verifica se o erro é do tipo Error e acessa a mensagem
+      reply.code(400).send({ message: error.message });
+    } else {
+      // Caso contrário, envia uma mensagem genérica
+      reply.code(400).send({ message: "Erro desconhecido" });
+    }
   }
-}
+};
 
-export async function login(request: FastifyRequest, reply: FastifyReply) {
+export const login = async (request: FastifyRequest, reply: FastifyReply) => {
+  const { email, password } = request.body as { email: string; password: string };
+
   try {
-    const { email, password } = request.body as { email: string; password: string };
+    const user = await getUserByEmail(email);
 
-    const user = usersDB.find((u) => u.emailUsuario === email);
     if (!user) {
-      return reply.status(401).send({ message: "Usuário não encontrado" });
+      return reply.code(404).send({ message: "Usuário não encontrado" });
     }
 
-    const passwordMatch = await bcrypt.compare(password, user.passwordHash);
-    if (!passwordMatch) {
-      return reply.status(401).send({ message: "Senha incorreta" });
+    if (user.senhaUsuario !== password) {
+      return reply.code(401).send({ message: "Senha incorreta" });
     }
 
-  } catch (err) {
-    console.error("Erro no login:", err);
-    return reply.status(500).send({ message: "Erro interno ao fazer login" });
+    return reply.code(200).send({ message: "Login bem-sucedido", user });
+  } catch (error) {
+    console.error("Erro ao realizar login:", error);
+    return reply.code(500).send({ message: "Erro no servidor" });
   }
 }
