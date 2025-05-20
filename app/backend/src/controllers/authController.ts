@@ -93,13 +93,6 @@ export async function login(request: FastifyRequest, reply: FastifyReply) {
       return reply.status(401).send({ message: "Senha incorreta" });
     }
 
-    const token = jwt.sign(
-      { userId: user.id, email: user.emailUsuario },
-      process.env.JWT_SECRET as string,
-      { expiresIn: "1h" }
-    );
-
-    return reply.send({ token });
   } catch (err) {
     console.error("Erro no login:", err);
     return reply.status(500).send({ message: "Erro interno ao fazer login" });

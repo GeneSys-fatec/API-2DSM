@@ -2,7 +2,7 @@ import React from 'react';
 import "./Navbar.scss";
 
 const NavbarRotas: React.FC = () => {
-  const isAuthenticated = !!localStorage.getItem('token'); // Verifica se há um token salvo
+  const isAuthenticated = !!localStorage.getItem('token');
 
   return (
     <nav className='navbar-rotas'>

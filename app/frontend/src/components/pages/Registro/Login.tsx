@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Importa o hook de navegação
 import './Login.scss';
 import Alert from './Alert';
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Inicializa o hook de navegação
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -53,7 +53,7 @@ const Login: React.FC = () => {
 
           setTimeout(() => {
             setAlert(null);
-          }, 2000);
+          }, 4000);
         }, 1000);
       });
   };
