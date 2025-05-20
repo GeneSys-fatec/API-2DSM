@@ -37,9 +37,9 @@ Para isso, os requisitos foram levantados e validados, e o protótipo foi constr
 ## 🎯 Objetivos da Sprint
 O principal objetivo para essa segunda sprint era de desenvolver o back-end do Dashboard de Indicadores, e começar o desenvolvimento das novas funcionalidades do projeto, com os seguintes requisitos (tanto do cliente como da instituição de ensino):
 - **RF01:** O Dashboard deve conter métricas numéricas essenciais como: Número de Lojas Criadas, Número de Patrocinados, Usuários Impactados e Distribuição Geográfica (cidades atendidas).
-- **RF02**: O Dashboard deve conter um Gráfico Dinâmico que exibe a quantidade de usuários impactados.
-- **RF03**: O Dashboard deve conter um Mapa Interativo que exibe a distribuição geográfica dos usuários e das lojas criadas.
-- **RF04**: Desenvolver uma página onde o usuário se cadastra e onde o usuário escolhe por qual empresa gostaria de ser patrocinado.
+- **RF01**: O Dashboard deve conter um Gráfico Dinâmico que exibe a quantidade de usuários impactados.
+- **RF01**: O Dashboard deve conter um Mapa Interativo que exibe a distribuição geográfica dos usuários e das lojas criadas.
+- **RF02**: Desenvolver uma página onde o usuário se cadastra e onde o usuário escolhe por qual empresa gostaria de ser patrocinado.
 - **RNF:** Utilizar React e TypeScript.
 
 <br>
