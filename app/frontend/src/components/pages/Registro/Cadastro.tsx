@@ -1,7 +1,8 @@
 import './Cadastro.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Alert from './Alert';
 
 const Cadastro: React.FC = () => {
 
@@ -27,6 +28,7 @@ const Cadastro: React.FC = () => {
   const [cidades, setCidades] = useState([])
   const [sugestoes, setSugestoes] = useState<string[]>([]);
   const [buscaCidade, setBuscaCidade] = useState('');
+  const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -106,13 +108,28 @@ const Cadastro: React.FC = () => {
 
       .then((data) => {
         console.log('Usuário cadastrado com sucesso:', data);
-        alert('Cadastro realizado com sucesso!');
-        navigate('/empresas-disponiveis');
+        setTimeout(() => {
+          setAlert({ type: 'success', message: 'Cadastro realizado com sucesso!' });
+
+          setTimeout(() => {
+            setAlert(null);
+          }, 4000);
+          navigate('/login');
+        }, 1000);
+
+        
       })
 
       .catch((error) => {
         console.error('Erro ao cadastrar usuário:', error);
-        alert('Erro ao realizar o cadastro. Por favor, tente novamente.');
+        setTimeout(() => {
+          setAlert({ type: 'error', message: 'Erro ao realizar o cadastro. CPF ou Email já em uso.' });
+
+          setTimeout(() => {
+            setAlert(null);
+          }, 4000);
+        }, 1000);
+        
       });
 
   }
@@ -126,6 +143,8 @@ const Cadastro: React.FC = () => {
             <h2>Cadastre-se</h2>
             <a className="login-btn" href="/login">Já tem login?</a>
           </div>
+
+          {alert && <Alert type={alert.type} message={alert.message} onClose={() => setAlert(null)} />}
 
           <form className="form-grid" onSubmit={handleSubmit}>
             <div className="form-row">
@@ -163,6 +182,7 @@ const Cadastro: React.FC = () => {
               <input type="text"
                 name="cpfUsuario"
                 placeholder="CPF"
+                maxLength={11}
                 value={formData.cpfUsuario}
                 onChange={handleInputChange} />
             </div>
@@ -172,7 +192,7 @@ const Cadastro: React.FC = () => {
                 name='sexoUsuario'
                 value={formData.sexoUsuario}
                 onChange={handleInputChange}>
-                
+                <option value="">Sexo</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Outro">Outro</option>
