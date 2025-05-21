@@ -1,5 +1,7 @@
+
 .cont {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -10,5 +12,5 @@
     padding: 0;
     margin-bottom: 0.5rem;
     text-align: center;
-    font-weight: bold;
+    font-weight: 550;  
 }

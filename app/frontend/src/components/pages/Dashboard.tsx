@@ -165,7 +165,7 @@ function Dashboard() {
           nomeEmpresa={empresa?.nameSponsor || ""}
         />
         <div className='dashboard'>
-          <div className='top-dashboard'>
+          
             <div className='cards-dados'>
               <Patrocinado valorCard={quantidadePatrocinados} />
               <LojasCriadas valorCard={quantidadelojas} />
@@ -178,7 +178,7 @@ function Dashboard() {
                 idEmpresaPatrocinio={Number(idEmpresa)}
               />
             </div>
-          </div>
+         
           <div className='distribuicao-geografica'>
             <Mapa idEmpresa={Number(idEmpresa)} />
           </div>

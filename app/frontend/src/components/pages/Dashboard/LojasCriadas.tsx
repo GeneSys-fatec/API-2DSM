@@ -9,10 +9,10 @@ const LojasCriadas: React.FC<LojasCriadasProps> = ({ valorCard }) => {
     <div className="card">
       <div className="conteudo">
         <div className="conteudo-card">
-          <img src="https://img.icons8.com/?size=100&id=78230&format=png&color=143357" />
+          <img className="card-icone" src="https://img.icons8.com/?size=100&id=78230&format=png&color=143357" />
           <div className="dados-card">
-            <h3>{valorCard}</h3>
-            <p>Lojas Criadas</p>
+            <h3 className="card-valor" >{valorCard}</h3>
+            <p className="card-titulo" >Lojas Criadas</p>
           </div>
         </div>
       </div>
