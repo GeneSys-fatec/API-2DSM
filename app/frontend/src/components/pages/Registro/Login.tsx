@@ -67,7 +67,6 @@ const Login: React.FC = () => {
             <a className="cadastro-btn" href="/registro">Registre-se</a>
           </div>
 
-          {/* Alerta de sucesso ou erro */}
           {alert && <Alert type={alert.type} message={alert.message} onClose={() => setAlert(null)} />}
 
           <form className="form-grid" onSubmit={handleSubmit}>

@@ -55,10 +55,11 @@ export async function registerUser(userData: {
     const existingUser = await User.findOne({ where: { emailUsuario: userData.emailUsuario } });
     if (existingUser) {
       throw new Error("Email já está em uso");
+      
     }
 
     // Valida o CPF antes de qualquer operação
-    const cpfValido = validateCPF(userData.cpfUsuario);
+    const cpfValido = await validateCPF(userData.cpfUsuario);
     if (!cpfValido) {
       throw new Error("CPF inválido");
     }
