@@ -2,10 +2,10 @@ import fastify from "fastify";
 import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import empresaRoutes from "./routes/empresaRoutes";
-import quantidadesPorEstadoRoutes from "./routes/localizacaoEstadoRoutes";
+import localizacaoEstadoRoutes from "./routes/localizacaoEstadoRoutes";
 import authRoutes from "./routes/authRoutes"; // Rota de login básico
-import { usuariosTotal, usuariosUltimos7Dias, usuariosImpactadosDados } from "./routes/usuariosEmpresaRoutes";
-import { empresaComunidades, empresaLojas, empresaPatrocinados } from "./routes/indicadoresRoutes";
+import usuariosEmpresaRoutes from "./routes/usuariosEmpresaRoutes";
+import indicadoresRoutes from "./routes/indicadoresRoutes";
 import patrocinioRoutes from "./routes/patrocinioRoutes";
 import cidadeRoutes from "./routes/cidadeRoutes";
 import estadoRoutes from "./routes/estadoRoutes";
@@ -33,13 +33,9 @@ app.register(cors, {
 // Registra rotas
 app.register(authRoutes, { prefix: "/auth" }); 
 app.register(empresaRoutes, { prefix: "/empresa" });
-app.register(quantidadesPorEstadoRoutes, { prefix: "/localizacao-estado" });
-app.register(usuariosTotal, { prefix: "/empresa-dadosTotal" });
-app.register(usuariosUltimos7Dias, { prefix: "/empresa-dados7dias" });
-app.register(usuariosImpactadosDados, { prefix: "/empresa-dados" });
-app.register(empresaComunidades, { prefix: "/empresa-comunidades" });
-app.register(empresaLojas, { prefix: "/empresa-lojas" });
-app.register(empresaPatrocinados, { prefix: "/empresa-patrocinados" });
+app.register(localizacaoEstadoRoutes, { prefix: "/localizacao-estado" });
+app.register(usuariosEmpresaRoutes, { prefix: "/usuarios-empresa" });
+app.register(indicadoresRoutes, { prefix: "/indicadores" });
 app.register(patrocinioRoutes, { prefix: "/empresas-aprovadas/:id" });
 app.register(cidadeRoutes, {prefix: "/cidades/:id"});
 app.register(estadoRoutes, {prefix: "/estados"});
