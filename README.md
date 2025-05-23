@@ -26,7 +26,7 @@ Com foco no MVP, a terceira sprint teve como objetivo finalizar o back-end de to
 
 ## 📍 DoD Definition of Done
 **:link: Clique no link abaixo para visualizar o DoD da Sprint 03:**  
-> [Definition of Done]()
+> [Definition of Done](https://docs.google.com/document/d/142-spFvZzo04tRTbLO0dZs-c4uruG32qb-unrMd3bJ0/edit?tab=t.vjkixzsfac0f)
 
 <br>
 
@@ -34,7 +34,7 @@ Com foco no MVP, a terceira sprint teve como objetivo finalizar o back-end de to
     
 ## 🎯 Objetivos da Sprint
 O principal objetivo da terceira sprint foi finalizar o back-end das telas restantes e implementar a responsividade da plataforma, com base nos seguintes requisitos (definidos pelo cliente e pela instituição de ensino):
-- **RF02:** Desenvolver uma página para cadastro de usuários, permitindo que escolham por qual empresa gostariam de ser patrocinados.
+- **RF02:** Desenvolver uma página para cadastramento de dados de usuários interessados em patrocínio.
 - **RF02**: Desenvolver uma página para exibição das empresas compatíveis com o perfil do usuário.
 - **RNF:** Aplicar responsividade à interface, garantindo uma experiência moderna e intuitiva em diferentes dispositivos.
 
@@ -45,8 +45,8 @@ O principal objetivo da terceira sprint foi finalizar o back-end das telas resta
 | ID |   Prioridade   |   Título   |   User Story   |   Requisito   |
 | --- | --- | --- | --- | --- |
  US07 | MÉDIA | Cadastramento de Dados | Como usuário, quero cadastrar minhas informações pessoais e de perfil, para que possa visualizar quais empresas patrocinadoras têm vagas disponíveis compatíveis comigo e escolher aquela com a qual mais me identifico.| RF02 |
- US08 | MÉDIA | Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.| RF02 |
- US09 | MÉDIA | Interface Intuitiva e Moderna | Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| RNF |
+ US09 | MÉDIA | Exibição de Empresas Compatíveis para Patrocínio | Como usuário interessado em patrocínio, quero visualizar uma página com empresas disponíveis compatíveis com meu perfil cadastrado, para identificar oportunidades alinhadas aos meus interesses.| RF02 |
+ US010 | MÉDIA | Interface Intuitiva e Moderna | Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.| RNF |
 
 <br>
 
@@ -56,7 +56,7 @@ O principal objetivo da terceira sprint foi finalizar o back-end das telas resta
 
 Na terceira entrega, os artefatos SCRUM — como o Sprint Backlog e as User Stories — foram validados por meio de comunicação direta entre o Product Owner (PO) e o cliente, juntamente com o MVP da sprint. Com essa validação, demos continuidade ao desenvolvimento do back-end utilizando TypeScript com Node.js, com os dados sendo extraídos de um banco de dados MySQL, conforme demonstrado a seguir:
 
-<a href=''>Vídeo do Projeto</a>
+<a href='https://youtu.be/0kPp-YthV4Y'>Vídeo do Projeto</a>
 
 <br>
 
