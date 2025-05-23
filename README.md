@@ -17,10 +17,11 @@ Os resultados dos projetos devem obedecer ao Aviso Legal disponível no site da 
 <span id="projeto">
 
 ## 📋 O Projeto
-> **📌 Status do Projeto: Em Desenvolvimento**
+> **📌 Status do Projeto: Concluído**
 
 O **Helpnei** é uma plataforma voltada para profissionais de venda direta, oferecendo ferramentas de gestão de links de afiliados, facilitando a promoção e comercialização de produtos de grandes marcas. Além disso, permite a criação de lojas próprias, o trabalho com afiliação e a venda de produtos dentro de comunidades, promovendo oportunidades de geração de renda extra.<br>
-A partir da apresentação do desafio enfrentado pelo Helpnei, a solução desenvolvida consiste em um Dashboard de Indicadores de Crescimento para as empresas cadastradas e um sistema de captação de usuários externos relacionados. <br>
+A dificuldade do Helpnei é oferecer às empresas parceiras acesso a indicadores que mostrem, de forma transparente, seus resultados e impacto na plataforma.
+A partir disso, a solução desenvolvida consiste em um Dashboard de Indicadores de Crescimento para as empresas cadastradas e um sistema de captação de usuários externos relacionados. <br>
 O Dashboard permitirá monitorar o impacto da plataforma e acompanhar o crescimento das empresas, exibindo dados estratégicos para patrocinadores e investidores. <br>
 O painel deve incluir métricas essenciais, como:
 * Número de Lojas Criadas;
@@ -42,15 +43,16 @@ O painel deve incluir métricas essenciais, como:
 
 ID |          Título           |                     User Story                      |
 :---: | :-------------------: | :----------------------------------------------------------: |
- US01 | Visão Geral do Dashboard |Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.
- US02 | Visualização do Número de Lojas Criadas |Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
- US03 | Monitoramento de Usuários Impactados |Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
- US04 | Número de Comunidades |Como patrocinador, quero visualizar o número total de comunidades, para compreender a abrangência das conexões formadas na plataforma.|
+ US01 | Visão Geral do Dashboard | Como patrocinador, quero acessar um dashboard geral da plataforma, para visualizar os principais indicadores de crescimento.
+ US02 | Visualização do Número de Lojas Criadas | Como patrocinador, quero visualizar o número total de lojas criadas, para acompanhar o crescimento da plataforma.|
+ US03 | Monitoramento de Usuários Impactados | Como patrocinador, quero visualizar o número total de usuários impactados, para entender o alcance da plataforma.|
+ US04 | Número de Comunidades | Como patrocinador, quero visualizar o número total de comunidades, para compreender a abrangência das conexões formadas na plataforma.|
  US05 | Número de Patrocinados | Como patrocinador, quero visualizar a quantidade de pessoas que minha empresa está patrocinando, para que eu possa acompanhar o impacto do meu patrocínio e avaliar seus resultados.|
  US06 | Exibição da Distribuição Geográfica |Como patrocinador, quero visualizar a distribuição geográfica das lojas em um mapa interativo, para identificar as cidades de maior adoção.| 
  US07 | Cadastramento de Dados | Como usuário, quero cadastrar minhas informações pessoais e de perfil, para que possa visualizar quais empresas patrocinadoras têm vagas disponíveis compatíveis comigo e escolher aquela com a qual mais me identifico.| 
  US08 | Página de Exibição das Empresas | Como usuário, quero uma página que liste todas as empresas patrocinadoras, para poder clicar em uma delas e visualizar suas informações detalhadas.|
- US09 | Interface Intuitiva e Moderna |Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.|
+ US09 | Exibição de Empresas Compatíveis para Patrocínio | Como usuário interessado em patrocínio, quero visualizar uma página com empresas disponíveis compatíveis com meu perfil cadastrado, para identificar oportunidades alinhadas aos meus interesses.|
+ US010 | Interface Intuitiva e Moderna | Como usuário, quero uma interface intuitiva, responsiva e moderna, para facilitar a leitura dos dados.|
 
 <br>
 
@@ -70,7 +72,7 @@ Tópicos utilizados para definir o DoR das Sprints:
 * User Stories;
 * Critérios de Aceitação e Cenários de Testes;
 * Modelagem do Banco de Dados;
-* Mockups;
+* Mockups.
 
 <br>
 
@@ -82,7 +84,7 @@ Tópicos utilizados para definir o DoR das Sprints:
 
 Tópicos utilizados para definir o DoD das Sprints:
 * Manual do Usuário;
-* Registros do Projeto Rodando;
+* Registros do Projeto Rodando.
 
 <br>
  
@@ -94,7 +96,7 @@ Sprint | Previsão | Status | Relatório | Vídeo do Projeto |
 |------|--------|------|---------|----------|
 |01 | 10/03/2025 - 30/03/2025 |☑️ Finalizado| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint1/README.md) | <a href='https://youtu.be/FqiySP5TJ9k'>Ver Vídeo</a> |
 |02|  07/04/2025 - 27/04/2025 |☑️ Finalizado| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint2/README.md) | <a href='https://youtu.be/iau4KI8iHJI'>Ver Vídeo</a> |
-|03| 05/05/2025 - 25/05/2025 |A fazer| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint3/README.md) | |
+|03| 05/05/2025 - 25/05/2025 |☑️ Finalizado| [Ver Relatório](https://github.com/GeneSys-fatec/API-2DSM/blob/updates-sprint3/README.md) | <a href='https://youtu.be/0kPp-YthV4Y'>Ver Vídeo</a> |
  
 <br>
 
