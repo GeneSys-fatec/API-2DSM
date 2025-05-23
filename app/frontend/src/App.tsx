@@ -12,15 +12,15 @@ function App() {
       <Routes>
         {/* Rotas protegidas dentro do Middleware */}
         <Route element={<Middleware />}>
-          <Route path="/" element={<Empresas />} />
           <Route path="/empresas-disponiveis" element={<Patrocinio />} />
-          <Route path="/dashboard/:idEmpresa" element={<Dashboard />} />
-          <Route path="/dashboard/" element={<Dashboard />} />
         </Route>
 
         {/* Rotas públicas */}
+        <Route path="/" element={<Empresas />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard/:idEmpresa" element={<Dashboard />} />
+        <Route path="/dashboard/" element={<Dashboard />} />
       </Routes>
     </Router>
   );
