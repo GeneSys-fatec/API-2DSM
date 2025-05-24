@@ -69,7 +69,7 @@ O acompanhamento de atividades, responsabilidade do Scrum Master, se encontra na
 
 <div align="center">
     
-![Burndown Chart]()
+![Burndown Chart](https://raw.githubusercontent.com/gbmedeiros00/testeee/refs/heads/main/burndown-sprint3.png)
 </div>
 
 <br>
