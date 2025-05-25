@@ -62,7 +62,7 @@ const UsuariosImpactados: React.FC<UsuariosImpactadosProps> = ({
   const [info, setInfo] = useState<{ name: string; quantidade: number }[]>([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-dados`)
+    fetch(`http://localhost:3005/usuarios-empresa/impactados`)
       .then((res) => res.json())
       .then((data: UsuarioPorMes[]) => {
         // filtra os dados por idEmpresa recebido via props
