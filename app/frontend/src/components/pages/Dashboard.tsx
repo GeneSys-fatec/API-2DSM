@@ -72,7 +72,7 @@ function Dashboard() {
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-dadosTotal`)
+    fetch(`http://localhost:3005/usuarios-empresa/total`)
       .then(res => res.json())
       .then((data: DadosTotal[]) => {
         setEmpresas1(data);
@@ -88,25 +88,13 @@ function Dashboard() {
   const [empresas2, setEmpresas2] = useState<Dados7dias[]>([]);
   const [total7Dias, setTotal7Dias] = useState<number>(0);
 
-  useEffect(() => {
-    fetch(`http://localhost:3005/empresa-dados7dias`)
-      .then(res => res.json())
-      .then((data: Dados7dias[]) => {
-        setEmpresas2(data);
-        const empresa = data.find(item => item.idEmpresaPatrocinio === Number(idEmpresa));
-        if (empresa) {
-          setTotal7Dias(empresa.Total7dias);
-        }
-      })
-      .catch((err) => console.error("Erro ao buscar dados dos últimos 7 dias", err));
-  }, [idEmpresa]);
 
   // fetch no número de lojas criadas por empresa
   const [empresas3, setEmpresas3] = useState<DadosLojas[]>([]);
   const [quantidadelojas, setquantidadelojas] = useState<number>(0);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-lojas`)
+    fetch(`http://localhost:3005/indicadores/lojas`)
       .then(res => res.json())
       .then((data: DadosLojas[]) => {
         setEmpresas3(data);
@@ -123,7 +111,7 @@ function Dashboard() {
   const [quantidadeComunidades, setquantidadeComunidades] = useState<number>(0);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-comunidades`)
+    fetch(`http://localhost:3005/indicadores/comunidades`)
       .then(res => res.json())
       .then((data: DadosComunidades[]) => {
         setEmpresas4(data);
@@ -140,7 +128,7 @@ function Dashboard() {
   const [quantidadePatrocinados, setquantidadePatrocinados] = useState<number>(0);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/empresa-patrocinados`)
+    fetch(`http://localhost:3005/indicadores/patrocinados`)
       .then(res => res.json())
       .then((data: DadosPatrocinados[]) => {
         setEmpresas5(data);

@@ -99,7 +99,7 @@ const Mapa: React.FC<MapaProps> = ({ idEmpresa }) => {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:3005/localizacao-estado")
+    fetch("http://localhost:3005/localizacao-estado/")
       .then(res => res.json())
       .then((raw: EstadoRaw[]) => {
         const transformed: EstadoInfo[] = raw.map(item => ({
